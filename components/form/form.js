@@ -2,6 +2,8 @@
 
 import { useState } from "react"
 import classes from "./form.module.css"
+import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export default function Form({prevData, user}) {
 
@@ -33,8 +35,13 @@ export default function Form({prevData, user}) {
 
     function updateData(e) {
         e.preventDefault();
-        // setEdit(true);
-        fetchData();
+        for(const key in data) {
+            if(data[key] != prevData[key]) {
+                fetchData();
+                break;
+            }
+        }
+        redirect('/');
     }
 
     return (
@@ -49,9 +56,8 @@ export default function Form({prevData, user}) {
             <input id="github" type="text" onChange={handleChange} placeholder="github..." name="github" value={data.github}/> <br />
             <label htmlFor="about"><span>About: </span></label>
             <input id="about" type="text" onChange={handleChange} placeholder="about..." name="about" value={data.about}/> <br />
-            <button className="mt-3 col-start-1 text-lg border mx-auto rounded-2xl" onClick={updateData}>submit</button>
-            <button className="mt-3 col-start-3 text-lg border mx-auto rounded-2xl" type="button">cancel</button>
-            {/* <input type="file" placeholder="image..." ref={image}/> <br /> */}
+            <button className="mt-3 col-start-1 text-lg" onClick={updateData}>submit</button>
+            <Link className="mt-3 button cancel col-start-3 text-lg" href={'/'}>cancel</Link>
         </form>
     )
 }

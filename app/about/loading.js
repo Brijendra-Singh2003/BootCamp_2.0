@@ -1,13 +1,7 @@
-export default function Loading() {
+import Loading from "@/components/Loading/Loading"
+
+export default function() {
     return (
-        <div className="
-            mx-auto
-            mt-[40vh]
-            h-16 w-16
-            border-8
-            border-[rgb(150,150,150)]
-            border-r-black
-            animate-spin
-            rounded-[50%]" />
+        <Loading />
     )
 }

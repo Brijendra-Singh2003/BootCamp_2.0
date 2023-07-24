@@ -9,7 +9,6 @@ const ImageUpload = ({name}) => {
 
   const [image, setImage] = useState(null);
   const [uurl, setuurl] = useState(null);
-  // const [prog, setProg] = useState(0);
 
   const handleImageChange = (e) => {
     const selectedImage = e.target.files[0];
@@ -34,8 +33,7 @@ const ImageUpload = ({name}) => {
 
   return (
     <div>
-        {/* <p>{prog}</p> */}
-        {uurl && <Image className="mx-auto my-4"  src={uurl} alt="image" height={150} width={150} />}
+        {uurl && <Image className="mx-auto my-4 h-64 w-64 object-cover rounded-xl" src={uurl} alt="image" height={250} width={250}/>}
         <input type="file" onChange={handleImageChange} />
         <button onClick={handleImageUpload}>Upload Image</button>
     </div>

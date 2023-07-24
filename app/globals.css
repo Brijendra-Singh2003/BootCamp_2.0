@@ -3,63 +3,127 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: rgb(0, 0, 0);
+  --background-start-rgb: rgb(214, 219, 220);
+  --background-end-rgb: rgb(255, 255, 255);
   height: 100svh;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: rgb(255, 255, 255);
+    --background-start-rgb: rgb(34, 34, 34);
+    --background-end-rgb: rgb(0, 0, 0);
   }
 }
 
 input, button {
-  background-color: black;
-  border: 1px solid white;
+  background-color: var(--background-end-rgb);
+  border: 1px solid gray;
   margin: 5px;
   padding: 10px;
   border-radius: 10px;
-  color: gray;
+  color: var(--foreground-rgb);
+  max-width: 400px;
 }
 
-button {
-  color: white;
+.cancel {
+  background-color: var(--background-end-rgb);
+  border: 1px solid gray;
+  padding: 10px;
+  height: 75%;
+  border-radius: 10px;
+  color: var(--foreground-rgb);
 }
 
 input:focus{
   outline: none;
-  color: aliceblue;
+  border-color: var(--foreground-rgb);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)
-  );
+  background-color: var(--background-start-rgb);
   text-align: center;
 }
 
+label, h1, p, li{
+  color: var(--foreground-rgb);
+}
+
 header {
-  background-color: blue;
+  background-color: var(--background-end-rgb);
+  color: var(--foreground-rgb);
   height: 48px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
-header a {
-  flex-grow: 1;
-  padding: 12px 0;
+.button:hover, button:hover {
+  border: 1px solid var(--foreground-rgb);
 }
 
-a:hover, button:hover {
-  background-color: rgb(255, 255, 255);
-  color: black;
+.links a:hover{
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 700px) {
+
+  header > a {
+    margin: 0 10%;
+    padding: 12px 0;
+    border: 1px solid var(--background-end-rgb);
+  }
+  .menu{
+    margin-right: 10%;
+    width: 400px;
+  }
+  .links {
+    height: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .links a{
+    height: 46px;
+    padding: 12px;
+  }
+}
+
+@media only screen and (max-width: 699px) {
+  header a {
+    padding: 12px 0;
+    border: 1px solid var(--background-end-rgb);
+  }
+  .bar{
+    height: 2px;
+    width: 35px;
+    background-color: var(--foreground-rgb);
+    margin: 10px;
+  }
+  .menu {
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    overflow: hidden;
+    z-index: 1;
+    height: 48px;
+  }
+  .menu:hover {
+    height: max-content;
+  }
+  .links{
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: var(--background-end-rgb);
+  }
+  .links a{
+    display: inline-block;
+    width: 100px;
+    height: 48px;
+    padding: 12px;
+  }
+  .links:hover {
+    
+  }
 }
