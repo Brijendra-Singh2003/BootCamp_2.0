@@ -1,0 +1,22 @@
+.form {
+    display: grid;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.form input {
+    grid-column: 2 / 4;
+}
+
+.form label {
+    grid-column: 1 / 2;
+    display: flex;
+    align-items: center;
+}
+
+.form button{
+    /* height: 44px; */
+    width: 100%;
+}

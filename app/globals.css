@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  height: 100svh;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,6 +17,24 @@
   }
 }
 
+input, button {
+  background-color: black;
+  border: 1px solid white;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  color: gray;
+}
+
+button {
+  color: white;
+}
+
+input:focus{
+  outline: none;
+  color: aliceblue;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -23,5 +42,24 @@ body {
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)
+  );
+  text-align: center;
+}
+
+header {
+  background-color: blue;
+  height: 48px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+header a {
+  flex-grow: 1;
+  padding: 12px 0;
+}
+
+a:hover, button:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
 }
