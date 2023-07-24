@@ -19,7 +19,7 @@ export default async function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <header>
-          <Link className='button' href={'/'} >Home</Link>
+          <Link href={'/'} >Home</Link>
           <div className='menu'>
             <div className="icon">
               <div className="bar"></div>
