@@ -1,6 +1,6 @@
 import Loading from "@/components/Loading/Loading"
 
-export default function() {
+export default function Load() {
     return (
         <Loading />
     )
