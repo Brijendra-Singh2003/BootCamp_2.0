@@ -32,10 +32,12 @@ const ImageUpload = ({name}) => {
   })
 
   return (
-    <div>
-        {uurl && <Image className="mx-auto my-4 h-64 w-64 object-cover rounded-xl" src={uurl} alt="image" height={250} width={250}/>}
-        <input type="file" onChange={handleImageChange} />
-        <button onClick={handleImageUpload}>Upload Image</button>
+    <div className='mx-auto w-full max-w-[500px] flex flex-col items-center'>
+        {uurl && <Image className="my-4 h-64 w-64 object-cover rounded-xl" src={uurl} alt="image" height={250} width={250}/>}
+        <div className='flex flex-wrap justify-center items-center'>
+        <input className=' max-w-[90vw]' type="file" onChange={handleImageChange} />
+        <button className='' onClick={handleImageUpload}>Upload Image</button>
+        </div>
     </div>
   );
 };
