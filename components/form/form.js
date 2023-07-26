@@ -3,9 +3,12 @@
 import { useState } from "react"
 import classes from "./form.module.css"
 import Link from "next/link";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
+import fetchData from "../FetchData";
 
 export default function Form({prevData, user}) {
+
+    const router = useRouter();
 
     const [data, setData] = useState(
         prevData ? prevData :
@@ -19,14 +22,6 @@ export default function Form({prevData, user}) {
         }
     );
 
-    function fetchData() {
-        fetch(`https://cse-bootcamp-auth-default-rtdb.asia-southeast1.firebasedatabase.app/20${user.substring(2, 4)}/${user}.json`, {
-            method: 'PUT',
-            headers: { 'Contenet-Type': 'application/json' },
-            body: JSON.stringify(data)
-        })
-    }
-
     function handleChange({target:{value, name}}) {
         setData(prevData => {
             return {...prevData, [name]: value};
@@ -37,11 +32,12 @@ export default function Form({prevData, user}) {
         e.preventDefault();
         for(const key in data) {
             if(data[key] != prevData[key]) {
-                fetchData();
+                fetchData(user, data);
+                console.log('data fetched');
                 break;
             }
         }
-        redirect('/');
+        router.back();
     }
 
     return (
@@ -57,7 +53,7 @@ export default function Form({prevData, user}) {
             <label htmlFor="about"><span>About: </span></label>
             <input id="about" type="text" onChange={handleChange} placeholder="about..." name="about" value={data.about}/> <br />
             <button className="mt-3 col-start-1 text-lg" onClick={updateData}>submit</button>
-            <Link className="mt-3 button cancel col-start-3 text-lg" href={'/'}>cancel</Link>
+            <button type="button" className="mt-3 col-start-3 text-lg cancel" onClick={()=>{router.back()}}>Cancel</button>
         </form>
     )
 }

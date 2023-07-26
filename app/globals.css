@@ -29,11 +29,6 @@ input, button {
 
 .cancel {
   background-color: var(--background-end-rgb);
-  border: 1px solid gray;
-  padding: 10px;
-  height: 75%;
-  border-radius: 10px;
-  color: var(--foreground-rgb);
 }
 
 input:focus{
@@ -58,7 +53,7 @@ header {
   justify-content: space-between;
 }
 
-.button:hover, button:hover {
+button:hover {
   border: 1px solid var(--foreground-rgb);
 }
 

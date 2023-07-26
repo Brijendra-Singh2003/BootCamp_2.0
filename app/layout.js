@@ -33,7 +33,7 @@ export default async function RootLayout({ children }) {
                   <Link href={'/students/2022'} >2022</Link>
                   <Link href={'/students/2021'} >2021</Link>
                   <Link href={'/api/auth/signout'} >Signout</Link>
-                  <Link href={'/profile'} >Profile</Link>
+                  <Link href={{pathname :'/profile', query : session.user}} >Profile</Link>
                 </> :
                 <Link href={'/api/auth/signin/google'} >Login</Link>
               }
