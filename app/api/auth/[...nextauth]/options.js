@@ -9,8 +9,9 @@ export const options = {
     ],
     callbacks: {
         async signIn({ account, profile }) {
+            const [id, provider] = profile.email.split('@');
             if (account.provider === "google") {
-                return profile.email_verified && (profile.email.endsWith("@iiit-bh.ac.in") && name.charAt(1) === '1');
+                return profile.email_verified && ( provider === "iiit-bh.ac.in" && id.charAt(1) === '1');
             }
             return;
         },
