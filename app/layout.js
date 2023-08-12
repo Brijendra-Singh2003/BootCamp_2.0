@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import Link from 'next/link'; import { options } from "./api/auth/[...nextauth]/options"
+import Navbar from '@/components/Navbar/Navbar'
+import { options } from "./api/auth/[...nextauth]/options"
 import { getServerSession } from "next-auth"
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,28 +19,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header>
-          <Link href={'/'} >Home</Link>
-          <div className='menu'>
-            <div className="icon">
-              <div className="bar"></div>
-              <div className="bar"></div>
-              <div className="bar"></div>
-            </div>
-            <ul className='links'>
-              <Link href={'/about'} >About</Link>
-              {session ?
-                <>
-                  <Link href={'/students/2022'} >2022</Link>
-                  <Link href={'/students/2021'} >2021</Link>
-                  <Link href={'/api/auth/signout'} >Signout</Link>
-                  <Link href={{pathname :'/profile', query : session.user}} >Profile</Link>
-                </> :
-                <Link href={'/api/auth/signin/google'} >Login</Link>
-              }
-            </ul>
-          </div>
-        </header>
+        <Navbar user={session?.user}/>
         {children}
       </body>
     </html>

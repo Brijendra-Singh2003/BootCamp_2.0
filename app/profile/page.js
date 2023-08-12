@@ -10,7 +10,6 @@ export default async function Page({searchParams: user}) {
 
   return (
     <>
-      {/* {user.name} */}
       <ImageUpload name={id} />
       <Form prevData={data} user={id} />
     </>

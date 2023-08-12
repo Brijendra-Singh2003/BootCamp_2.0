@@ -18,9 +18,7 @@ export default async function StudentPage(props) {
         const imgref = ref(storage, `images/${curr.id}`);
         let imgURL = false;
         try {imgURL = await getDownloadURL(imgref);}
-        catch (err) {
-            console.log(err);
-        }
+        catch (err) {}
         studentsList.push({...curr, image: imgURL || null});
     }
 
