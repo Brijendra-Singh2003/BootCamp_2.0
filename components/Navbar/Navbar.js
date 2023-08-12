@@ -15,8 +15,8 @@ export default function Navbar({user}) {
         <header style={{"--height": (user ? "250px" : "100px")}} className={styles.header}>
             <Link href={'/'} >CSE Bootcamp 2.0</Link>
             <div onClick={toggle}>
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
                 </svg>
                 <div className={styles.links+' '+(showMenu && styles.show)}>
                     <div className={styles.backdrop}></div>

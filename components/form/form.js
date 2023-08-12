@@ -4,12 +4,11 @@ import { useState } from "react"
 import classes from "./form.module.css"
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import fetchData from "../FetchData";
+import fetchData from "../../functions/FetchData";
 
 export default function Form({prevData, user}) {
 
     const router = useRouter();
-
     const [data, setData] = useState(
         prevData ? prevData :
         {
@@ -30,13 +29,14 @@ export default function Form({prevData, user}) {
 
     function updateData(e) {
         e.preventDefault();
-        for(const key in data) {
-            if(data[key] != prevData[key]) {
-                fetchData(user, data);
-                console.log('data fetched');
-                break;
+        if(prevData)
+            for(const key in data) {
+                if(data[key] != prevData[key]) {
+                    fetchData(user, data);
+                    break;
+                }
             }
-        }
+        else fetchData(user, data);
         router.back();
     }
 

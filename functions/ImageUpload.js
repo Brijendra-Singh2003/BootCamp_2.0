@@ -25,11 +25,13 @@ const ImageUpload = ({name}) => {
     }
   };
 
-  const urlref = ref(storage, `images/${name}`);
-  const foo = getDownloadURL(urlref)
-  .then((value)=>{
-    setuurl(value);
-  })
+  const urlref = ref(storage, `images/${name}`) || null;
+  if ( urlref ) {
+    const foo = getDownloadURL(urlref)
+    .then((value)=>{
+      setuurl(value);
+    })
+  }
 
   return (
     <div className='mx-auto w-full max-w-[500px] flex flex-col items-center'>
