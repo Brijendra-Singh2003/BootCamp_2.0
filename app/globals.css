@@ -52,6 +52,12 @@ button:hover {
 .image-input {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 80svw;
+  max-width: 500px;
   margin: 5px auto;
+}
+
+.image-input *{
+  width: 100%;
 }
