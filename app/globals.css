@@ -49,6 +49,9 @@ button:hover {
   border: 1px solid var(--foreground-rgb);
 }
 
-.links a:hover{
-  text-decoration: underline;
+.image-input {
+  display: flex;
+  flex-direction: column;
+  width: 80svw;
+  margin: 5px auto;
 }

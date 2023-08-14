@@ -34,9 +34,9 @@ const ImageUpload = ({name}) => {
   }
 
   return (
-    <div className=''>
-        {uurl && <Image className="my-4 mx-auto h-64 w-64 object-cover" src={uurl} alt="image" height={250} width={250}/>}
-        <div>
+    <div>
+        {uurl && <Image className="my-4 mx-auto h-64 w-64 object-cover rounded-xl" src={uurl} alt="image" height={250} width={250}/>}
+        <div className='image-input'>
           <input type="file" onChange={handleImageChange} />
           <button onClick={handleImageUpload}>Upload Image</button>
         </div>
