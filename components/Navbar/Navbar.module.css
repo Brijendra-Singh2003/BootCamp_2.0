@@ -71,7 +71,7 @@
 
 @keyframes hide {
     0% {
-        height: var(--height);
+        height: initial;
     }
     100% {
         height: 0;
