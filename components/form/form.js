@@ -48,15 +48,17 @@ export default function Form({prevData, host}) {
     return (
         <form className={classes.form} onSubmit={checkData}>
             <label htmlFor="name"><span>Name: </span></label>
-            <input required={true} id="name" type="text" onChange={handleChange} placeholder="name..." name="name" value={data.name}/> <br />
+            <input required={true} id="name" type="text" onChange={handleChange} placeholder="name..." name="name" value={data.name}/>
+            <label htmlFor="location"><span>Location: </span></label>
+            <input required={true} id="location" type="text" onChange={handleChange} placeholder="location..." name="location" value={data.location}/>
             <label htmlFor="insta"><span>Instagram: </span></label>
-            <input required={true} id="insta" type="text" onChange={handleChange} placeholder="instagram..." name="instagram" value={data.instagram}/> <br />
+            <input required={true} id="insta" type="text" onChange={handleChange} placeholder="instagram..." name="instagram" value={data.instagram}/>
             <label htmlFor="linkedin"><span>Linkedin: </span></label>
-            <input required={true} id="linkedin" type="text" onChange={handleChange} placeholder="linkdin..." name="linkedin" value={data.linkedin}/> <br />
+            <input required={true} id="linkedin" type="text" onChange={handleChange} placeholder="linkdin..." name="linkedin" value={data.linkedin}/>
             <label htmlFor="github"><span>Github: </span></label>
-            <input required={true} id="github" type="text" onChange={handleChange} placeholder="github..." name="github" value={data.github}/> <br />
+            <input required={true} id="github" type="text" onChange={handleChange} placeholder="github..." name="github" value={data.github}/>
             <label htmlFor="about"><span>About: </span></label>
-            <input required={true} id="about" type="text" onChange={handleChange} placeholder="about..." name="about" value={data.about}/> <br />
+            <input required={true} id="about" type="text" onChange={handleChange} placeholder="about..." name="about" value={data.about}/>
             <button className="mt-3 col-start-1 text-lg">submit</button>
             <button type="button" className="mt-3 col-start-3 text-lg cancel" onClick={()=>{router.back()}}>Cancel</button>
         </form>

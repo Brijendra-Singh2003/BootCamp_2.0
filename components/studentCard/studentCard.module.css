@@ -1,0 +1,250 @@
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+.effect {
+    --card-height: 400px;
+    --card-width: 320px;
+}
+
+.container {
+    position: relative;
+    height: var(--card-height);
+    width: var(--card-width);
+    overflow: hidden;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-out;
+    border-radius: 1rem;
+    border: 2px solid #40DDFF;
+}
+
+.effect {
+    height: var(--card-height);
+    width: var(--card-width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    position: relative;
+    margin: 20px auto;
+    color: white;
+    z-index: 0;
+}
+
+.effect::before {
+    content: "";
+    width: 105%;
+    height: 105%;
+    background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -2.5%;
+    left: -2.5%;
+    animation: spin 2.5s linear infinite;
+    border-radius: 1rem;
+}
+
+.effect::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+    opacity: 0;
+}
+
+.effect:hover::after {
+    opacity: 1;
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+
+    100% {
+        --rotate: 360deg;
+    }
+}
+
+.imgcontainer {
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.imgcontainer>img {
+    object-fit: cover;
+}
+
+.name {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+    text-align: right;
+    transition: 0.5s ease-in-out;
+}
+
+.stdid {
+    rotate: -90deg;
+    transform: translateX(-0.35rem);
+    margin-left: 0.6rem;
+}
+
+.idtext {
+    font-size: 2.3rem;
+    transform: translateY(0.35rem);
+}
+
+.idWrap {
+    display: flex;
+    margin-bottom: 0.7rem;
+    transition: 0.5s ease-in-out;
+}
+
+.imgTop {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-shadow: none;
+    width: calc(var(--card-width) - 2rem);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.container:hover .name,
+.container:hover .idWrap {
+    margin-bottom: 100px;
+}
+
+.imgTop::before {
+    content: " ";
+    height: 9rem;
+    width: var(--card-width);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, 0);
+}
+
+.imgcontainer:focus {
+    cursor: pointer;
+}
+
+.container:hover .imgcontainer {
+    transform: translateY(calc(0px - var(--card-height) + 80px));
+}
+
+.imgcontainer>img {
+    height: 100%;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+.socialmedia {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.socialmedia>li {
+    list-style: none;
+}
+
+.socialmedia>li>a {
+    display: block;
+    height: 40px;
+    width: 40px;
+    border: 2px #40DDFF dashed;
+    text-align: center;
+    color: white;
+    margin: 0 8px;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all 0.5s ease-in-out;
+}
+
+.container:hover>.socialmedia>li>a {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.container:hover .socialmedia li:nth-child(1) a {
+    transition-delay: 0s;
+}
+
+.container:hover .socialmedia li:nth-child(2) a {
+    transition-delay: 0.1s;
+}
+
+.container:hover .socialmedia li:nth-child(3) a {
+    transition-delay: 0.2s;
+}
+
+.userinfo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    text-shadow: none;
+    height: calc(var(--card-height) - 80px);
+    border-top: 2px solid #40DDFF;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center
+}
+
+.userinfo svg {
+    width: 1.4rem;
+    transform: translateY(0.2rem);
+    margin-right: 0.35rem;
+}
+
+.address {
+    word-spacing: -0.6rem;
+}
+
+.addressWrap {
+    margin-top: 0rem;
+    margin-bottom: 0.8rem;
+}
+
+.about {
+    font-size: 0.8rem;
+    text-align: justify;
+    margin: 0;
+}
+
+@media (max-width:435px) {
+    .effect {
+        --card-width: 80vw;
+    }
+}
