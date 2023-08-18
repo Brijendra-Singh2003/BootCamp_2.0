@@ -1,18 +1,18 @@
 "use client"
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './Navbar.module.css'
 import Link from 'next/link'
 
 export default function Navbar({user, className}) {
 
-    const [showMenu, setShowMenu] = useState(false);
+    const [showMenu, setShowMenu] = React.useState(false);
 
     function toggle() {
         setShowMenu(prevShowMenu => !prevShowMenu);
     }
 
     return (
-        <header style={{"--height": (user ? "250px" : "100px")}} className={styles.header + ' ' + className}>
+        <header style={{"--height": (user ? "250px" : "100px")}} className={`${styles.header} fixed w-full top-0`}>
             <Link className='sm:ml-[8%]' href={'/'} >CSE Bootcamp 2.0</Link>
             <div className='sm:hidden' onClick={toggle}>
                 <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">

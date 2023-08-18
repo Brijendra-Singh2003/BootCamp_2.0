@@ -8,17 +8,27 @@ export default async function Page({searchParams: user}) {
     redirect('/');
   }
   const id = user.email.split('@')[0];
-  let data = null;
+  let data = {
+    name: "",
+    instagram: "",
+    linkdin: "",
+    github: "",
+    about: "",
+    id: id
+  };
 
-  try {
-    const response = await fetch(`https://cse-bootcamp-auth-default-rtdb.asia-southeast1.firebasedatabase.app/20${id.substring(2, 4)}/${id}.json`, {cache:'no-store'});
-    data = await response.json();
-  } catch (err) {}
+  const response = await fetch(`${process.env.HOST}/api/db/get`, {
+    method:'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify(id)
+  })
+
+  data = await response.json();
 
   return (
     <>
       <ImageUpload name={id} />
-      <Form prevData={data} user={id} />
+      <Form prevData={data} user={id} host={process.env.HOST}/>
     </>
   )
 };

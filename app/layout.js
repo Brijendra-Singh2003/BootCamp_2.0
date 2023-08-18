@@ -19,7 +19,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar className={'fixed w-full top-0'} user={session?.user}/>
+        <Navbar user={session?.user}/>
         <main className=' mt-20'>
           {children}
         </main>

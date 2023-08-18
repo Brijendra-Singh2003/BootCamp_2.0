@@ -50,7 +50,7 @@
 }
 
 .hide {
-    animation: hide 300ms ease-out forwards;
+    animation: hide 100ms ease-out forwards;
 }
 
 .links a {

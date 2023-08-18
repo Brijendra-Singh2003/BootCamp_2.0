@@ -2,24 +2,21 @@ import Image from 'next/image';
 import { storage } from '@/Firebase';
 import { ref, getDownloadURL } from 'firebase/storage'
 
-export default async function StudentPage(props) {
+export default async function StudentPage() {
 
-    const studentsList = [];
+    const response = await fetch(`${process.env.HOST}/api/db/getall`,{
+        method: 'GET'
+    })
 
-    const response = await fetch(
-        'https://cse-bootcamp-auth-default-rtdb.asia-southeast1.firebasedatabase.app/'+props.params.year+'.json',
-        { next: { revalidate: 10 } }
-    );
+    const studentsList = await response.json();
+    const a = []
 
-    const data = await response.json();
-
-    for(const key in data) {
-        const curr = data[key];
-        const imgref = ref(storage, `images/${curr.id}`);
+    for(let i=0; i<studentsList.length; i++) {
+        const imgref = ref(storage, `images/${studentsList[i].id}`);
         let imgURL = false;
         try {imgURL = await getDownloadURL(imgref);}
         catch (err) {}
-        studentsList.push({...curr, image: imgURL || null});
+        studentsList[i] = {...studentsList[i], image: imgURL};
     }
 
     return <div>
@@ -31,11 +28,12 @@ export default async function StudentPage(props) {
                 <p>{student.about}</p>
                 <ul>
                     <li>{student.instagram}</li>
-                    <li>{student.linkdin}</li>
+                    <li>{student.linkedin}</li>
                     <li>{student.github}</li>
                 </ul>
             </div>
         })}
+        {/* {JSON.stringify(data)} */}
     </div>
 
 }
