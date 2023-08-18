@@ -4,7 +4,7 @@ import { useState } from "react"
 import classes from "./form.module.css"
 import { useRouter } from "next/navigation";
 
-export default function Form({prevData, host}) {
+export default function Form({prevData}) {
 
     const router = useRouter();
     const [data, setData] = useState(prevData);
@@ -16,7 +16,7 @@ export default function Form({prevData, host}) {
     }
 
     function updateData() {
-        fetch(`${host}/api/db/update`,{
+        fetch('https://csebootcamp2.varcel.app/api/db/update',{
             method: 'POST',
             headers: {'Content-Type' : 'application/json'},
             body: JSON.stringify(data)
