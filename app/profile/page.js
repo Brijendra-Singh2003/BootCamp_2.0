@@ -17,7 +17,7 @@ export default async function Page({searchParams: user}) {
     id: id
   };
 
-  const response = await fetch("https://csebootcamp2.vercel.app/api/db/get", {
+  const response = await fetch(`${process.env.HOST}/api/db/get`, {
     method:'POST',
     headers: {'Content-Type':'application/json'},
     body: JSON.stringify(id)

@@ -4,7 +4,7 @@ import { ref, getDownloadURL } from 'firebase/storage'
 
 export default async function StudentPage() {
 
-    const response = await fetch('https://csebootcamp2.vercel.app/api/db/getall',{
+    const response = await fetch(`${process.env.HOST}/api/db/getall`,{
         method: 'GET'
     })
 

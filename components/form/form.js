@@ -16,7 +16,7 @@ export default function Form({prevData, host}) {
     }
 
     function updateData() {
-        fetch(`https://csebootcamp2.vercel.app/api/db/update`,{
+        fetch(`${host}/api/db/update`,{
             method: 'POST',
             headers: {'Content-Type' : 'application/json'},
             body: JSON.stringify(data)
