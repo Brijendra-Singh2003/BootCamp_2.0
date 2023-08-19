@@ -17,7 +17,7 @@ export default function Navbar({ user }) {
     <header
       className={`${styles.header} w-full top-0`}
     >
-      {/* <div className="fixed h-full w-full top-0 right-0 overflow-hidden z-[-10]"><div id={styles.spotlight}></div></div> */}
+      <div className="fixed h-full w-full top-0 right-0 overflow-hidden z-[-1] pointer-events-none"><div id={styles.spotlight}></div></div>
       <Link className="sm:ml-[4%]" href={"/"}>
         <Image src={"/assets/logo.png"} height={140} width={140} />
       </Link>
@@ -44,8 +44,9 @@ export default function Navbar({ user }) {
           <Link href={"/about"}>About</Link>
           {user ? (
             <>
+              <Link href={"/students/2023"}>2023</Link>
               <Link href={"/students/2022"}>2022</Link>
-              <Link href={"/students/2021"}>2021</Link>
+              {/* <Link href={"/students/2021"}>2021</Link> */}
               <Link href={{ pathname: "/profile", query: user }}>Profile</Link>
               <a className=" cursor-pointer" onClick={()=>{signOut()}}>Signout</a>
             </>
@@ -60,7 +61,7 @@ export default function Navbar({ user }) {
           <>
             <Link href={"/students/2023"}>2023</Link>
             <Link href={"/students/2022"}>2022</Link>
-            <Link href={"/students/2021"}>2021</Link>
+            {/* <Link href={"/students/2021"}>2021</Link> */}
             <Link href={{ pathname: "/profile", query: user }}>Profile</Link>
             <Link href={"/societies"}>Societies</Link>
             <button className={styles.signout} onClick={()=>{signOut()}}>Signout</button>
