@@ -1,3 +1,4 @@
+import './page_vdo.css'
 import { options } from "./api/auth/[...nextauth]/options"
 import { getServerSession } from "next-auth"
 import Image from "next/image";
@@ -9,9 +10,9 @@ export default async function Home() {
 
   return <>
     <h1>
-    <div className="video_animation w-full flex align-middle justify-center overflow-hidden">
+    <div className="video_animation">
       <video
-        className="w-full h-full object-cover"
+        className="vid"
           id="vid"
           preload="false"
           muted
