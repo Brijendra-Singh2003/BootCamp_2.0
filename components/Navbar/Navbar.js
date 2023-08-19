@@ -16,7 +16,7 @@ export default function Navbar({ user, className }) {
       style={{ "--height": user ? "250px" : "100px" }}
       className={`${styles.header} w-full top-0`}
     >
-      <div id={styles.spotlight}></div>
+      <div className="fixed h-full w-full top-0 left-0 overflow-hidden z-[-10]"><div id={styles.spotlight}></div></div>
       <Link className="sm:ml-[4%]" href={"/"}>
         <Image src={"/assets/logo.png"} height={140} width={140} />
       </Link>
