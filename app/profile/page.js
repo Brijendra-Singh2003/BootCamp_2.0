@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 export default async function Page({ searchParams: user }) {
-  if (!user.email) {
+  if (!user) {
     redirect("/api/auth/signin");
   }
   const id = user.email.split("@")[0];
