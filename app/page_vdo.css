@@ -1,0 +1,20 @@
+.video_animation {
+    position: relative;
+    top: 35vh;
+    left: 50vw;
+    z-index: 1;
+    width: 100vw;
+    height: 100em;
+    -webkit-mask-image: radial-gradient(50% 50% at 50% 50%, #fff 60.94%, transparent 100%);
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: .75s cubic-bezier(.6, .6, 0, 1) opacity;
+    pointer-events: none;
+}
+.vid {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0em;
+    left: 0em;
+}

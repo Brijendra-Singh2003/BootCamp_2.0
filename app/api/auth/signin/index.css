@@ -199,7 +199,7 @@
 
 #cseimg {
     position: relative;
-    right: 12%;
+    right: 8%;
     height: 36%;
     object-fit: cover;
     width: 100%;
@@ -208,7 +208,7 @@
 #cseimg2 {
     position: relative;
     top: -4%;
-    left: 12%;
+    left: -2%;
     width: 100%;
     height: 20%;
     object-fit: cover;
