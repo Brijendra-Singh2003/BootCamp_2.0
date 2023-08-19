@@ -2,28 +2,36 @@ import Image from 'next/image';
 import { storage } from '@/Firebase';
 import { ref, getDownloadURL } from 'firebase/storage'
 import classes from "../students.module.css"
-import StudentCard from '@/components/studentCard/studentCard';
 
 export default async function StudentPage() {
 
-    const response = await fetch(`${process.env.HOST}/api/db/getall`,{
-        method: 'GET'
-    })
+    let studentsList = [];
+    let err = false;
 
-    const studentsList = await response.json();
-
-    for(let i=0; i<studentsList.length; i++) {
-        const imgref = ref(storage, `images/${studentsList[i].id}`);
-        let imgURL = false;
-        try {imgURL = await getDownloadURL(imgref);}
-        catch (err) {}
-        studentsList[i] = {...studentsList[i], image: imgURL};
+    try {
+        const response = await fetch(`${process.env.HOST}/api/db/getall`,{ method: 'GET' })
+        studentsList = await response.json();
+    } catch (error) {
+        err = error.message;
     }
+
+    // for(let i=0; i<studentsList.length; i++) {
+    //     const imgref = ref(storage, `images/${studentsList[i].id}`);
+    //     let imgURL = false;
+    //     try {imgURL = await getDownloadURL(imgref);}
+    //     catch (err) {}
+    //     studentsList[i] = {...studentsList[i], image: imgURL};
+    // }
 
     return (
         <div className='flex flex-wrap gap-5'>
-            {studentsList.map( student => {
-                return <StudentCard {...student} />
+            {err || studentsList.map( student => {
+                return <ul key={student.id}>
+                    <li>{student.name}</li>
+                    <li>{student.location}</li>
+                    <li>{student.about}</li>
+                    <br />
+                </ul>
             })}
         </div>
     )
