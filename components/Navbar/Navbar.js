@@ -17,7 +17,7 @@ export default function Navbar({ user }) {
     <header
       className={`${styles.header} w-full top-0`}
     >
-      <div className="fixed h-[20em] w-[20em] top-0 right-0 overflow-hidden z-[-10]"><div id={styles.spotlight}></div></div>
+      <div className="fixed h-full w-full top-0 right-0 overflow-hidden z-[-10]"><div id={styles.spotlight}></div></div>
       <Link className="sm:ml-[4%]" href={"/"}>
         <Image src={"/assets/logo.png"} height={140} width={140} />
       </Link>
