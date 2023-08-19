@@ -17,8 +17,8 @@ export default function Navbar({ user, className }) {
       className={`${styles.header} w-full top-0`}
     >
       <div id={styles.spotlight}></div>
-      <Link className="sm:ml-[8%]" href={"/"}>
-        <Image src={"/assets/logo.png"} height={100} width={100} />
+      <Link className="sm:ml-[4%]" href={"/"}>
+        <Image src={"/assets/logo.png"} height={140} width={140} />
       </Link>
       <div className="sm:hidden" onClick={toggle}>
         <svg
