@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 
 export const metadata = {
   title: "Profile - CSE Bootcamp 2.0",
-  description: "created with ❤️ by Brijendra Singh",
+  description: "",
 };
 
 export default async function Page({ searchParams: user }) {
