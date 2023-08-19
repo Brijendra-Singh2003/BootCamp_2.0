@@ -7,7 +7,7 @@ function Loading() {
             mt-[40vh]
             h-16 w-16
             border-8
-            border-[rgb(150,150,150)]
+            border-[rgb(20,0,70)]
             border-r-transparent
             animate-spin
             rounded-[50%]" />

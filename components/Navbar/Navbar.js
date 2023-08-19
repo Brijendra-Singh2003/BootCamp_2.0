@@ -21,7 +21,7 @@ export default function Navbar({ user, className }) {
       </Link>
       <div className="sm:hidden" onClick={toggle}>
         <svg
-          className="w-6 h-6 text-gray-800 dark:text-white m-3"
+          className="w-6 h-6 text-gray-800 dark:text-white m-3 scale-125"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -44,8 +44,8 @@ export default function Navbar({ user, className }) {
             <>
               <Link href={"/students/2022"}>2022</Link>
               <Link href={"/students/2021"}>2021</Link>
-              <Link href={"/api/auth/signout"}>Signout</Link>
               <Link href={{ pathname: "/profile", query: user }}>Profile</Link>
+              <Link href={"/api/auth/signout"}>Signout</Link>
             </>
           ) : (
             <Link href={"/api/auth/signin/google"}>Login</Link>
@@ -58,8 +58,8 @@ export default function Navbar({ user, className }) {
           <>
             <Link href={"/students/2022"}>2022</Link>
             <Link href={"/students/2021"}>2021</Link>
-            <Link href={"/api/auth/signout"}>Signout</Link>
             <Link href={{ pathname: "/profile", query: user }}>Profile</Link>
+            <button className={styles.signout}><Link href={"/api/auth/signout"}>Signout</Link></button>
           </>
         ) : (
           <Link href={"/api/auth/signin/google"}>Login</Link>
