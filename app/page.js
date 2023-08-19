@@ -9,7 +9,7 @@ export default async function Home() {
 
   return <>
     <h1>
-    <div className="video_animation">
+    {/* <div className="video_animation">
                 <video
                     id="vid"
                     preload="false"
@@ -19,7 +19,7 @@ export default async function Home() {
                     autoPlay
                     src="/assets/animation.webm"
                 ></video>
-            </div>
+            </div> */}
     </h1>
   </>
 
