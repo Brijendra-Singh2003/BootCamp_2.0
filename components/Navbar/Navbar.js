@@ -60,10 +60,14 @@ export default function Navbar({ user, className }) {
             <Link href={"/students/2022"}>2022</Link>
             <Link href={"/students/2021"}>2021</Link>
             <Link href={{ pathname: "/profile", query: user }}>Profile</Link>
+            <Link href={"/societies"}>Societies</Link>
             <button className={styles.signout}><Link href={"/api/auth/signout"}>Signout</Link></button>
           </>
         ) : (
+          <>
+          <Link href={"/societies"}>Societies</Link>
           <Link href={"/api/auth/signin"}>Login</Link>
+          </>
         )}
       </div>
     </header>
