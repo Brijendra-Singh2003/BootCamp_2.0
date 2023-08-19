@@ -1,4 +1,3 @@
-import Alert from "@/components/alert/Alert";
 import Form from "@/components/form/form";
 import ImageUpload from "@/functions/ImageUpload";
 import { redirect } from "next/navigation";
@@ -23,7 +22,7 @@ export default async function Page({ searchParams: user }) {
   };
 
   const loadTimer = setTimeout(() => {
-    return <Alert>unable to connect to the server. Please try again later</Alert>;
+    return <h1>unable to connect to the server. Please try again later</h1>;
   }, 5000);
 
   try {
@@ -36,7 +35,7 @@ export default async function Page({ searchParams: user }) {
     data = await response.json();
     clearTimeout(loadTimer);
   } catch (err) {
-    return <Alert>Something went wrong</Alert>
+    return <h1>Something went wrong</h1>
   }
 
   return (
