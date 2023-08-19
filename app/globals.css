@@ -29,7 +29,7 @@ input:focus{
 }
 
 body {
-  background-color: var(--background-start-rgb);
+  background-image: linear-gradient(var(--background-start-rgb), var(--background-end-rgb));
   text-align: center;
 }
 

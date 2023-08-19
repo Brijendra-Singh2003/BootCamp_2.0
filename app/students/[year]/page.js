@@ -24,7 +24,7 @@ export default async function StudentPage() {
     // }
 
     return (
-        <div className='flex flex-wrap gap-5'>
+        <div className=''>
             {err || studentsList.map( student => {
                 return <ul key={student.id}>
                     <li>{student.name}</li>

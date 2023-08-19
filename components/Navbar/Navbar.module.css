@@ -4,17 +4,39 @@
     --background-end-rgb: rgb(0, 0, 0);
 }
 
+#spotlight {
+    background-color: rgb(122, 59, 173);
+    position: absolute;
+    border-radius: 15em;
+    top: -40svh;
+    width: max(100vw, 500px);
+    height: max(100vh, 350px);
+    background: radial-gradient(rgb(142, 91, 199, 0.44), rgb(42, 27, 58, 0));
+    filter: blur(2em);
+    z-index: -1;
+    animation: move 120s ease-in-out infinite;
+}
+
+@keyframes move {
+    0%, 100% {
+        left: -70vw;
+        transform:rotate(0deg);
+    }
+    50% {
+        left: 70vw;
+        transform:rotate(180deg);
+    }
+}
+
 .header{
     color: var(--foreground-rgb);
-    height: 70px;
-    /* background-color: var(--background-end-rgb); */
-    background-color: rgb(21, 0, 70);
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
     z-index: 1;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.401);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
 
 .signout {

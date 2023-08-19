@@ -1,7 +1,8 @@
 .toast {
     position: absolute;
-    top: 80px;
-    width: 100svw;
+    bottom: 120px;
+    width: 80svw;
+    margin: 0 10svw;
     box-sizing: border-box;
     background-color: red;
     display: flex;
@@ -11,6 +12,7 @@
     animation: show 3s ease-out forwards;
     overflow: hidden;
     height: 60px;
+    border-radius: 30px;
 }
 
 @keyframes show {

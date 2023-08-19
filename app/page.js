@@ -8,7 +8,19 @@ export default async function Home() {
   const user = session?.user || null;
 
   return <>
-    <h1>Home page</h1>
+    <h1>
+    <div className="video_animation">
+                <video
+                    id="vid"
+                    preload="false"
+                    muted
+                    playsInline
+                    loop
+                    autoPlay
+                    src="/assets/animation.webm"
+                ></video>
+            </div>
+    </h1>
   </>
 
 }
