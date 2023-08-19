@@ -9,17 +9,18 @@ export default async function Home() {
 
   return <>
     <h1>
-    {/* <div className="video_animation">
-                <video
-                    id="vid"
-                    preload="false"
-                    muted
-                    playsInline
-                    loop
-                    autoPlay
-                    src="/assets/animation.webm"
-                ></video>
-            </div> */}
+    <div className="video_animation w-full flex align-middle justify-center overflow-hidden">
+      <video
+        className="w-full h-full object-cover"
+          id="vid"
+          preload="false"
+          muted
+          playsInline
+          loop
+          autoPlay
+          src="/assets/animation.webm"
+        ></video>
+      </div>
     </h1>
   </>
 

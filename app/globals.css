@@ -29,8 +29,9 @@ input:focus{
 }
 
 body {
-  background-image: linear-gradient(var(--background-start-rgb), var(--background-end-rgb));
+  background-image: radial-gradient(var(--background-end-rgb), var(--background-start-rgb));
   text-align: center;
+  overflow: scroll;
 }
 
 label, h1, p, li{
@@ -52,4 +53,8 @@ button:hover {
 
 .image-input *{
   width: 100%;
+}
+
+.video_animation {
+  height: calc(100svh - 70px);
 }
