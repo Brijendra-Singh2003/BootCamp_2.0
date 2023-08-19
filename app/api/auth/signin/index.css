@@ -1,29 +1,33 @@
 .container {
     position: relative;
+    top: -100px;
     margin: 0 auto;
-    /* padding: 0 10vw; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     /* background-color: red; */
     flex-wrap: wrap-reverse;
-    gap: min(100px, 13vw);
+    overflow: hidden;
 }
 
 .animation {
     position: relative;
-    width: min(400px, 50svw);
-    height: min(400px, 50svw);
     display: inline-block;
     /* background-color: #7200ff; */
     margin: 0 auto;
+    width: min(500px, 100svw);
+    height: min(400px, 75svw);
+    padding: min(100px, 25svw) min(100px, 25svw) 0 min(100px, 25svw);
+    overflow: hidden;
 }
 
 .left {
     /* background-color: #FC0; */
-    width: min(400px, 50svw);
-    height: min(400px, 50svw);
     margin: 0 auto;
+    width: min(400px, 100svw);
+    height: min(400px, 75svw);
+    padding: min(100px, 25svw) min(100px, 25svw) 0 min(100px, 25svw);
+    overflow: hidden;
 }
 
 #img1 {
@@ -215,7 +219,7 @@
     color: white;
     padding: 0 0 4% 0;
     text-align: center;
-    font-size: min(28.8px, 3.6vw);
+    font-size: min(14.4px, 3.6vw);
 }
 
 .innerleft {
