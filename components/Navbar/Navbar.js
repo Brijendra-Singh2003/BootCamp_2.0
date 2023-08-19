@@ -3,17 +3,18 @@ import React from "react";
 import styles from "./Navbar.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { signOut } from 'next-auth/react'
 
-export default function Navbar({ user, className }) {
+export default function Navbar({ user }) {
+
   const [showMenu, setShowMenu] = React.useState(false);
 
   function toggle() {
-    setShowMenu((prevShowMenu) => !prevShowMenu);
+    setShowMenu(prevShowMenu => !prevShowMenu);
   }
 
   return (
     <header
-      style={{ "--height": user ? "250px" : "100px" }}
       className={`${styles.header} w-full top-0`}
     >
       <div className="fixed h-full w-full top-0 left-0 overflow-hidden z-[-10]"><div id={styles.spotlight}></div></div>
@@ -46,7 +47,7 @@ export default function Navbar({ user, className }) {
               <Link href={"/students/2022"}>2022</Link>
               <Link href={"/students/2021"}>2021</Link>
               <Link href={{ pathname: "/profile", query: user }}>Profile</Link>
-              <Link href={"/api/auth/signout"}>Signout</Link>
+              <a className=" cursor-pointer" onClick={()=>{signOut()}}>Signout</a>
             </>
           ) : (
             <Link href={"/api/auth/signin"}>Login</Link>
@@ -57,16 +58,17 @@ export default function Navbar({ user, className }) {
         <Link href={"/about"}>About</Link>
         {user ? (
           <>
+            <Link href={"/students/2023"}>2023</Link>
             <Link href={"/students/2022"}>2022</Link>
             <Link href={"/students/2021"}>2021</Link>
             <Link href={{ pathname: "/profile", query: user }}>Profile</Link>
             <Link href={"/societies"}>Societies</Link>
-            <button className={styles.signout}><Link href={"/api/auth/signout"}>Signout</Link></button>
+            <button className={styles.signout} onClick={()=>{signOut()}}>Signout</button>
           </>
         ) : (
           <>
-          <Link href={"/societies"}>Societies</Link>
-          <Link href={"/api/auth/signin"}>Login</Link>
+            <Link href={"/societies"}>Societies</Link>
+            <Link href={"/api/auth/signin"}>Login</Link>
           </>
         )}
       </div>

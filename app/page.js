@@ -27,4 +27,9 @@ export default async function Home() {
 
 }
 
+export const metadata = {
+  title: "CSE Bootcamp 2.0 - Home",
+  description: "A palce to clill",
+};
+
 // {"name":"Brijendra Singh","email":"b122041@iiit-bh.ac.in","image":"https://lh3.googleusercontent.com/a/AAcHTteV-zE6NIOj8A5zk2Wo_aglZgQzO5m5qLr_n9-O6smA=s96-c"}

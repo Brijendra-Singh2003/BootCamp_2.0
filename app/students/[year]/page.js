@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { storage } from '@/Firebase';
 import { ref, getDownloadURL } from 'firebase/storage'
-import classes from "../students.module.css"
+import classes from "./students.module.css"
 
 export default async function StudentPage() {
 
@@ -38,4 +38,8 @@ export default async function StudentPage() {
 
 }
 
+export const metadata = {
+    title: "Students - CSE Bootcamp 2.0",
+    description: "About your peers",
+};
 // {"about":"my about is empty","github":"birju ka github","id":"041","instagram":"birju ka insta","linkdin":"birju ka linkdin","name":"birju"}

@@ -68,7 +68,8 @@
     flex-direction: column;
     align-items: baseline;
     justify-content: space-between;
-    background-color: rgb(21, 0, 70);
+    background-color: rgba(18, 0, 60, 0.4);
+    box-shadow: 0 0 25px rgba(17, 0, 58, 0.4);
     border-radius: 10px;
     overflow: hidden;
     z-index: 10;

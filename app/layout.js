@@ -6,11 +6,6 @@ import { getServerSession } from "next-auth"
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: "Get In Touch",
-  description: "created with ❤️ by Brijendra Singh",
-};
-
 export default async function RootLayout({ children }) {
 
   let session = false;
