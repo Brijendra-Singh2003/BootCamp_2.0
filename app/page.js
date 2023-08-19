@@ -9,11 +9,6 @@ export default async function Home() {
 
   return <>
     <h1>Home page</h1>
-    {user && <>
-      <h1>welcome {user.name}</h1>
-      <Image className="rounded-[50%] mx-auto my-4" src={user.image} height={100} width={100} alt="display image" />
-      <p>{user.email}</p>
-    </>}
   </>
 
 }

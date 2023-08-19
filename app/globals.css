@@ -3,18 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: rgb(0, 0, 0);
-  --background-start-rgb: rgb(214, 219, 220);
-  --background-end-rgb: rgb(255, 255, 255);
+  --foreground-rgb: rgb(255, 255, 255);
+  --background-start-rgb: rgb(6, 0, 20);
+  --background-end-rgb: rgb(21, 0, 70);
   height: 100svh;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: rgb(255, 255, 255);
-    --background-start-rgb: rgb(34, 34, 34);
-    --background-end-rgb: rgb(0, 0, 0);
-  }
 }
 
 input, button {

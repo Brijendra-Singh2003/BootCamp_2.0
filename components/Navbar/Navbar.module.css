@@ -1,26 +1,20 @@
 .header {
-    --foreground-rgb: rgb(0, 0, 0);
-    --background-start-rgb: rgb(214, 219, 220);
-    --background-end-rgb: rgb(255, 255, 255);
-  }
-  
-  @media (prefers-color-scheme: dark) {
-    .header {
-      --foreground-rgb: rgb(255, 255, 255);
-      --background-start-rgb: rgb(34, 34, 34);
-      --background-end-rgb: rgb(0, 0, 0);
-    }
-  }
+    --foreground-rgb: rgb(255, 255, 255);
+    --background-start-rgb: rgb(34, 34, 34);
+    --background-end-rgb: rgb(0, 0, 0);
+}
 
 .header{
     color: var(--foreground-rgb);
-    height: 64px;
-    background-color: var(--background-end-rgb);
+    height: 70px;
+    /* background-color: var(--background-end-rgb); */
+    background-color: rgb(21, 0, 70);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
     z-index: 1;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.401);
 }
 
 .backdrop {
@@ -34,24 +28,32 @@
 
 .links{
     position: absolute;
-    top: 64px;
-    right: 0;
+    top: 75px;
+    right: 5px;
     display: flex;
     flex-direction: column;
     align-items: baseline;
     justify-content: space-evenly;
-    background-color: var(--background-end-rgb);
+    background-color: rgb(21, 0, 70);
     border-radius: 10px;
     overflow: hidden;
     z-index: 10;
 }
 
+.navLink a {
+    font-size: larger;
+}
+
+.navLink a:hover {
+    color: rgb(255, 149, 0);
+}
+
 .show {
-    animation: show 300ms ease-out forwards;
+    animation: show 2000ms ease-out forwards;
 }
 
 .hide {
-    animation: hide 100ms ease-out forwards;
+    animation: hide 200ms ease-out forwards;
 }
 
 .links a {
@@ -63,18 +65,20 @@
 
 @keyframes show {
     0% {
-        height: 0;
+        clip-path: circle(0 at 120px 0);
     }
     100% {
-        height: var(--height);
+        clip-path: circle(max(200svh, 200svw) at 120px 0);
     }
 }
 
 @keyframes hide {
     0% {
-        height: var(--height);
+        clip-path: circle(max(200%, 200%) at 120px 0);
+        /* height: var(--height); */
     }
     100% {
-        height: 0;
+        clip-path: circle(0 at 120px 0);
+        /* height: 0; */
     }
 }
