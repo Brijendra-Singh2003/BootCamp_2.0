@@ -1,0 +1,13 @@
+.left-card, .right-card {
+    margin: 50px 100px;
+    height: min(60svw, 400px);
+    width: min(60svw, 400px);
+}
+
+.left-card {
+    margin-right: auto;
+}
+
+.right-card {
+    margin-left: auto;
+}

@@ -41,17 +41,20 @@ export default function Navbar({ user }) {
           className={`${styles.links} ${showMenu ? styles.show : styles.hide}`}
         >
           <Link href={"/"}>Home</Link>
-          <Link href={"/about"}>About</Link>
           {user ? (
             <>
               <Link href={"/students/2023"}>2023</Link>
               <Link href={"/students/2022"}>2022</Link>
-              {/* <Link href={"/students/2021"}>2021</Link> */}
+              <Link href={"/about"}>About</Link>
+              <Link href={"/societies"}>Societies</Link>
               <Link href={{ pathname: "/profile", query: user }}>Profile</Link>
               <a className=" cursor-pointer" onClick={()=>{signOut()}}>Signout</a>
             </>
           ) : (
-            <Link href={"/api/auth/signin"}>Login</Link>
+            <>
+              <Link href={"/about"}>About</Link>
+              <Link href={"/api/auth/signin"}>Login</Link>
+            </>
           )}
         </div>
       </div>
@@ -61,10 +64,9 @@ export default function Navbar({ user }) {
           <>
             <Link href={"/students/2023"}>2023</Link>
             <Link href={"/students/2022"}>2022</Link>
-            {/* <Link href={"/students/2021"}>2021</Link> */}
-            <Link href={{ pathname: "/profile", query: user }}>Profile</Link>
             <Link href={"/societies"}>Societies</Link>
             <Link href={"/about"}>About</Link>
+            <Link href={{ pathname: "/profile", query: user }}>Profile</Link>
             <button className={styles.signout} onClick={()=>{signOut()}}>Signout</button>
           </>
         ) : (

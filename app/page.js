@@ -1,26 +1,34 @@
 import "./page_vdo.css";
 import { options } from "./api/auth/[...nextauth]/options";
 import { getServerSession } from "next-auth";
+import Lottie from "@/components/animations/Lottie";
 
 export default async function Home() {
   const session = await getServerSession(options);
   const user = session?.user || null;
 
   return (
-      <main>
-        <div className="video_animation">
-          <video
-            className="vid"
-            id="vid"
-            preload="false"
-            muted
-            playsInline
-            loop
-            autoPlay
-            src="/assets/animation.webm"
-          ></video>
-        </div>
-      </main>
+    <main>
+
+      <Lottie
+        className='h-[80%] w-[80%] m-auto'
+        src="/animations/helloworld.json"
+      />
+
+      <div className="video_animation">
+
+        <video
+          className="vid"
+          id="vid"
+          preload="false"
+          muted
+          playsInline
+          loop
+          autoPlay
+          src="/assets/animation.webm"
+        ></video>
+      </div>
+    </main>
   );
 }
 
@@ -47,5 +55,3 @@ export const metadata = {
     },
   ],
 };
-
-// {"name":"Brijendra Singh","email":"b122041@iiit-bh.ac.in","image":"https://lh3.googleusercontent.com/a/AAcHTteV-zE6NIOj8A5zk2Wo_aglZgQzO5m5qLr_n9-O6smA=s96-c"}
