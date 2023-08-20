@@ -1,16 +1,15 @@
 import React from 'react'
+import "./Loading.css"
 
 function Loading() {
     return (
-        <div className="
-            mx-auto
-            mt-[40vh]
-            h-16 w-16
-            border-8
-            border-[rgb(241,241,241)]
-            border-r-transparent
-            animate-spin
-            rounded-[50%]" />
+            <>
+            <div class="circle"></div>
+            <div class="circle-small"></div>
+            <div class="circle-big"></div>
+            <div class="circle-inner-inner"></div>
+            <div class="circle-inner"></div>
+            </>           
     )
 }
 
