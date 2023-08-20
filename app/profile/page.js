@@ -1,6 +1,6 @@
 import Retry from "@/components/Retry";
 import Form from "@/components/form/form";
-import ImageUpload from "@/functions/ImageUpload";
+import ImageUpload from "@/components/profileImage/ImageUpload";
 import { redirect } from "next/navigation";
 
 export const metadata = {
@@ -32,13 +32,13 @@ export default async function Page({ searchParams: user }) {
       throw new Error('connection timed out');
     }, 5000);
 
-    const response = await fetch(`${process.env.HOST}/api/db?id=${id}`);
+    const response = await fetch(`${process.env.HOST}/api/db?id=${id}`, {cache: 'no-store'});
 
     clearTimeout(loadTimeout);
     data = await response.json() || data;
   
   } catch (err) {
-    return <div><h1>{err.message}</h1><Retry>Retry</Retry></div>
+    return <div className=" mt-52"><h1>Error: {err.message}</h1><Retry>Retry</Retry></div>
   }
 
   return (
