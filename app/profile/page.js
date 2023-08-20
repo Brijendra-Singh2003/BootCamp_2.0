@@ -14,11 +14,14 @@ export default async function Page({ searchParams: user }) {
   }
   const id = user.email.split("@")[0];
   let data = {
-    name: "",
-    instagram: "",
-    linkdin: "",
-    github: "",
-    about: "",
+    name: '',
+    about: '',
+    state: '',
+    city: '',
+    instagram: '',
+    github: '',
+    linkedin: '',
+    image: '',
     id: id,
     year: Number.parseInt(id.at(3))
   };
@@ -29,23 +32,19 @@ export default async function Page({ searchParams: user }) {
       throw new Error('connection timed out');
     }, 5000);
 
-    const response = await fetch(`${process.env.HOST}/api/db/get`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(id),
-    });
+    const response = await fetch(`${process.env.HOST}/api/db?id=${id}`);
 
     clearTimeout(loadTimeout);
-    data = await response.json();
+    data = await response.json() || data;
   
   } catch (err) {
     return <div><h1>{err.message}</h1><Retry>Retry</Retry></div>
   }
 
   return (
-    <>
-      <ImageUpload name={id} />
+    <div className=" relative top-10">
+      <ImageUpload name={id} host={process.env.HOST} />
       <Form prevData={data} user={id} host={process.env.HOST} />
-    </>
+    </div>
   );
 }

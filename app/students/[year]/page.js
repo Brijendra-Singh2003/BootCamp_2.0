@@ -29,7 +29,8 @@ export default async function StudentPage() {
                 return <ul key={student.id}>
                     <li>name: {student.name}</li>
                     <li>id: {student.id}</li>
-                    <li>location: {student.location}</li>
+                    <li>State: {student.state}</li>
+                    <li>City: {student.city}</li>
                     <li>About: {student.about}</li>
                     <li>year: {student.year}</li>
                     <br />

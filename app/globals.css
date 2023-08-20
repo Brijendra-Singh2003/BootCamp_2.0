@@ -9,7 +9,7 @@
   height: 100svh;
 }
 
-input, button {
+input, button, .input {
   background-color: var(--background-end-rgb);
   border: 1px solid gray;
   margin: 5px;
@@ -23,7 +23,7 @@ input, button {
   background-color: var(--background-end-rgb);
 }
 
-input:focus{
+input:focus , .input:focus{
   outline: none;
   border-color: var(--foreground-rgb);
 }
@@ -55,3 +55,6 @@ button:hover {
   width: 100%;
 }
 
+.submitButton:disabled {
+  color: gray;
+}
