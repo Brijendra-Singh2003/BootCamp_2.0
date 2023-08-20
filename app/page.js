@@ -8,6 +8,7 @@ export default async function Home() {
   const user = session?.user || null;
 
   return <>
+    
     <h1>
     <div className="video_animation">
       <video
