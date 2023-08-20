@@ -19,6 +19,7 @@ export default async function StudentPage() {
         <div className=''>
             {err || studentsList.map( student => {
                 return <ul key={student.id}>
+                    <Image src={student.image} height={300} width={300} className=' m-auto' />
                     <li>name: {student.name}</li>
                     <li>id: {student.id}</li>
                     <li>State: {student.state}</li>

@@ -27,23 +27,16 @@ export default async function Page({ searchParams: user }) {
   };
 
   try {
-
-    const loadTimeout = setTimeout(()=>{
-      throw new Error('connection timed out');
-    }, 5000);
-
-    const response = await fetch(`${process.env.HOST}/api/db?id=${id}`, {cache: 'no-store'});
-
-    clearTimeout(loadTimeout);
+    const response = await fetch(`${process.env.HOST}/api/db?id=${id}`, { cache: 'no-store' });
     data = await response.json() || data;
-  
   } catch (err) {
-    return <div className=" mt-52"><h1>Error: {err.message}</h1><Retry>Retry</Retry></div>
+    console.log(err);
+    return <div className=" mt-52"><h1>Something went wrong</h1><Retry>Retry</Retry></div>
   }
 
   return (
     <div className=" relative top-10">
-      <ImageUpload name={id} host={process.env.HOST} />
+      <ImageUpload name={id} src={data.image} host={process.env.HOST} />
       <Form prevData={data} user={id} host={process.env.HOST} />
     </div>
   );
