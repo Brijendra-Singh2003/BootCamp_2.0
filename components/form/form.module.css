@@ -6,7 +6,7 @@
     grid-template-columns: 33% 33% 33%;
 }
 
-.form input {
+.form input, .input {
     grid-column: 2 / 4;
 }
 
@@ -18,8 +18,4 @@
 
 .form button{
     width: 100%;
-}
-
-.submitButton:disabled {
-    color: gray;
 }

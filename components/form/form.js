@@ -10,16 +10,15 @@ export default function Form({ prevData, host }) {
   const [data, setData] = useState(prevData);
   const [disabled, setDisabled] = useState(false);
 
-  console.log(prevData);
-
   function handleChange({ target: { value, name } }) {
     setData((prevData) => {
       return { ...prevData, [name]: value };
     });
+    console.log(data);
   }
 
   function updateData() {
-    fetch (`${host}/api/db/update`,
+    fetch (`${host}/api/db`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -30,7 +29,6 @@ export default function Form({ prevData, host }) {
       setDisabled(false);
       if (response.ok) {
         alert("updated successfully");
-        router.push('/');
       } else {
         alert(response.status);
       }
@@ -48,7 +46,6 @@ export default function Form({ prevData, host }) {
         }
       }
       alert("updated successfully");
-      router.push('/');
       setDisabled(false);
     }
     else {
@@ -58,9 +55,9 @@ export default function Form({ prevData, host }) {
 
   return (
     <form className={classes.form} onSubmit={checkData}>
-      <label htmlFor="name">
-        <span>Name: </span>
-      </label>
+
+      <label htmlFor="name"><span>Name: </span></label>
+
       <input
         required={true}
         id="name"
@@ -68,83 +65,85 @@ export default function Form({ prevData, host }) {
         onChange={handleChange}
         placeholder="name..."
         name="name"
-        value={data.name}
-      />
-      <label htmlFor="location">
-        <span>Location: </span>
-      </label>
+        value={data.name} />
+
+      <label htmlFor="state"><span>State: </span></label>
+
       <input
         required={true}
-        id="location"
+        id="state"
         type="text"
         onChange={handleChange}
-        placeholder="location..."
-        name="location"
-        value={data.location}
-      />
-      <label htmlFor="insta">
-        <span>Instagram: </span>
-      </label>
+        placeholder="State..."
+        name="state"
+        value={data.state} />
+
+      <label htmlFor="city"><span>City: </span></label>
+
       <input
         required={true}
+        id="city"
+        type="text"
+        onChange={handleChange}
+        placeholder="City..."
+        name="city"
+        value={data.city} />
+
+      <label htmlFor="insta"><span>Instagram: </span></label>
+
+      <input
         id="insta"
         type="text"
         onChange={handleChange}
         placeholder="instagram..."
         name="instagram"
-        value={data.instagram}
-      />
-      <label htmlFor="linkedin">
-        <span>Linkedin: </span>
-      </label>
+        value={data.instagram} />
+
+      <label htmlFor="linkedin"><span>Linkedin: </span></label>
+
       <input
-        required={true}
         id="linkedin"
         type="text"
         onChange={handleChange}
         placeholder="linkdin..."
         name="linkedin"
-        value={data.linkedin}
-      />
-      <label htmlFor="github">
-        <span>Github: </span>
-      </label>
+        value={data.linkedin} />
+
+      <label htmlFor="github"><span>Github: </span></label>
+
       <input
-        required={true}
         id="github"
         type="text"
         onChange={handleChange}
         placeholder="github..."
         name="github"
-        value={data.github}
-      />
-      <label htmlFor="about">
-        <span>About: </span>
-      </label>
-      <input
-        required={true}
+        value={data.github} />
+
+      <label htmlFor="about"><span>About: </span></label>
+
+      <textarea
+        className={classes.input+' input'}
         id="about"
-        type="text"
-        onChange={handleChange}
-        placeholder="about..."
         name="about"
-        value={data.about}
-      />
-      <button 
+        type="text"
+        rows={10}
+        onChange={handleChange}
+        maxLength="400"
+        placeholder="max 400 chars"
+        defaultValue={data.about} />
+
+      <button
         disabled={disabled}
-        className={"mt-3 col-start-1 text-lg submit-button " + classes.submitButton}
-      >
-        submit
-      </button>
+        className={"mt-3 col-start-1 text-lg submitButton"}
+        value='submit'
+      > submit </button>
+
       <button
         type="button"
         className="mt-3 col-start-3 text-lg cancel"
-        onClick={() => {
-          router.back();
-        }}
-      >
-        Cancel
-      </button>
+        onClick={() => router.back()}
+      > Cancel </button>
+
     </form>
   );
 }
