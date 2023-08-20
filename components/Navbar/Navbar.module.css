@@ -51,6 +51,13 @@
     border: 2px solid rgb(142, 4, 4);
 }
 
+.signout:hover {
+    text-shadow: #FC0 0.5px 0 10px;
+    border: 2px solid white;
+    cursor: pointer;
+    color: rgb(217, 238, 51);
+}
+
 .backdrop {
     top: 0;
     left:  0;
