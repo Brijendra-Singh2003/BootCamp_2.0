@@ -4,19 +4,6 @@
     --background-end-rgb: rgb(0, 0, 0);
 }
 
-#spotlight {
-    background-color: rgb(122, 59, 173);
-    position: absolute;
-    border-radius: 15em;
-    right: -10em;
-    top: -10em;
-    width: 30em;
-    height: 30em;
-    background: radial-gradient(rgb(142, 91, 199, 0.44), rgb(42, 27, 58, 0));
-    filter: blur(4em);
-    z-index: -10;
-}
-
 /* @keyframes move {
     0%, 100% {
         left: -70vw;
@@ -38,7 +25,6 @@
     justify-content: space-between;
     padding: 10px;
     z-index: 1;
-    /* box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); */
 }
 
 .signout {
@@ -73,9 +59,9 @@
     flex-direction: column;
     align-items: baseline;
     justify-content: space-between;
-    background-color: rgba(18, 0, 60, 0.4);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 0 25px rgba(17, 0, 58, 0.4);
+    box-shadow: 0 0 15px rgba(17, 0, 58, 0.4);
+    background-color: rgba(18, 0, 60, 0.6);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
     overflow: hidden;
     z-index: 20;
@@ -100,18 +86,18 @@
 }
 
 .show {
-    animation: show 200ms ease-out forwards;
+    animation: show 250ms ease-out forwards;
 }
 
 .hide {
-    animation: hide 200ms ease-out forwards;
+    animation: hide 150ms ease-out forwards;
 }
 
 .links a {
     padding: 10px 20px;
     width: 150px;
     text-align: left;
-    z-index: 10;
+    z-index: 20;
 }
 
 @keyframes show {
@@ -119,13 +105,13 @@
         clip-path: circle(0 at 120px 0);
     }
     100% {
-        clip-path: circle(200% at 120px 0);
+        clip-path: circle(140% at 120px 0);
     }
 }
 
 @keyframes hide {
     0% {
-        clip-path: circle(200% at 120px 0);
+        clip-path: circle(140% at 120px 0);
     }
     100% {
         clip-path: circle(0 at 120px 0);

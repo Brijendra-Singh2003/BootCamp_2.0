@@ -9,6 +9,19 @@
   height: 100svh;
 }
 
+#spotlight {
+  background-color: rgb(122, 59, 173);
+  position: absolute;
+  border-radius: 15em;
+  right: -10em;
+  top: -10em;
+  width: 30em;
+  height: 30em;
+  background: radial-gradient(rgb(142, 91, 199, 0.44), rgb(42, 27, 58, 0));
+  filter: blur(4em);
+  z-index: -10;
+}
+
 input, button, .input {
   background-color: var(--background-end-rgb);
   border: 1px solid gray;

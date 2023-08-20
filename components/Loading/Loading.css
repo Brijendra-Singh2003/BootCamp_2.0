@@ -3,7 +3,6 @@
     padding: 0;
 }
 .circle{
-    z-index: 14;
     width: 180px;
     height: 180px;
     border: 10px inset rgb(133,224,242);
@@ -21,7 +20,6 @@
 }
 
 .circle-small{
-    z-index: 14;
     width: 150px;
     height: 150px;
     border: 6px outset rgb(133,224,242);
@@ -39,7 +37,6 @@
 }
 
 .circle-big{
-    z-index: 14;
     width: 210px;
     height: 210px;
     border: 4px dotted rgb(133,224,242);
@@ -56,7 +53,6 @@
 }
 
 .circle-inner{
-    z-index: 14;
     width: 80px;
     height: 80px;
     background-color: rgb(133,224,242);
@@ -75,7 +71,6 @@
 }
 
 .circle-inner-inner{
-    z-index: 14;
     width: 100px;
     height: 100px;
     background-color: rgb(74,124,134);
@@ -91,7 +86,6 @@
     animation: pulse 1.5s infinite ease-in;
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
-
 
 /*==============ANIMATIONS=================*/
 

@@ -35,6 +35,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+      <div className="fixed h-full w-full top-0 right-0 overflow-hidden z-[-10] pointer-events-none"><div id="spotlight"></div></div>
         <Navbar user={session?.user}/>
         <main className=' mt-20'>
           {children}
