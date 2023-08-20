@@ -56,7 +56,6 @@ export default function Navbar({ user }) {
         </div>
       </div>
       <div className={styles.navLink}>
-        <Link href={"/about"}>About</Link>
         {user ? (
           <>
             <Link href={"/students/2023"}>2023</Link>
@@ -64,12 +63,15 @@ export default function Navbar({ user }) {
             {/* <Link href={"/students/2021"}>2021</Link> */}
             <Link href={{ pathname: "/profile", query: user }}>Profile</Link>
             <Link href={"/societies"}>Societies</Link>
+            <Link href={"/about"}>About</Link>
             <button className={styles.signout} onClick={()=>{signOut()}}>Signout</button>
           </>
         ) : (
           <>
             <Link href={"/societies"}>Societies</Link>
+            <Link href={"/about"}>About</Link>
             <Link href={"/api/auth/signin"}>Login</Link>
+
           </>
         )}
       </div>
