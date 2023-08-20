@@ -63,7 +63,7 @@ export default function Form({ prevData, host }) {
         id="name"
         type="text"
         onChange={handleChange}
-        placeholder="name..."
+        placeholder="Name..."
         name="name"
         value={data.name} />
 
@@ -95,7 +95,7 @@ export default function Form({ prevData, host }) {
         id="insta"
         type="text"
         onChange={handleChange}
-        placeholder="instagram..."
+        placeholder="https://www.instagram.com/"
         name="instagram"
         value={data.instagram} />
 
@@ -105,7 +105,7 @@ export default function Form({ prevData, host }) {
         id="linkedin"
         type="text"
         onChange={handleChange}
-        placeholder="linkdin..."
+        placeholder="https://www.linkedin.com/"
         name="linkedin"
         value={data.linkedin} />
 
@@ -115,7 +115,7 @@ export default function Form({ prevData, host }) {
         id="github"
         type="text"
         onChange={handleChange}
-        placeholder="github..."
+        placeholder="https://github.com/"
         name="github"
         value={data.github} />
 
