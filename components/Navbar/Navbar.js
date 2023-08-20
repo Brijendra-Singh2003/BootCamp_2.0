@@ -41,6 +41,7 @@ export default function Navbar({ user }) {
           className={`${styles.links} ${showMenu ? styles.show : styles.hide}`}
         >
           {showMenu && <div className={styles.backdrop}></div>}
+          <Link href={"/"}>Home</Link>
           <Link href={"/about"}>About</Link>
           {user ? (
             <>
@@ -56,7 +57,7 @@ export default function Navbar({ user }) {
         </div>
       </div>
       <div className={styles.navLink + ' hidden sm:flex'}>
-        <Link href={"/about"}>About</Link>
+        <Link href={"/"}>Home</Link>
         {user ? (
           <>
             <Link href={"/students/2023"}>2023</Link>
@@ -72,7 +73,6 @@ export default function Navbar({ user }) {
             <Link href={"/societies"}>Societies</Link>
             <Link href={"/about"}>About</Link>
             <Link href={"/api/auth/signin"}>Login</Link>
-
           </>
         )}
       </div>
