@@ -1,7 +1,6 @@
 import './page_vdo.css'
 import { options } from "./api/auth/[...nextauth]/options"
 import { getServerSession } from "next-auth"
-import Image from "next/image";
 
 export default async function Home() {
 
@@ -29,7 +28,7 @@ export default async function Home() {
 
 export const metadata = {
   title: "CSE Bootcamp 2.0 - Home",
-  description: "A palce to clill",
+  description: "A bootcamp for all CSE students of IIIT Bhubaneshwar",
   icons: [
     {
       rel: 'icon',

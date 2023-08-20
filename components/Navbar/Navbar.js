@@ -16,11 +16,12 @@ export default function Navbar({ user }) {
   return (
     <header
       className={`${styles.header} w-full top-0`}
-    >   {/*container ka pointer event none h kahi v le ja skte ho spotlight ko*/}
+    >
       <div className="fixed h-full w-full top-0 right-0 overflow-hidden z-[-10] pointer-events-none"><div id={styles.spotlight}></div></div>
       <Link className="sm:ml-[4%]" href={"https://www.iiit-bh.ac.in/"}>
         <Image src={"/assets/logo.png"} height={140} width={140} />
       </Link>
+      {showMenu && <div className={styles.backdrop} onClick={toggle}></div>}
       <div className={styles.mobileLink} onClick={toggle}>
         <svg
           className="w-6 h-6 text-gray-800 dark:text-white m-3 scale-125"
@@ -40,7 +41,6 @@ export default function Navbar({ user }) {
         <div
           className={`${styles.links} ${showMenu ? styles.show : styles.hide}`}
         >
-          {showMenu && <div className={styles.backdrop}></div>}
           <Link href={"/"}>Home</Link>
           <Link href={"/about"}>About</Link>
           {user ? (

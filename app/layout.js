@@ -30,8 +30,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default async function RootLayout({ children }) {
 
-  let session = false;
-  session = await getServerSession(options);
+  const session = await getServerSession(options);
 
   return (
     <html lang="en">
