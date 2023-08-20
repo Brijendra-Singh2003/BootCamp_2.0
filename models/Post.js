@@ -22,6 +22,7 @@ const PostSchema = new Schema(
         instagram: String,
         github: String,
         linkedin: String,
+        year: Number
     },
     { timestamps : true }
 )

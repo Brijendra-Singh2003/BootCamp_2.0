@@ -5,8 +5,12 @@ import classes from "./form.module.css";
 import { useRouter } from "next/navigation";
 
 export default function Form({ prevData, host }) {
+
   const router = useRouter();
   const [data, setData] = useState(prevData);
+  const [disabled, setDisabled] = useState(false);
+
+  console.log(prevData);
 
   function handleChange({ target: { value, name } }) {
     setData((prevData) => {
@@ -15,32 +19,41 @@ export default function Form({ prevData, host }) {
   }
 
   function updateData() {
-    fetch(`${host}/api/db/update`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    }).then((response) => {
+    fetch (`${host}/api/db/update`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      }
+    )
+    .then((response) => {
+      setDisabled(false);
       if (response.ok) {
         alert("updated successfully");
+        router.push('/');
       } else {
         alert(response.status);
       }
     });
   }
-
+  
   function checkData(e) {
+    setDisabled(true);
     e.preventDefault();
-    if (prevData)
+    if (prevData) {
       for (const key in data) {
         if (data[key] !== prevData[key]) {
           updateData();
-          break;
+          return;
         }
       }
+      alert("updated successfully");
+      router.push('/');
+      setDisabled(false);
+    }
     else {
       updateData();
     }
-    router.back();
   }
 
   return (
@@ -117,7 +130,12 @@ export default function Form({ prevData, host }) {
         name="about"
         value={data.about}
       />
-      <button className="mt-3 col-start-1 text-lg">submit</button>
+      <button 
+        disabled={disabled}
+        className={"mt-3 col-start-1 text-lg submit-button " + classes.submitButton}
+      >
+        submit
+      </button>
       <button
         type="button"
         className="mt-3 col-start-3 text-lg cancel"

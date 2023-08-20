@@ -19,3 +19,7 @@
 .form button{
     width: 100%;
 }
+
+.submitButton:disabled {
+    color: gray;
+}

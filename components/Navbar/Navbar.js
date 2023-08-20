@@ -21,7 +21,7 @@ export default function Navbar({ user }) {
       <Link className="sm:ml-[4%]" href={"https://www.iiit-bh.ac.in/"}>
         <Image src={"/assets/logo.png"} height={140} width={140} />
       </Link>
-      <div className="sm:hidden" onClick={toggle}>
+      <div className={styles.mobileLink} onClick={toggle}>
         <svg
           className="w-6 h-6 text-gray-800 dark:text-white m-3 scale-125"
           aria-hidden="true"
@@ -56,7 +56,7 @@ export default function Navbar({ user }) {
           )}
         </div>
       </div>
-      <div className={styles.navLink + ' hidden sm:flex'}>
+      <div className={styles.navLink}>
         <Link href={"/"}>Home</Link>
         {user ? (
           <>

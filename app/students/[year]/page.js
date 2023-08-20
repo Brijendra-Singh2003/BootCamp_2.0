@@ -27,9 +27,11 @@ export default async function StudentPage() {
         <div className=''>
             {err || studentsList.map( student => {
                 return <ul key={student.id}>
-                    <li>{student.name}</li>
-                    <li>{student.location}</li>
-                    <li>{student.about}</li>
+                    <li>name: {student.name}</li>
+                    <li>id: {student.id}</li>
+                    <li>location: {student.location}</li>
+                    <li>About: {student.about}</li>
+                    <li>year: {student.year}</li>
                     <br />
                 </ul>
             })}

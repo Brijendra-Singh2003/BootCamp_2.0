@@ -1,7 +1,6 @@
 import Retry from "@/components/Retry";
 import Form from "@/components/form/form";
 import ImageUpload from "@/functions/ImageUpload";
-import Link from "next/link";
 import { redirect } from "next/navigation";
 
 export const metadata = {
@@ -21,6 +20,7 @@ export default async function Page({ searchParams: user }) {
     github: "",
     about: "",
     id: id,
+    year: Number.parseInt(id.at(3))
   };
 
   try {
