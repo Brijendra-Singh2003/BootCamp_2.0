@@ -55,7 +55,7 @@ export default function Navbar({ user }) {
           )}
         </div>
       </div>
-      <div className={styles.navLink}>
+      <div className={styles.navLink + ' hidden sm:flex'}>
         <Link href={"/about"}>About</Link>
         {user ? (
           <>
