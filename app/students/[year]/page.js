@@ -15,14 +15,6 @@ export default async function StudentPage() {
         err = error.message;
     }
 
-    // for(let i=0; i<studentsList.length; i++) {
-    //     const imgref = ref(storage, `images/${studentsList[i].id}`);
-    //     let imgURL = false;
-    //     try {imgURL = await getDownloadURL(imgref);}
-    //     catch (err) {}
-    //     studentsList[i] = {...studentsList[i], image: imgURL};
-    // }
-
     return (
         <div className=''>
             {err || studentsList.map( student => {

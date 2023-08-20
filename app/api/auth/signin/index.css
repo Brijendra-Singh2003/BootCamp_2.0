@@ -58,10 +58,12 @@
     .animation {
         position: absolute;
         top: 50%;
-        right: 10%;
+        right: 2%;
         transform: translateY(-50%);
-        height: 25vw;
-        width: 25vw;
+        height: 45vw;
+        width: 45vw;
+        padding: 10vw;
+        overflow: hidden;
     }
     
     .left {
