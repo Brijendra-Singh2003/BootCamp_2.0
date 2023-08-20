@@ -14,7 +14,7 @@
     height: 30em;
     background: radial-gradient(rgb(142, 91, 199, 0.44), rgb(42, 27, 58, 0));
     filter: blur(4em);
-    z-index: -1;
+    z-index: -10;
 }
 
 /* @keyframes move {
@@ -29,7 +29,7 @@
 } */
 
 .header{
-    position: sticky;
+    position: absolute;
     top: 0px;
     color: var(--foreground-rgb);
     height: 100px;
