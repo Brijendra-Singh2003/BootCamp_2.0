@@ -1,6 +1,6 @@
 .video_animation {
-    position: relative;
-    top: 35vh;
+    position: absolute;
+    top: 50%;
     left: 50vw;
     z-index: -2;
     width: 100vw;

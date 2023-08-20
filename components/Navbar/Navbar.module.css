@@ -77,16 +77,21 @@
 
 .navLink {
     display: flex;
+    /* margin: 0 2em; */
+    justify-content: space-between;
     align-items: center;
+    font-size: 1.2em;
 }
 
 .navLink a {
-    font-size: larger;
+    font-size: 1.2em;
+    margin : 0px  1.5em;
     height: fit-content;
 }
 
 .navLink a:hover {
-    color: rgb(255, 200, 123);
+    color: rgb(240, 236, 8);
+    text-decoration: underline;
 }
 
 .show {

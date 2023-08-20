@@ -18,7 +18,7 @@ export default function Navbar({ user }) {
       className={`${styles.header} w-full top-0`}
     >
       <div className="fixed h-full w-full top-0 right-0 overflow-hidden z-[-1] pointer-events-none"><div id={styles.spotlight}></div></div>
-      <Link className="sm:ml-[4%]" href={"/"}>
+      <Link className="sm:ml-[4%]" href={"https://www.iiit-bh.ac.in/"}>
         <Image src={"/assets/logo.png"} height={140} width={140} />
       </Link>
       <div className="sm:hidden" onClick={toggle}>
@@ -55,7 +55,7 @@ export default function Navbar({ user }) {
           )}
         </div>
       </div>
-      <div className={"hidden sm:flex gap-4 mr-[8%] "+styles.navLink}>
+      <div className={styles.navLink}>
         <Link href={"/about"}>About</Link>
         {user ? (
           <>
