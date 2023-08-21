@@ -1,15 +1,13 @@
 import Image from 'next/image';
-import { storage } from '@/Firebase';
-import { ref, getDownloadURL } from 'firebase/storage'
 import classes from "./students.module.css"
 
-export default async function StudentPage() {
+export default async function StudentPage({params:{year}}) {
 
     let studentsList = [];
     let err = false;
 
     try {
-        const response = await fetch(`${process.env.HOST}/api/db/getall`,{ method: 'GET' })
+        const response = await fetch(`${process.env.HOST}/api/db/getall?year=${year[3]}`,{ method: 'GET', cache: 'no-store' });
         studentsList = await response.json();
     } catch (error) {
         err = error.message;
@@ -31,11 +29,9 @@ export default async function StudentPage() {
             })}
         </div>
     )
-
 }
 
 export const metadata = {
     title: "Students - CSE Bootcamp 2.0",
     description: "About your peers",
 };
-// {"about":"my about is empty","github":"birju ka github","id":"041","instagram":"birju ka insta","linkdin":"birju ka linkdin","name":"birju"}
