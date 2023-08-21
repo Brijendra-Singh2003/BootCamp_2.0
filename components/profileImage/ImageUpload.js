@@ -36,32 +36,34 @@ const ImageUpload = ({ name, host, src }) => {
     }
   }
 
-  const handleImageUpload = () => {
+  function updateDatabase() {
+    const urlref = ref(storage, `images/${name}`) || null;
+    if (urlref) {
+      getDownloadURL(urlref).then((value) => {
+        setPrevURL(value);
+        fetch(`${host}/api/db`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ id: name, image: value }),
+        });
+      });
+    }
+    setImage(null);
+    setIsDisabled(false);
+    alert("image uploaded");
+  }
+
+  function handleImageUpload() {
     if (image) {
       setIsDisabled(true);
       const imageRef = ref(storage, `images/${name}`);
       uploadBytes(imageRef, image)
-      .then(() => {
-        const urlref = ref(storage, `images/${name}`) || null;
-        if (urlref) {
-          getDownloadURL(urlref).then((value) => {
-            setPrevURL(value);
-            fetch(`${host}/api/db`, {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ id: name, image: value }),
-            });
-          });
-        }
-        setImage(null);
-        setIsDisabled(false);
-        alert("image uploaded");
-      });
+      .then(updateDatabase);
     }
   };
 
   return (
-    <div>
+    <>
       <label
         className={styles.imageLable}
         htmlFor="image-input"
@@ -75,29 +77,30 @@ const ImageUpload = ({ name, host, src }) => {
           src={image ? URL.createObjectURL(image) : prevURL}
           alt="user image"
           height={250}
-          width={250}
-        />
+          width={250} />
+
       </label>
 
       <div className="image-input">
-        {image && <button onClick={() => setImage(null)}>CANCEL</button>}{" "}
+        {image && <button onClick={() => setImage(null)}>CANCEL</button>}
+
         <input
           id="image-input"
           hidden={image}
           type="file"
           onChange={handleImageChange}
           accept="image/*"
-          title="select image"
-        />
+          title="select image" />
+
         <button
-          className="submitButton"
-          isDisabled={isDisabled}
+          className={"submitButton"}
+          disabled={isDisabled}
           onClick={handleImageUpload}
         >
           {isDisabled ? "Uploading..." : "Upload Image"}
         </button>
       </div>
-    </div>
+    </>
   );
 };
 

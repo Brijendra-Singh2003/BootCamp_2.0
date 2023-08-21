@@ -9,9 +9,11 @@ export const metadata = {
 };
 
 export default async function Page({ searchParams: user }) {
+
   if (!user.email) {
     redirect("/api/auth/signin");
   }
+
   const id = user.email.split("@")[0];
   let data = {
     name: '',
@@ -29,6 +31,7 @@ export default async function Page({ searchParams: user }) {
   try {
     const response = await fetch(`${process.env.HOST}/api/db?id=${id}`, { cache: 'no-store' });
     data = await response.json() || data;
+    
   } catch (err) {
     return <div className=" mt-52"><h1>Something went wrong</h1><Retry>Retry</Retry></div>
   }

@@ -4,16 +4,18 @@ import Lottie from '@/components/animations/Lottie';
 function Society() {
   return (
     <>
-    <Lottie
-        className='middle-card'
-        src="https://lottie.host/7cab2c58-4430-45c7-acec-1c5756661ed2/IZsNX0UedL.json"/>
-    <div >
-      <p className='text'>
-        SOCIETIES
-      </p>
-    </div>
+      <Lottie
+          className='middle-card'
+          src="https://lottie.host/7cab2c58-4430-45c7-acec-1c5756661ed2/IZsNX0UedL.json"/>
 
-    <div className="container">
+      <div >
+        <p className='text'>
+          SOCIETIES
+        </p>
+      </div>
+
+      <div className="container">
+
       <Lottie
           className='left-card'
           src="https://lottie.host/d50c2b17-e9cb-48fd-b398-ebc016684817/9xMhusflLl.json"/>

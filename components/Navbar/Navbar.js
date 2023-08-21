@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import  "./Navbar.css";
+import "./Navbar.css";
 import Link from "next/link";
 import Image from "next/image";
 import { signOut } from 'next-auth/react';
@@ -18,8 +18,8 @@ export default function Navbar({ user }) {
 
       { showMenu ? <div className="backdrop" onClick={toggle}></div> : null }
 
-      <Link className="logo" href="https://www.iiit-bh.ac.in/">
-        <Image src="/assets/logo.png" height={140} width={140} alt="IIIT BBSR logo"/>
+      <Link href="https://www.iiit-bh.ac.in/">
+        <Image src="/assets/logo.png" height={120} width={120} alt="IIIT BBSR logo"/>
       </Link>
 
       <div className="mobile-links" onClick={toggle}>

@@ -6,7 +6,7 @@ header {
 
 header{
     position: absolute;
-    top: 15px;
+    top: 0;
     width: 100svw;
     color: var(--foreground-rgb);
     height: 100px;
@@ -14,10 +14,6 @@ header{
     align-items: center;
     justify-content: space-between;
     z-index: 1;
-}
-
-.logo {
-    /* margin-top: 15px; */
 }
 
 .menu-icon {
@@ -70,6 +66,7 @@ header{
     justify-content: space-between;
     align-items: center;
     font-size: 1.2em;
+    margin-right: 15px;
 }
 
 .desktop-links a {

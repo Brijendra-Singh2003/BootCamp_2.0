@@ -4,16 +4,15 @@ import { getServerSession } from "next-auth";
 import Lottie from "@/components/animations/Lottie";
 
 export default async function Home() {
+
   const session = await getServerSession(options);
   const user = session?.user || null;
 
   return (
-    <div>
-      
+    <>
       <Lottie
         className='h-[80%] mt-40 w-[80%] m-auto lottie'
-        src="/animations/helloworld.json"
-      />
+        src="/animations/helloworld.json" />
 
       {/* <iframe
         className="youtube"
@@ -34,11 +33,11 @@ export default async function Home() {
           playsInline
           loop
           autoPlay
-          src="/assets/animation.webm"
-        ></video>
+          src="/assets/animation.webm" />
+
       </div>
-    </div>
-  );
+    </>
+  )
 }
 
 export const metadata = {
