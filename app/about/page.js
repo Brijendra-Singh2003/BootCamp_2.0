@@ -1,8 +1,19 @@
 import React from 'react'
+import "./page.css"
+import Lottie from '@/components/animations/Lottie';
 
 function About() {
   return (
-    <h1>About</h1>
+    <>
+    <div>
+      <p className='text'>
+        ABOUT US
+      </p>
+    </div>
+    <Lottie
+    className='middle-card'
+    src="https://lottie.host/b53a03ab-7407-4a8c-81bc-bd26d8355484/oKFOwD0sSA.json"/>
+    </>
   )
 }
 

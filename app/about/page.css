@@ -1,0 +1,18 @@
+.text {
+    font-family: 'Lilita One', cursive;
+    text-shadow: rgb(172, 5, 5) -4px 2px 5px;
+    color: rgb(241, 254, 98);
+    z-index: 10;
+    text-align: center;
+    font-size: min(10vh, 20vw);
+    margin-top: 0px;
+    position: relative;
+    top: 5vh;
+}
+
+.middle-card {
+    margin: 5vh auto 0 auto;
+    height: min(60vh, 100vw);
+    transform: translateY(10%);
+    width: auto;
+}
