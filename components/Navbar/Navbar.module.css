@@ -86,11 +86,11 @@
 }
 
 .show {
-    animation: show 250ms ease-out forwards;
+    animation: show 300ms ease-out forwards;
 }
 
 .hide {
-    animation: hide 150ms ease-out forwards;
+    animation: hide 200ms ease-out forwards;
 }
 
 .links a {
@@ -102,19 +102,19 @@
 
 @keyframes show {
     0% {
-        clip-path: circle(0 at 120px 0);
+        clip-path: circle(0 at 100px 0);
     }
     100% {
-        clip-path: circle(140% at 120px 0);
+        clip-path: circle(140% at 100px 0);
     }
 }
 
 @keyframes hide {
     0% {
-        clip-path: circle(140% at 120px 0);
+        clip-path: circle(140% at 100px 0);
     }
     100% {
-        clip-path: circle(0 at 120px 0);
+        clip-path: circle(0 at 100px 0);
     }
 }
 

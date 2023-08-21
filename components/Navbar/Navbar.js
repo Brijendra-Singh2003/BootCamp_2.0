@@ -23,7 +23,7 @@ export default function Navbar({ user }) {
       {showMenu && <div className={styles.backdrop} onClick={toggle}></div>}
       <div className={styles.mobileLink} onClick={toggle}>
         <svg
-          className="w-6 h-6 text-gray-800 dark:text-white m-3 scale-125"
+          className="w-8 h-8 text-gray-800 dark:text-white m-5 scale-100"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
