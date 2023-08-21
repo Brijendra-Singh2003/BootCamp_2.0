@@ -7,7 +7,7 @@ function Society() {
     <Lottie
         className='middle-card'
         src="https://lottie.host/7cab2c58-4430-45c7-acec-1c5756661ed2/IZsNX0UedL.json"/>
-    <div>
+    <div >
       <p className='text'>
         SOCIETIES
       </p>
@@ -34,9 +34,6 @@ function Society() {
           className='left-card'
           src="https://lottie.host/44e21f05-0bf3-4615-9ee1-9fd688806b44/h5NAGTRDW5.json"/>
         
-        <Lottie
-          className='right-card'
-          src="https://lottie.host/b53a03ab-7407-4a8c-81bc-bd26d8355484/oKFOwD0sSA.json"/>
       </div>
     </>
   )
