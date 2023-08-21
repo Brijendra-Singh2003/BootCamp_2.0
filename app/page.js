@@ -8,13 +8,21 @@ export default async function Home() {
   const user = session?.user || null;
 
   return (
-    <main>
-
-
+    <div>
+      
       <Lottie
         className='h-[80%] mt-40 w-[80%] m-auto lottie'
         src="/animations/helloworld.json"
       />
+
+      {/* <iframe
+        className="youtube"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0&start=1"
+        title="YouTube video player"
+        allowFullScreen
+      ></iframe> */}
 
       <div className="video_animation">
 
@@ -29,7 +37,7 @@ export default async function Home() {
           src="/assets/animation.webm"
         ></video>
       </div>
-    </main>
+    </div>
   );
 }
 

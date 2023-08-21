@@ -41,7 +41,7 @@ export default async function RootLayout({ children }) {
         <main className=' mt-20'>
           {children}
         </main>
-        <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"/>
+        <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer/>
       </body>
     </html>
   )
