@@ -120,7 +120,7 @@ header{
     .desktop-links {
         display: flex;
     }
-    .mobileLink {
+    .mobile-links {
         display: none;
     }
 }
