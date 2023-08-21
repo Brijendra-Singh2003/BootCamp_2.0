@@ -18,7 +18,7 @@ export default function Navbar({ user }) {
       className={`${styles.header} w-full top-0`}
     >
       <Link className="sm:ml-[4%]" href={"https://www.iiit-bh.ac.in/"}>
-        <Image src={"/assets/logo.png"} height={140} width={140} />
+        <Image src={"/assets/logo.png"} height={140} width={140} alt="IIIT BBSR logo"/>
       </Link>
       {showMenu && <div className={styles.backdrop} onClick={toggle}></div>}
       <div className={styles.mobileLink} onClick={toggle}>

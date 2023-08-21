@@ -3,7 +3,6 @@ import React from 'react'
 export default function Lottie({className, src, id}) {
   return (
     <>
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <lottie-player
             id={id}
             className={className}

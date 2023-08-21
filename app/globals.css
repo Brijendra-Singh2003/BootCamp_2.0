@@ -70,4 +70,5 @@ button:hover {
 
 .submitButton:disabled {
   color: gray;
+  cursor: wait;
 }

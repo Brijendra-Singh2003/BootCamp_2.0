@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar/Navbar'
 import { options } from "./api/auth/[...nextauth]/options"
 import { getServerSession } from "next-auth"
+import Script from 'next/script'
 
 export const metadata = {
   icons: [
@@ -40,6 +41,7 @@ export default async function RootLayout({ children }) {
         <main className=' mt-20'>
           {children}
         </main>
+        <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"/>
       </body>
     </html>
   )

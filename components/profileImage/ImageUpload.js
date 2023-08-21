@@ -1,16 +1,20 @@
-"use client"
+"use client";
 
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import { storage } from '@/Firebase';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
-import styles from "./uploadImage.module.css"
+import React, { useState } from "react";
+import Image from "next/image";
+import { storage } from "@/Firebase";
+import {
+  ref,
+  uploadBytes,
+  getDownloadURL,
+  deleteObject,
+} from "firebase/storage";
+import styles from "./uploadImage.module.css";
 
-const ImageUpload = ({name, host, src}) => {
-
+const ImageUpload = ({ name, host, src }) => {
   const [image, setImage] = useState(null);
-  const [disabled, setdisabled] = useState(false);
-  const [uurl, setuurl] = useState(src);
+  const [isDisabled, setIsDisabled] = useState(false);
+  const [prevURL, setPrevURL] = useState(src);
 
   const handleImageChange = (e) => {
     const selectedImage = e.target.files[0];
@@ -18,70 +22,81 @@ const ImageUpload = ({name, host, src}) => {
     console.log(selectedImage);
   };
 
-  function onOver(e) {
+  function handleDefault(e) {
     e.preventDefault();
   }
 
-  function onDND(e) {
+  function handleDrop(e) {
     e.preventDefault();
     const file = e.dataTransfer.files[0];
-    const fileType = file.type.split('/')[0];
+    const fileType = file.type.split("/")[0];
     console.log(fileType, file);
-    if(fileType === 'image') {
+    if (fileType === "image") {
       setImage(e.dataTransfer.files[0]);
     }
   }
 
   const handleImageUpload = () => {
     if (image) {
-      setdisabled(true);
-      const imageRef = ref(storage,`images/${name}`);
+      setIsDisabled(true);
+      const imageRef = ref(storage, `images/${name}`);
       uploadBytes(imageRef, image)
-      .then(()=>{
+      .then(() => {
         const urlref = ref(storage, `images/${name}`) || null;
-        if ( urlref ) {
-          getDownloadURL(urlref)
-          .then((value)=>{
-            setuurl(value);
-            fetch (`${host}/api/db`,
-              {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({id: name, image: value}),
-              }
-            )
-          })
+        if (urlref) {
+          getDownloadURL(urlref).then((value) => {
+            setPrevURL(value);
+            fetch(`${host}/api/db`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ id: name, image: value }),
+            });
+          });
         }
-        setdisabled(false);
-        alert('image uploaded');
-      })
+        setImage(null);
+        setIsDisabled(false);
+        alert("image uploaded");
+      });
     }
   };
 
   return (
     <div>
-        <label className={styles.imageLable} htmlFor='image-input' onDragOver={onOver} onDragLeave={onOver} onDrop={onDND}>
-          <div className={styles.dndtext}>Drag And Drop Here</div>
-          <Image
-            className={styles.userimage}
-            // src={uurl.length ? uurl : '/assets/default-avatar.png'}
-            src={image ? URL.createObjectURL(image) : uurl}
-            alt="user image"
-            height={250}
-            width={250} />
+      <label
+        className={styles.imageLable}
+        htmlFor="image-input"
+        onDragOver={handleDefault}
+        onDragLeave={handleDefault}
+        onDrop={handleDrop}
+      >
+        <div className={styles.dndtext}>Drag And Drop Here</div>
+        <Image
+          className={styles.userimage}
+          src={image ? URL.createObjectURL(image) : prevURL}
+          alt="user image"
+          height={250}
+          width={250}
+        />
+      </label>
 
-        </label>
-
-        <div className='image-input'>
-
-          {image ? <button onClick={()=> setImage(null)}>CANCEL</button> : <input id='image-input' type="file" onChange={handleImageChange} accept='image/*' title='select image'/>}
-          <button
-            className='submitButton'
-            disabled={disabled}
-            onClick={handleImageUpload}
-          > Upload Image </button>
-
-        </div>
+      <div className="image-input">
+        {image && <button onClick={() => setImage(null)}>CANCEL</button>}{" "}
+        <input
+          id="image-input"
+          hidden={image}
+          type="file"
+          onChange={handleImageChange}
+          accept="image/*"
+          title="select image"
+        />
+        <button
+          className="submitButton"
+          isDisabled={isDisabled}
+          onClick={handleImageUpload}
+        >
+          {isDisabled ? "Uploading..." : "Upload Image"}
+        </button>
+      </div>
     </div>
   );
 };
