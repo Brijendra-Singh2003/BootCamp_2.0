@@ -30,7 +30,6 @@ export default async function Page({ searchParams: user }) {
     const response = await fetch(`${process.env.HOST}/api/db?id=${id}`, { cache: 'no-store' });
     data = await response.json() || data;
   } catch (err) {
-    console.log(err);
     return <div className=" mt-52"><h1>Something went wrong</h1><Retry>Retry</Retry></div>
   }
 
