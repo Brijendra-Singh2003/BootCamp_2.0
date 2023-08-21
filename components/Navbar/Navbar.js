@@ -1,5 +1,5 @@
 "use client";
-import React, {useState} from "react";
+import React from "react";
 import styles from "./Navbar.module.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,7 +9,6 @@ import LoadingBar from 'react-top-loading-bar';
 export default function Navbar({ user }) {
 
   const [showMenu, setShowMenu] = React.useState(false);
-  const [progress, setProgress] = useState(0);
 
   function toggle() {
     setShowMenu(prevShowMenu => !prevShowMenu);
@@ -19,18 +18,10 @@ export default function Navbar({ user }) {
     <header
       className={`${styles.header} w-full top-0`}
     >
-      <LoadingBar
-        color='#f11946'
-        progress={progress}
-        onLoaderFinished={() => setProgress(0)}
-      />
-
       <Link className="sm:ml-[4%]" href={"https://www.iiit-bh.ac.in/"}>
         <Image src={"/assets/logo.png"} height={140} width={140} alt="IIIT BBSR logo"/>
       </Link>
-
       {showMenu && <div className={styles.backdrop} onClick={toggle}></div>}
-
       <div className={styles.mobileLink} onClick={toggle}>
         <svg
           className="w-6 h-6 text-gray-800 dark:text-white m-3 scale-125"
