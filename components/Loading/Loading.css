@@ -26,7 +26,7 @@
     display: block;
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 50.1%;
     margin-left: -81px;
     margin-top: -81px;
     border-radius: 156px;
@@ -167,5 +167,15 @@
   100% {
         transform: scale(0.1);
         opacity: 0.2;
+    }
+}
+
+
+@media only screen and (max-width: 1100px) {
+    .circle{
+        left: 50.5%;
+    }
+    .circle-small{
+        left: 50.3%;
     }
 }
