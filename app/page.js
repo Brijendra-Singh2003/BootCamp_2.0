@@ -10,8 +10,9 @@ export default async function Home() {
   return (
     <main>
 
+
       <Lottie
-        className='h-[80%] w-[80%] m-auto'
+        className='h-[80%] w-[80%] m-auto lottie'
         src="/animations/helloworld.json"
       />
 
