@@ -1,7 +1,7 @@
 .left-card, .right-card {
-    margin: 50px 100px;
-    height: min(60svw, 400px);
-    width: min(60svw, 400px);
+    margin: 10vh 10vw;
+    height: 40vh;
+    width: 40vw;
 }
 
 .left-card {
