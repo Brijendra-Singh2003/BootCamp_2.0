@@ -4,7 +4,6 @@ import styles from "./Navbar.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { signOut } from 'next-auth/react';
-import LoadingBar from 'react-top-loading-bar';
 
 export default function Navbar({ user }) {
 
