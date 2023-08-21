@@ -7,8 +7,8 @@ function Society() {
     <Lottie
         className='middle-card'
         src="https://lottie.host/7cab2c58-4430-45c7-acec-1c5756661ed2/IZsNX0UedL.json"/>
-    <div className='text'>
-      <p >
+    <div >
+      <p className='text'>
         SOCIETIES
       </p>
     </div>
