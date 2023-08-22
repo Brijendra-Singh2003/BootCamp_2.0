@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import Retry from '@/components/Retry';
 import "./students.css"
+import StudentList from '@/components/studentList/StudentList';
 import sampleData from './sampleData';
+import { Drower, DrowerRoot, DrowerTrigger } from '@/components/Drawrer/Drower';
 
 // run "npm i" in terminal to install vaul before running
 
@@ -10,9 +12,24 @@ export const metadata = {
     description: "About your peers",
 };
 
+const curr = {
+    _id: "64e1f12024452bbb960c865e",
+    id: "b122041",
+    name: "Brijendra Singh",
+    about: "",
+    state: "mp",
+    city: "pali",
+    instagram: "added instagram",
+    github: "",
+    linkedin: "and linkedin",
+    image: "https://firebasestorage.googleapis.com/v0/b/cse-bootcamp-auth.appspot.com/o/images%2Fb122041?alt=media&token=ddedfdf7-8c2a-4927-b945-ee1c003b1055",
+    year: 2,
+    __v: 0
+  }
+
 export default async function StudentPage({params:{year}}) {
 
-    let studentsList = [];
+    let studentsList = [sampleData];
     let err = false;
 
     // try {
@@ -23,23 +40,11 @@ export default async function StudentPage({params:{year}}) {
     // }
 
     return (
-        <>
-        <div className='student-container'>
-            {err || studentsList.map( student => {
-                return (
-                    <ul key={student.id} className='student-card'>
-                        <Image src={student.image} height={300} width={300} className=' m-auto' alt={student.id}/>
-                        <li>name: {student.name}</li>
-                        <li>id: {student.id}</li>
-                        <li>State: {student.state}</li>
-                        <li>City: {student.city}</li>
-                        <li>About: {student.about}</li>
-                        <li>year: {student.year}</li>
-                        <br />
-                    </ul>
-                )
-            })}
-        </div>
-        </>
+        <DrowerRoot>
+            <DrowerTrigger>
+                open card
+            </DrowerTrigger>
+            <Drower {...curr} />
+        </DrowerRoot>
     )
 }

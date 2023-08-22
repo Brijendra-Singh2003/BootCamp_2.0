@@ -39,6 +39,7 @@ export function Drower({image, id, name, city, state, about, instagram, linkedin
                         {instagram && <Link href={instagram} ><Image src={'/logo/instagram-logo.png'} height={30} width={30}/></Link>}
                         {linkedin && <Link href={linkedin} ><Image className=" bg-transparent" src={'/logo/linkedin-logo.png'} height={30} width={30}/></Link>}
                         {github && <Link href={github} ><Image src={'/logo/github-logo.png'} height={30} width={30}/></Link>}
+                        {id && <Link href={'#'} ><Image src={'/logo/mail-logo.png'} height={30} width={30}/></Link>}
                     </div>
                 </div>
             </div>
