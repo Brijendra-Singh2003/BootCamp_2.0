@@ -36,10 +36,10 @@ export function Drower({image, id, name, city, state, about, instagram, linkedin
                     <p className="drower-city">{(city+', '+state).toUpperCase()}</p>
                     <div className="drower-about">{about}</div>
                     <div className="drower-logo-container">
-                        {instagram && <Link href={instagram} ><Image src={'/logo/instagram-logo.png'} height={30} width={30}/></Link>}
-                        {linkedin && <Link href={linkedin} ><Image className=" bg-transparent" src={'/logo/linkedin-logo.png'} height={30} width={30}/></Link>}
-                        {github && <Link href={github} ><Image src={'/logo/github-logo.png'} height={30} width={30}/></Link>}
-                        {id && <Link href={'#'} ><Image src={'/logo/mail-logo.png'} height={30} width={30}/></Link>}
+                        {instagram && <Link target="_blank" href={instagram} ><Image src={'/logo/instagram-logo.png'} height={30} width={30}/></Link>}
+                        {linkedin && <Link target="_blank" href={linkedin} ><Image className=" bg-transparent" src={'/logo/linkedin-logo.png'} height={30} width={30}/></Link>}
+                        {github && <Link target="_blank" href={github} ><Image src={'/logo/github-logo.png'} height={30} width={30}/></Link>}
+                        {id && <Link target="_blank" href={`https://mail.google.com/mail/?view=cm&to=${id}@iiit-bh.ac.in`}><Image src={'/logo/mail-logo.png'} height={30} width={30}/></Link>}
                     </div>
                 </div>
             </div>
