@@ -20,7 +20,7 @@ const curr = {
     state: "mp",
     city: "pali",
     instagram: "added instagram",
-    github: "",
+    github: "#",
     linkedin: "and linkedin",
     image: "https://firebasestorage.googleapis.com/v0/b/cse-bootcamp-auth.appspot.com/o/images%2Fb122041?alt=media&token=ddedfdf7-8c2a-4927-b945-ee1c003b1055",
     year: 2,
