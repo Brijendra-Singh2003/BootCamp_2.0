@@ -10,7 +10,7 @@
 
 .close-button {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -5px;
+    right: 10px;
     border: 0;
 }
