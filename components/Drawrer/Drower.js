@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { Drawer } from "vaul";
 
+// run "npm i" in terminal to install vaul before running
+
 export function Drower2() {
 
     return (

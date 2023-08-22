@@ -3,6 +3,8 @@ import Retry from '@/components/Retry';
 import "./students.css"
 import {Drower2} from '@/components/Drawrer/Drower';
 
+// run "npm i" in terminal to install vaul before running
+
 export const metadata = {
     title: "Students - CSE Bootcamp 2.0",
     description: "About your peers",
