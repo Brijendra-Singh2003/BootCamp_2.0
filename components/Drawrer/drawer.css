@@ -1,0 +1,16 @@
+.student-card {
+    margin-bottom: 60px;
+    padding: 16px;
+    border-radius: 40px;
+    background-image: linear-gradient(rgba(255, 0, 255, 0.3),70%, rgba(0, 0, 255, 0.3));
+    backdrop-filter: blur(5px);
+    border: 2px solid white;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.578);
+}
+
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+}
