@@ -41,6 +41,7 @@ export default function Navbar({ user }) {
           ) : (
             <>
               <Link href={"/about"}>About</Link>
+              <Link href="/societies">Societies</Link>
               <Link href={"/api/auth/signin"}>Login</Link>
             </>
           )}
