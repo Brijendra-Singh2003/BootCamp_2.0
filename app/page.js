@@ -1,18 +1,16 @@
 import "./page_vdo.css";
-import { options } from "./api/auth/[...nextauth]/options";
-import { getServerSession } from "next-auth";
-import Lottie from "@/components/animations/Lottie";
 
 export default async function Home() {
 
-  const session = await getServerSession(options);
-  const user = session?.user || null;
-
   return (
     <>
-      <Lottie
+      <lottie-player
         className='h-[80%] mt-40 w-[80%] m-auto lottie'
-        src="/animations/helloworld.json" />
+        src="/animations/helloworld.json"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay />
 
       {/* <iframe
         className="youtube"

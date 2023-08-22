@@ -1,14 +1,18 @@
 import React from 'react'
 import "./page.css"
-import Lottie from '@/components/animations/Lottie';
 
 function About() {
   return (
     <>
-    
-    <Lottie
-    className='middle-card'
-    src="https://lottie.host/b53a03ab-7407-4a8c-81bc-bd26d8355484/oKFOwD0sSA.json"/>
+    <lottie-player
+      className='middle-card'
+      src="https://lottie.host/b53a03ab-7407-4a8c-81bc-bd26d8355484/oKFOwD0sSA.json"
+      background="transparent"
+      speed="1"
+      loop
+      autoplay
+    />
+
     <div>
       <p className='text'>
         ABOUT US

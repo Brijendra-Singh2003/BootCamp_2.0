@@ -33,7 +33,7 @@ export default async function Page({ searchParams: user }) {
     data = await response.json() || data;
     
   } catch (err) {
-    return <div className=" mt-52"><h1>Something went wrong</h1><Retry>Retry</Retry></div>
+    return <div className=" mt-52"><h1>Err: {err.message}</h1><Retry>Retry</Retry></div>
   }
 
   return (

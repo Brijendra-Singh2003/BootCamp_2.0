@@ -1,12 +1,14 @@
 import './society.css'
-import Lottie from '@/components/animations/Lottie';
 
-function Society() {
+export default function Society() {
   return (
     <>
-      <Lottie
+      <lottie-player
           className='middle-card'
-          src="https://lottie.host/7cab2c58-4430-45c7-acec-1c5756661ed2/IZsNX0UedL.json"/>
+          src="/animations/society-main.json"
+          speed="1"
+          loop
+          autoplay/>
 
       <div >
         <p className='text'>
@@ -16,32 +18,47 @@ function Society() {
 
       <div className="container">
 
-      <Lottie
+      <lottie-player
           className='left-card'
-          src="https://lottie.host/d50c2b17-e9cb-48fd-b398-ebc016684817/9xMhusflLl.json"/>
+          src="/animations/society1.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay/>
 
-        <Lottie
+        <lottie-player
           className='right-card'
-          src="https://lottie.host/ffb8224c-0789-4a89-ac59-c85c8958541c/aof29xsnyr.json"/>
+          src="/animations/society2.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay/>
 
-        <Lottie
+        <lottie-player
           className='left-card'
-          src="https://lottie.host/360f78e9-4acb-4728-9404-d62c4fda20b4/pJVVstSbOg.json"/>
+          src="/animations/society3.json"
+          speed="1"
+          loop
+          autoplay/>
 
-        <Lottie
+        <lottie-player
           className='right-card'
-          src="https://lottie.host/c7561713-c5a7-4cd3-becb-188099674eec/PFXmeRb60Y.json"/>
+          src="https://lottie.host/c7561713-c5a7-4cd3-becb-188099674eec/PFXmeRb60Y.json"
+          speed="1"
+          loop
+          autoplay/>
 
-        <Lottie
+        <lottie-player
           className='left-card'
-          src="https://lottie.host/44e21f05-0bf3-4615-9ee1-9fd688806b44/h5NAGTRDW5.json"/>
+          src="https://lottie.host/44e21f05-0bf3-4615-9ee1-9fd688806b44/h5NAGTRDW5.json"
+          speed="1"
+          loop
+          autoplay/>
         
       </div>
     </>
   )
 }
-
-export default Society;
 
 export const metadata = {
   title: "Socities -CSE Bootcamp 2.0",
