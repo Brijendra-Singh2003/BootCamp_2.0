@@ -37,7 +37,7 @@ export default async function Page({ searchParams: user }) {
   }
 
   return (
-    <div className=" relative top-10">
+    <div className="profile-container relative top-10">
       <ImageUpload name={id} src={data.image} host={process.env.HOST} />
       <Form prevData={data} user={id} host={process.env.HOST} />
     </div>

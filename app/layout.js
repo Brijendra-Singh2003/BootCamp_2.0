@@ -38,7 +38,7 @@ export default async function RootLayout({ children }) {
       <body className={inter.className}>
       <div className="fixed h-full w-full top-0 right-0 overflow-hidden z-[-10] pointer-events-none"><div id="spotlight"></div></div>
         <Navbar user={session?.user}/>
-        <main className=' mt-20'>
+        <main>
           {children}
         </main>
         <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer/>

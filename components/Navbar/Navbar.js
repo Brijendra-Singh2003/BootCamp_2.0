@@ -14,7 +14,7 @@ export default function Navbar({ user }) {
   }
 
   return (
-    <header>
+    <nav>
 
       { showMenu ? <div className="backdrop" onClick={toggle}></div> : null }
 
@@ -69,6 +69,6 @@ export default function Navbar({ user }) {
         )}
       </div>
 
-    </header>
+    </nav>
   );
 }

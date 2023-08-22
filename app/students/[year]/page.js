@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Retry from '@/components/Retry';
 import "./students.css"
+import {Drower2} from '@/components/Drawrer/Drower';
 
 export const metadata = {
     title: "Students - CSE Bootcamp 2.0",
@@ -12,14 +13,15 @@ export default async function StudentPage({params:{year}}) {
     let studentsList = [];
     let err = false;
 
-    try {
-        const response = await fetch(`${process.env.HOST}/api/db/getall?year=${year[3]}`,{ cache: 'no-store' });
-        studentsList = await response.json();
-    } catch (error) {
-        return <div className=" mt-52"><h1>Something went wrong</h1><Retry>Retry</Retry></div>
-    }
+    // try {
+    //     const response = await fetch(`${process.env.HOST}/api/db/getall?year=${year[3]}`,{ cache: 'no-store' });
+    //     studentsList = await response.json();
+    // } catch (error) {
+    //     return <div className=" mt-52"><h1>Something went wrong</h1><Retry>Retry</Retry></div>
+    // }
 
     return (
+        <>
         <div className='student-container'>
             {err || studentsList.map( student => {
                 return (
@@ -36,5 +38,8 @@ export default async function StudentPage({params:{year}}) {
                 )
             })}
         </div>
+
+        <Drower2 />
+        </>
     )
 }

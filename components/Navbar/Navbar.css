@@ -1,11 +1,11 @@
-header {
+nav {
     --foreground-rgb: rgb(255, 255, 255);
     --background-start-rgb: rgb(34, 34, 34);
     --background-end-rgb: rgb(0, 0, 0);
 }
 
-header{
-    position: absolute;
+nav{
+    position: fixed;
     top: 0;
     width: 100svw;
     color: var(--foreground-rgb);
