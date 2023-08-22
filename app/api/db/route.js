@@ -1,12 +1,8 @@
 import { NextResponse } from "next/server";
 import Post from "@/models/Post";
 import mongoose from "mongoose";
-import { options } from "./../auth/[...nextauth]/options";
-import { getServerSession } from "next-auth";
 
 export async function GET(req) {
-//   const session = await getServerSession(options);
-//   if (session) {
     try {
       await mongoose.connect(process.env.MONGO);
       const userId = req.nextUrl.searchParams.get("id");
@@ -22,14 +18,9 @@ export async function GET(req) {
     } finally {
       mongoose.disconnect();
     }
-//   } else {
-//     return new NextResponse("Access denied", { status: 401 });
-//   }
 }
 
 export async function POST(req) {
-//   const session = await getServerSession(options);
-//   if (session) {
     try {
       const data = await req.json();
       await mongoose.connect(process.env.MONGO);
@@ -46,7 +37,4 @@ export async function POST(req) {
     } finally {
       mongoose.disconnect();
     }
-//   } else {
-//     return new NextResponse("Access denied", { status: 401 });
-//   }
 }
