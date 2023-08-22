@@ -41,7 +41,7 @@
     }
     
     #sign {
-        z-index: 11;
+        z-index: 0;
         background: linear-gradient(90.2deg, #ff0c28, #7200ff);
         color: white;
         font-weight: bolder;
