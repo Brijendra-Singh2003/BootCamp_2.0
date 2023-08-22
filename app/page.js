@@ -5,7 +5,7 @@ export default async function Home() {
   return (
     <>
       <lottie-player
-        className='h-[80%] mt-40 w-[80%] m-auto lottie'
+        className='h-[40%] mt-10 w-[80%] m-auto lottie'
         src="/animations/helloworld.json"
         background="transparent"
         speed="1"
