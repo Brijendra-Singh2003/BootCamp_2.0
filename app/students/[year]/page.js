@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Retry from '@/components/Retry';
 import "./students.css"
 import {Drower2} from '@/components/Drawrer/Drower';
+import sampleData from './sampleData';
 
 // run "npm i" in terminal to install vaul before running
 
