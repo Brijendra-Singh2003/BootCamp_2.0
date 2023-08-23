@@ -76,7 +76,7 @@
 .drower-image {
     height: 28vh;
     width: 100%;
-    object-fit: cover;
+    object-fit:initial;
     border-radius: 5vh;
     background-image: url('/assets/default-avatar.png');
     background-size: cover;
