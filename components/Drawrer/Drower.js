@@ -4,7 +4,7 @@ import { Drawer } from "vaul";
 import "./drawer.css"
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function Drower({userlist}) {
 
@@ -40,14 +40,15 @@ export function Drower({userlist}) {
                         <p className="drower-city">{(city+', '+state).toUpperCase()}</p>
                         <div className="drower-about">{about?.toUpperCase()}</div>
                         <div className="drower-logo-container">
-                            {instagram && <Link target="_blank" href={instagram} ><Image src={'/logo/instagram-logo.png'} height={30} width={30} alt="instagram link"/></Link>}
-                            {linkedin && <Link target="_blank" href={linkedin} ><Image className=" bg-transparent" src={'/logo/linkedin-logo.png'} height={30} width={30} alt="linked link"/></Link>}
-                            {github && <Link target="_blank" href={github} ><Image src={'/logo/github-logo.png'} height={30} width={30} alt="github link"/></Link>}
-                            {id && <Link target="_blank" href={`https://mail.google.com/mail/?view=cm&to=${id}@iiit-bh.ac.in`}><Image src={'/logo/mail-logo.png'} height={30} width={30} alt="gmail link"/></Link>}
+                            {instagram && <Link target="_blank" href={instagram} ><Image src={'/logo/instagram-logo.png'} height={80} width={80} alt="instagram link"/></Link>}
+                            {linkedin && <Link target="_blank" href={linkedin} ><Image className=" bg-transparent" src={'/logo/linkedin-logo.png'} height={80} width={80} alt="linked link"/></Link>}
+                            {github && <Link target="_blank" href={github} ><Image src={'/logo/github-logo.png'} height={80} width={80} alt="github link"/></Link>}
+                            {id && <Link target="_blank" href={`https://mail.google.com/mail/?view=cm&to=${id}@iiit-bh.ac.in`}><Image src={'/logo/mail-logo.png'} height={80} width={80} alt="gmail link"/></Link>}
                         </div>
                     </div>
                 </div>
             </Drawer.Content>
+
         </Drawer.Root>
     );
 }
