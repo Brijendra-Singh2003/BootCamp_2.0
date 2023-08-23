@@ -54,7 +54,7 @@ export function Drower({userlist}) {
                             <div className="student-card" onClick={()=>setActive(curr)} key={curr.id}>
                                 <Image src={curr.image || `https://csebootcamp2k22.tech/images/${curr.id}.webp`} height={70} width={70} alt={""} />
                                 <div>
-                                    <h1>{curr.name}</h1>
+                                    <h1 className="student-card-name">{curr.name}</h1>
                                     <p>{curr.city+', '+curr.state}</p>
                                 </div>
                                 <span>ID #{curr.id.substring(4, 7)}</span>

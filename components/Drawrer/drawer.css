@@ -48,6 +48,9 @@
     font-weight: bold;
 }
 
+.student-card-name{
+    margin: top 3vh;
+}
 .drower-container {
     position: fixed;
     display: flex;
