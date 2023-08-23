@@ -1,25 +1,26 @@
 .imageLable {
     position: relative;
     display: flex;
-    height: min(56vw, 300px);
+    height: min(76vw, 406px);
     width: min(80vw, 428px);
-    margin: 20px auto;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
     border-radius: 15px;
     border: 2px dashed white;
 }
 
 .userimage {
     position: absolute;
-    margin: 3.8% auto;
-    height: 90%;
-    width: 93%;
+    height: 100%;
+    width: 100%;
+    scale: 0.95;
     object-fit: cover;
     border-radius: 12px;
-    left: 3.3%;
 }
 
 .dndtext {
-    position: relative;
+    position: absolute;
     font-size: 1.5rem;
     line-height: 2rem;
     width: 14rem;

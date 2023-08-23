@@ -41,6 +41,7 @@ export default async function RootLayout({ children }) {
         <main>
           {children}
         </main>
+        {/* run npm i to install toast */}
         {/* <ToastContainer/> */}
         <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer/>
       </body>

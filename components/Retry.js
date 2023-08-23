@@ -1,13 +1,14 @@
 "use client"
 
-export default function Retry({children, tag}) {
+import { revalidateTag } from "next/cache";
+
+export default function Retry() {
 
     function sasta_refresh() {
-      revalidateTag(tag);
       document.location = document.location;
     }
 
   return (
-    <button onClick={sasta_refresh}>{children}</button>
+    <button onClick={sasta_refresh}>Retry</button>
   )
 }

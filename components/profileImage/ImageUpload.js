@@ -3,16 +3,11 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { storage } from "@/Firebase";
-import {
-  ref,
-  uploadBytes,
-  getDownloadURL,
-  deleteObject,
-} from "firebase/storage";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import styles from "./uploadImage.module.css";
 import { toast } from "react-toastify";
 
-const ImageUpload = ({ name, host, src }) => {
+export default function ImageUpload({ name, host, src }) {
   const [image, setImage] = useState(null);
   const [isDisabled, setIsDisabled] = useState(false);
   const [prevURL, setPrevURL] = useState(src);
@@ -22,10 +17,6 @@ const ImageUpload = ({ name, host, src }) => {
     setImage(selectedImage);
     console.log(selectedImage);
   };
-
-  function handleDefault(e) {
-    e.preventDefault();
-  }
 
   function handleDrop(e) {
     e.preventDefault();
@@ -68,8 +59,6 @@ const ImageUpload = ({ name, host, src }) => {
       <label
         className={styles.imageLable}
         htmlFor="image-input"
-        onDragOver={handleDefault}
-        onDragLeave={handleDefault}
         onDrop={handleDrop}
       >
         <div className={styles.dndtext}>Drag And Drop Here</div>
@@ -104,5 +93,3 @@ const ImageUpload = ({ name, host, src }) => {
     </>
   );
 };
-
-export default ImageUpload;

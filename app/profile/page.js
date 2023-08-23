@@ -6,8 +6,7 @@ import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 
 export const metadata = {
-  title: "Profile - CSE Bootcamp 2.0",
-  description: "",
+  title: "Profile - CSE Bootcamp 2.0"
 };
 
 export default async function Page() {
@@ -39,11 +38,11 @@ export default async function Page() {
   };
 
   try {
-    const response = await fetch(`${process.env.HOST}/api/db?id=${id}`, {next: {tags: ['profile']}});
+    const response = await fetch(`${process.env.HOST}/api/db?id=${id}`, {cache: "no-store"});
     data = await response.json() || data;
 
   } catch (err) {
-    return <div className=" mt-52"><h1>Err: {err.message}</h1><Retry tag="profile">Retry</Retry></div>
+    return <div className=" mt-52"><h1>Err: {err.message}</h1><Retry/></div>
   }
 
   return (

@@ -4,6 +4,7 @@ import { useState } from "react";
 import classes from "./form.module.css";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import { revalidateTag } from "next/cache";
 
 export default function Form({ prevData, host }) {
 
@@ -30,6 +31,8 @@ export default function Form({ prevData, host }) {
       setDisabled(false);
       if (response.ok) {
         toast("updated successfully");
+        revalidateTag('profile');
+        revalidateTag('student');
       } else {
         toast(response.status);
       }

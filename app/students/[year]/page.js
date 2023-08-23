@@ -28,10 +28,12 @@ export default async function StudentPage({params:{year}}) {
     let studentsList = sampleData;
 
     try {
-        const response = await fetch(`${process.env.HOST}/api/db/getall?year=${year[3]}`, {next: {revalidate: 60, tags:['student', year]}});
-        studentsList = await response.json();
+        const response = await fetch(`${process.env.HOST}/api/db/getall?year=${year[3]}`, {next: {revalidate: 10, tags:['student', year]}});
+        try{studentsList = await response.json();}catch(err) {
+            throw new Error(response.status);
+        }
     } catch (error) {
-        return <div className=" mt-52"><h1>Something went wrong{error.message}</h1><Retry tag={'student'}></Retry></div>
+        return <div className=" mt-52"><h1>Something went wrong{error.message}</h1><Retry/></div>
     }
 
     return (
@@ -39,6 +41,6 @@ export default async function StudentPage({params:{year}}) {
     )
 }
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
     return [{year: '2022'}, {year: '2023'}];
 }
