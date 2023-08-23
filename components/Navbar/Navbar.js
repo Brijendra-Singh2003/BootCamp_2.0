@@ -5,9 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { signOut } from 'next-auth/react';
 
-export default function Navbar({ user:{email} }) {
+export default function Navbar({ user }) {
 
   const [showMenu, setShowMenu] = React.useState(false);
+  const {email} = user;
 
   function toggle() {
     setShowMenu(prevShowMenu => !prevShowMenu);
