@@ -115,7 +115,7 @@
     border-radius: 2vh;
     padding: 10px;
     word-wrap: break-word;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .drower-logo-container {
@@ -163,4 +163,10 @@
 
 .d-container .drower-card {
     scroll-snap-align: center;
+}
+
+.no-select{
+    -webkit-user-select: none; /* Safari */
+   -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }

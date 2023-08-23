@@ -29,11 +29,11 @@ export function Drower({userlist}) {
                     return(
                         <div className="drower-card" key={id}>
                         <div className="mx-auto">
-                            <Image className="drower-image" src={image || `https://csebootcamp2k22.tech/images/${id}.webp`} height={200} width={400} />
-                            <span className="drower-id">ID: #{id?.substring(4, 7)}</span>
-                            <h1 className="drower-name">{name?.toUpperCase()}</h1>
-                            <p className="drower-city">{(city+', '+state).toUpperCase()}</p>
-                            <div className="drower-about">{about?.toUpperCase()}</div>
+                            <Image className="drower-image no-select" src={image || `https://csebootcamp2k22.tech/images/${id}.webp`} height={200} width={400} />
+                            <span className="drower-id no-select">ID: #{id?.substring(4, 7)}</span>
+                            <h1 className="drower-name no-select">{name?.toUpperCase()}</h1>
+                            <p className="drower-city no-select">{(city+', '+state).toUpperCase()}</p>
+                            <div className="drower-about no-select">{about?.toUpperCase()}</div>
                             <div className="drower-logo-container">
                                 {instagram && <Link target="_blank" href={instagram} ><Image src={'/logo/instagram-logo.png'} height={60} width={60} alt="instagram link"/></Link>}
                                 {linkedin && <Link target="_blank" href={linkedin} ><Image className=" bg-transparent" src={'/logo/linkedin-logo.png'} height={60} width={60} alt="linked link"/></Link>}
@@ -68,11 +68,11 @@ export function Drower({userlist}) {
                     {/* <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-zinc-300 mb-1" /> */}
                     <div className="flex-1 drower-card">
                         <div className="mx-auto">
-                            <Image className="drower-image" src={image || `https://csebootcamp2k22.tech/images/${id}.webp`} height={200} width={400} />
-                            <span className="drower-id">ID: #{id?.substring(4, 7)}</span>
-                            <h1 className="drower-name">{name?.toUpperCase()}</h1>
-                            <p className="drower-city">{(city+', '+state).toUpperCase()}</p>
-                            <div className="drower-about">{about?.toUpperCase()}</div>
+                            <Image className="drower-image no-select" src={image || `https://csebootcamp2k22.tech/images/${id}.webp`} height={200} width={400} />
+                            <span className="drower-id no-select">ID: #{id?.substring(4, 7)}</span>
+                            <h1 className="drower-name no-select">{name?.toUpperCase()}</h1>
+                            <p className="drower-city no-select">{(city+', '+state).toUpperCase()}</p>
+                            <div className="drower-about no-select">{about?.toUpperCase()}</div>
                             <div className="drower-logo-container">
                                 {instagram && <Link target="_blank" href={instagram} ><Image src={'/logo/instagram-logo.png'} height={80} width={80} alt="instagram link"/></Link>}
                                 {linkedin && <Link target="_blank" href={linkedin} ><Image className=" bg-transparent" src={'/logo/linkedin-logo.png'} height={80} width={80} alt="linked link"/></Link>}
