@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import './society.css'
 
 export default function Society() {
@@ -18,42 +19,69 @@ export default function Society() {
 
       <div className="container">
 
-      <lottie-player
-          className='left-card'
-          src="/animations/society1.json"
-          background="transparent"
-          speed="1"
-          loop
-          autoplay/>
+        <div className='card'>
+          <Image
+          src="/assets/e-cell white logo.png"
+          height={400}
+          width={300}/>
+        </div>
 
-        <lottie-player
-          className='right-card'
-          src="/animations/society2.json"
-          background="transparent"
-          speed="1"
-          loop
-          autoplay/>
+        <div className='card'>
+          <Image
+          src="/assets/cult.png"
+          height={400}
+          width={300}/>
+        </div>
 
-        <lottie-player
-          className='left-card'
-          src="/animations/society3.json"
-          speed="1"
-          loop
-          autoplay/>
+        <div className='card'>
+          <Image
+          src="/assets/fats.png"
+          height={400}
+          width={300}/>
+        </div>
 
-        <lottie-player
-          className='right-card'
-          src="https://lottie.host/c7561713-c5a7-4cd3-becb-188099674eec/PFXmeRb60Y.json"
-          speed="1"
-          loop
-          autoplay/>
+        <div className='card'>
+            <Image className='bg-gray-200'
+            src="/assets/NAPS NEW LOGO.png"
+            height={400}
+            width={300}/>
+        </div>
+          
 
-        <lottie-player
-          className='left-card'
-          src="https://lottie.host/44e21f05-0bf3-4615-9ee1-9fd688806b44/h5NAGTRDW5.json"
-          speed="1"
-          loop
-          autoplay/>
+        <div className='card'>
+          <Image
+          src="/assets/PARACOSM LOGO TRANSPARENT.png"
+          height={400}
+          width={300}/>
+        </div>
+
+        <div className='card'>
+          <Image
+          src="/assets/PHOTOGEEKS LOGO.png"
+          height={400}
+          width={300}/>
+        </div>
+
+        <div className='card'>
+          <Image
+          src="/assets/sports.png"
+          height={400}
+          width={300}/>
+        </div>
+
+        <div className='card'>
+          <Image
+          src="/assets/tars.png"
+          height={400}
+          width={300}/>
+        </div>
+
+        <div className='card'>
+          <Image
+          src="/assets/techsociety.png"
+          height={400}
+          width={300}/>
+        </div>
         
       </div>
     </>
