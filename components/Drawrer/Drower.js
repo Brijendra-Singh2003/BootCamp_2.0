@@ -27,7 +27,7 @@ export function Drower({userlist}) {
             <div className="d-container">
                 {userlist.map(({image, id, name, city, state, about, instagram, linkedin, github})=>{
                     return(
-                        <div className="drower-card">
+                        <div className="drower-card" key={id}>
                         <div className="mx-auto">
                             <Image className="drower-image" src={image || `https://csebootcamp2k22.tech/images/${id}.webp`} height={200} width={400} />
                             <span className="drower-id">ID: #{id?.substring(4, 7)}</span>
@@ -52,7 +52,7 @@ export function Drower({userlist}) {
                     {userlist.map((curr)=>{
                         return(
                             <div className="student-card" onClick={()=>setActive(curr)} key={curr.id}>
-                                <Image src={curr.image || `https://csebootcamp2k22.tech/images/${curr.id}.webp`} height={70} width={70} alt={curr.id + " profile image"} />
+                                <Image src={curr.image || `https://csebootcamp2k22.tech/images/${curr.id}.webp`} height={70} width={70} alt={""} />
                                 <div>
                                     <h1>{curr.name}</h1>
                                     <p>{curr.city+', '+curr.state}</p>

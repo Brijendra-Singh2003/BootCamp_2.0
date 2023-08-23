@@ -14,6 +14,12 @@ export default async function Page({ searchParams: user }) {
     redirect("/api/auth/signin");
   }
 
+  const year = user.email[3];
+
+  if(year !== '2' && year !== '3') {
+    redirect("/");
+  }
+
   const id = user.email.split("@")[0];
   let data = {
     name: '',
@@ -31,7 +37,7 @@ export default async function Page({ searchParams: user }) {
   try {
     const response = await fetch(`${process.env.HOST}/api/db?id=${id}`, { cache: 'no-store' });
     data = await response.json() || data;
-    
+
   } catch (err) {
     return <div className=" mt-52"><h1>Err: {err.message}</h1><Retry>Retry</Retry></div>
   }

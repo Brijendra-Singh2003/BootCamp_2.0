@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { signOut } from 'next-auth/react';
 
-export default function Navbar({ user }) {
+export default function Navbar({ user:{email} }) {
 
   const [showMenu, setShowMenu] = React.useState(false);
 
@@ -53,7 +53,7 @@ export default function Navbar({ user }) {
               <Link href="/students/2022">2022</Link>
               <Link href="/about">About</Link>
               <Link href="/societies">Societies</Link>
-              <Link href={{ pathname: "/profile", query: user }}>Profile</Link>
+              {(email[3] === '2' || email[3] === '3') && <Link href={{ pathname: "/profile", query: user }}>Profile</Link>}
               <a className="cursor-pointer" onClick={()=>{signOut()}}>Signout</a>
             </>
           ) : (
@@ -77,7 +77,7 @@ export default function Navbar({ user }) {
             <Link href="/students/2022">2022</Link>
             <Link href="/about">About</Link>
             <Link href="/societies">Societies</Link>
-            <Link href={{ pathname: "/profile", query: user }}>Profile</Link>
+            {(email[3] === '2' || email[3] === '3') && <Link href={{ pathname: "/profile", query: user }}>Profile</Link>}
             <button className="signout" onClick={()=>{signOut()}}>Signout</button>
           </>
         ) : (
