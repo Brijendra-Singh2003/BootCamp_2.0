@@ -1,9 +1,10 @@
 "use client"
 
-export default function Retry({children}) {
+export default function Retry({children, tag}) {
 
     function sasta_refresh() {
-        document.location = document.location;
+      revalidateTag(tag);
+      document.location = document.location;
     }
 
   return (

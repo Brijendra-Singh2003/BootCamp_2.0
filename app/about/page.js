@@ -1,7 +1,7 @@
 import React from 'react'
 import "./page.css"
 
-function About() {
+export default async function About() {
   return (
     <>
     <lottie-player
@@ -21,8 +21,6 @@ function About() {
     </>
   )
 }
-
-export default About;
 
 export const metadata = {
   title: "About - CSE Bootcamp 2.0",

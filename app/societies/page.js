@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import './society.css'
 
-export default function Society() {
+export default async function Society() {
   return (
     <>
       <lottie-player

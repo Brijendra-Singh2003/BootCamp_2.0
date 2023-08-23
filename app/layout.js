@@ -33,13 +33,11 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default async function RootLayout({ children }) {
 
-  const session = await getServerSession(options);
-
   return (
     <html lang="en">
       <body className={inter.className}>
       <div className="fixed h-full w-full top-0 right-0 overflow-hidden z-[-10] pointer-events-none"><div id="spotlight"></div></div>
-        <Navbar user={session?.user}/>
+        <Navbar/>
         <main>
           {children}
         </main>

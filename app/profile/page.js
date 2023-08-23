@@ -1,6 +1,8 @@
+import { options } from "@/app/api/auth/[...nextauth]/options";
 import Retry from "@/components/Retry";
 import Form from "@/components/form/form";
 import ImageUpload from "@/components/profileImage/ImageUpload";
+import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 
 export const metadata = {
@@ -8,19 +10,21 @@ export const metadata = {
   description: "",
 };
 
-export default async function Page({ searchParams: user }) {
+export default async function Page() {
 
-  if (!user.email) {
-    redirect("/api/auth/signin");
+  const session = await getServerSession(options);
+
+  if(!session) {
+    redirect('/api/auth/signin');
   }
 
-  const year = user.email[3];
+  const id = session.user.email.split('@')[0];
+  const year = id[3];
 
   if(year !== '2' && year !== '3') {
     redirect("/");
   }
 
-  const id = user.email.split("@")[0];
   let data = {
     name: '',
     about: '',
@@ -31,19 +35,19 @@ export default async function Page({ searchParams: user }) {
     linkedin: '',
     image: '',
     id: id,
-    year: Number.parseInt(id.at(3))
+    year: Number.parseInt(year)
   };
 
   try {
-    const response = await fetch(`${process.env.HOST}/api/db?id=${id}`, { cache: 'no-store' });
+    const response = await fetch(`${process.env.HOST}/api/db?id=${id}`, {next: {tags: ['profile']}});
     data = await response.json() || data;
 
   } catch (err) {
-    return <div className=" mt-52"><h1>Err: {err.message}</h1><Retry>Retry</Retry></div>
+    return <div className=" mt-52"><h1>Err: {err.message}</h1><Retry tag="profile">Retry</Retry></div>
   }
 
   return (
-    <div className="profile-container relative top-10">
+    <div className="profile-container relative">
       <ImageUpload name={id} src={data.image} host={process.env.HOST} />
       <Form prevData={data} user={id} host={process.env.HOST} />
     </div>

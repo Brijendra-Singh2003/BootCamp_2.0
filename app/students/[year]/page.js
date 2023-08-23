@@ -1,10 +1,7 @@
-import Image from 'next/image';
-import Retry from '@/components/Retry';
 import "./students.css"
 import sampleData from './sampleData';
 import { Drower } from '@/components/Drawrer/Drower';
-
-// run "npm i" in terminal to install vaul before running
+import Retry from "@/components/Retry";
 
 export const metadata = {
     title: "Students - CSE Bootcamp 2.0",
@@ -30,17 +27,18 @@ export default async function StudentPage({params:{year}}) {
 
     let studentsList = sampleData;
 
-    // try {
-    //     const response = await fetch(`${process.env.HOST}/api/db/getall?year=${year[3]}`,{ cache: 'no-store' });
-    //     studentsList = await response.json();
-    // } catch (error) {
-    //     return <div className=" mt-52"><h1>Something went wrong</h1><Retry>Retry</Retry></div>
-
-    // }
+    try {
+        const response = await fetch(`${process.env.HOST}/api/db/getall?year=${year[3]}`, {next: {revalidate: 60, tags:['student', year]}});
+        studentsList = await response.json();
+    } catch (error) {
+        return <div className=" mt-52"><h1>Something went wrong{error.message}</h1><Retry tag={student}></Retry></div>
+    }
 
     return (
-        <>
-            <Drower userlist={studentsList}/>
-        </>
+        <Drower userlist={studentsList}/>
     )
+}
+
+export function generateStaticParams() {
+    return [{year: '2022'}, {year: '2023'}];
 }
