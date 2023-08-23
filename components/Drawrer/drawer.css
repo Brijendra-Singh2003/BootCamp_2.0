@@ -80,6 +80,7 @@
     border-radius: 5vh;
     background-image: url('/assets/default-avatar.png');
     background-size: cover;
+    pointer-events: none;
 }
 
 .drower-id {
