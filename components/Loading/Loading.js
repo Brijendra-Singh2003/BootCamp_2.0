@@ -3,13 +3,13 @@ import "./Loading.css"
 
 function Loading() {
     return (
-            <>
-                <div class="circle"></div>
-                <div class="circle-small"></div>
-                <div class="circle-big"></div>
-                <div class="circle-inner-inner"></div>
-                <div class="circle-inner"></div>
-            </>           
+            <div className='circle-container'>
+                <div className="circle"></div>
+                <div className="circle-small"></div>
+                <div className="circle-big"></div>
+                <div className="circle-inner-inner"></div>
+                <div className="circle-inner"></div>
+            </div>           
     )
 }
 

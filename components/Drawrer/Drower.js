@@ -18,7 +18,7 @@ export function Drower({userlist}) {
                 {userlist.map((curr)=>{
                     return(
                         <div className="student-card" onClick={()=>setActive(curr)}>
-                            <Image src={curr.image} height={70} width={70} />
+                            <Image src={curr.image} height={70} width={70} alt={curr.id + " profile image"} />
                             <div>
                                 <h1>{curr.name}</h1>
                                 <p>{curr.city+', '+curr.state}</p>
@@ -33,7 +33,7 @@ export function Drower({userlist}) {
             <Drawer.Content className="drower-container">
                 {/* <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-zinc-300 mb-1" /> */}
                 <div className="flex-1 drower-card">
-                    <div className="max-w-md mx-auto">
+                    <div className="mx-auto">
                         <Image className="drower-image" src={image} height={200} width={400} />
                         <span className="drower-id">ID: #{id?.substring(4, 7)}</span>
                         <h1 className="drower-name">{name?.toUpperCase()}</h1>
