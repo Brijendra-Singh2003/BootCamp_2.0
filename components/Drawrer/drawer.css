@@ -74,7 +74,7 @@
 }
 
 .drower-image {
-    height: 28vh;
+    height: 36vh;
     width: 100%;
     object-fit:initial;
     border-radius: 5vh;
@@ -84,16 +84,17 @@
 }
 
 .drower-id {
-    margin-top: 5px;
+    margin-top: 4px;
     display: inline-block;
     font-weight: bold;
     font-size: 2vh;
 }
 
 .drower-name {
+    /* margin-top: 3px; */
     font-size: 2.5vh;
     font-weight: bolder;
-    line-height: 0.5vh;
+    line-height: 2vh;
 }
 
 .drower-city {
@@ -101,10 +102,10 @@
 }
 
 .drower-about {
-    margin-top: 1vh;
+    margin-top: 2vh;
     background-color: rgba(0, 0, 255, 0.2);
-    height: 34vh;
-    font-size: 1.7vh;
+    height: 28vh;
+    font-size: 1.4vh;
     text-align: justify;
     border: 2px solid white;
     border-radius: 2vh;
@@ -116,17 +117,17 @@
 .drower-logo-container {
     display: flex;
     width: 100%;
-    height: 10vh;
+    height: 7vh;
     align-items: center;
     justify-content: space-evenly;
 }
 
 .drower-logo-container a {
-    margin-top: 1vh;
+    margin-top: 0.5vh;
     background-color: rgb(255, 0, 200);
     object-fit: cover;
-    height: 6vh;
-    width: 6vh;
+    height: 4.5vh;
+    width: 4.5vh;
     padding: 1vh;
     border-radius: 3vh;
     transition: all 150ms ease-out;
