@@ -1,20 +1,21 @@
 .imageLable {
     position: relative;
-    display: inline-block;
-    height: 290px;
-    width: 290px;
+    display: flex;
+    height: min(56vw, 300px);
+    width: min(80vw, 428px);
+    margin: 20px auto;
     border-radius: 15px;
     border: 2px dashed white;
 }
 
 .userimage {
-    position: relative;
-    margin: 16px auto;
-    height: 256px;
-    width: 256px;
+    position: absolute;
+    margin: 3.8% auto;
+    height: 90%;
+    width: 93%;
     object-fit: cover;
     border-radius: 12px;
-    top: -65px;
+    left: 3.3%;
 }
 
 .dndtext {
@@ -22,6 +23,5 @@
     font-size: 1.5rem;
     line-height: 2rem;
     width: 14rem;
-    left: 2rem;
-    top: 6rem;
+    margin: auto;
 }

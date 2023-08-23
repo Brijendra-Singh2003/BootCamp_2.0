@@ -3,6 +3,7 @@
 import { useState } from "react";
 import classes from "./form.module.css";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 export default function Form({ prevData, host }) {
 
@@ -28,9 +29,9 @@ export default function Form({ prevData, host }) {
     .then((response) => {
       setDisabled(false);
       if (response.ok) {
-        alert("updated successfully");
+        toast("updated successfully");
       } else {
-        alert(response.status);
+        toast(response.status);
       }
     });
   }
@@ -45,7 +46,7 @@ export default function Form({ prevData, host }) {
           return;
         }
       }
-      alert("updated successfully");
+      toast("updated successfully");
       setDisabled(false);
     }
     else {

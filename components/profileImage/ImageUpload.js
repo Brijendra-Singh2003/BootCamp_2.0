@@ -10,6 +10,7 @@ import {
   deleteObject,
 } from "firebase/storage";
 import styles from "./uploadImage.module.css";
+import { toast } from "react-toastify";
 
 const ImageUpload = ({ name, host, src }) => {
   const [image, setImage] = useState(null);
@@ -50,7 +51,7 @@ const ImageUpload = ({ name, host, src }) => {
     }
     setImage(null);
     setIsDisabled(false);
-    alert("image uploaded");
+    toast("image uploaded");
   }
 
   function handleImageUpload() {
