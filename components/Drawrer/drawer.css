@@ -109,6 +109,7 @@
     border-radius: 2vh;
     padding: 10px;
     word-wrap: break-word;
+    pointer-events: none;
 }
 
 .drower-logo-container {
@@ -134,6 +135,7 @@
     object-fit: cover;
     height: 100%;
     width: 100%;
+    pointer-events: none;
 }
 
 .drower-logo-container a:hover{
