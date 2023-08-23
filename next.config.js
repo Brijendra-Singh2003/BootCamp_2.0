@@ -4,7 +4,7 @@ const nextConfig = {
         serverActions: true,
     },
     images: {
-        domains: ['lh3.googleusercontent.com', "firebasestorage.googleapis.com"], // Add more domains if needed, separated by commas
+        domains: ['lh3.googleusercontent.com', "firebasestorage.googleapis.com", "csebootcamp2k22.tech"], // Add more domains if needed, separated by commas
     },
 }
 

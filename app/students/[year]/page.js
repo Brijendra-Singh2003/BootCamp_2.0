@@ -28,15 +28,15 @@ export const metadata = {
 
 export default async function StudentPage({params:{year}}) {
 
-    let studentsList;
+    let studentsList = sampleData;
 
-    try {
-        const response = await fetch(`${process.env.HOST}/api/db/getall?year=${year[3]}`,{ cache: 'no-store' });
-        studentsList = await response.json();
-    } catch (error) {
-        return <div className=" mt-52"><h1>Something went wrong</h1><Retry>Retry</Retry></div>
+    // try {
+    //     const response = await fetch(`${process.env.HOST}/api/db/getall?year=${year[3]}`,{ cache: 'no-store' });
+    //     studentsList = await response.json();
+    // } catch (error) {
+    //     return <div className=" mt-52"><h1>Something went wrong</h1><Retry>Retry</Retry></div>
 
-    }
+    // }
 
     return (
         <>

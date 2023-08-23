@@ -149,4 +149,9 @@
     gap: 5%;
     align-items: center;
     justify-content: center;
+    scroll-snap-type: y mandatory;
+}
+
+.d-container .drower-card {
+    scroll-snap-align: center;
 }
