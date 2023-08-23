@@ -8,7 +8,7 @@ import { signOut } from 'next-auth/react';
 export default function Navbar({ user }) {
 
   const [showMenu, setShowMenu] = React.useState(false);
-  const {email} = user;
+  const email = user?.email;
 
   function toggle() {
     setShowMenu(prevShowMenu => !prevShowMenu);
