@@ -83,6 +83,7 @@
     pointer-events: none;
 }
 
+
 .drower-id {
     margin-top: 4px;
     display: inline-block;
@@ -126,8 +127,8 @@
     margin-top: 0.5vh;
     background-color: rgb(255, 0, 200);
     object-fit: cover;
-    height: 4.5vh;
-    width: 4.5vh;
+    height: 5vh;
+    width: 5vh;
     padding: 1vh;
     border-radius: 3vh;
     transition: all 150ms ease-out;
