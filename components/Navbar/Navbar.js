@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import "./Navbar.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,6 +12,22 @@ export default function Navbar({ user }) {
   function toggle() {
     setShowMenu(prevShowMenu => !prevShowMenu);
   }
+
+  useEffect(()=>{
+    const spotlight = document.getElementById('spotlight');
+    const w = spotlight.offsetWidth/2;
+    const h = spotlight.offsetHeight/2;
+    function foo(e) {
+      const x = e.clientX;
+      const y = e.clientY;
+      console.log(x, y);
+      spotlight.style.left = (x-w)+'px';
+      spotlight.style.top = (y-h)+'px';
+    }
+    document.addEventListener('mousemove', foo);
+
+    return () => document.removeEventListener('mousemove', foo);
+  },[])
 
   return (
     <nav>
