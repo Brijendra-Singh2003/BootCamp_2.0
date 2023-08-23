@@ -14,19 +14,21 @@ export default function Navbar({ user }) {
   }
 
   useEffect(()=>{
-    const spotlight = document.getElementById('spotlight');
-    const w = spotlight.offsetWidth/2;
-    const h = spotlight.offsetHeight/2;
-    function foo(e) {
-      const x = e.clientX;
-      const y = e.clientY;
-      console.log(x, y);
-      spotlight.style.left = (x-w)+'px';
-      spotlight.style.top = (y-h)+'px';
-    }
-    document.addEventListener('mousemove', foo);
+    if (window.innerWidth > 1100) {
+      const spotlight = document.getElementById('spotlight');
+      const w = spotlight.offsetWidth / 2;
+      const h = spotlight.offsetHeight / 2;
+      function foo(e) {
+        const x = e.clientX;
+        const y = e.clientY;
+        console.log(x, y);
+        spotlight.style.left = (x-w)+'px';
+        spotlight.style.top = (y-h)+'px';
+      }
+      document.addEventListener('mousemove', foo);
 
-    return () => document.removeEventListener('mousemove', foo);
+      return () => document.removeEventListener('mousemove', foo);
+    }
   },[])
 
   return (
