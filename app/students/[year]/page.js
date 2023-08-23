@@ -28,8 +28,7 @@ export const metadata = {
 
 export default async function StudentPage({params:{year}}) {
 
-    let studentsList = sampleData;
-    let err = false;
+    let studentsList;
 
     try {
         const response = await fetch(`${process.env.HOST}/api/db/getall?year=${year[3]}`,{ cache: 'no-store' });
