@@ -4,6 +4,7 @@ import "./Navbar.css";
 import Link from "next/link";
 import Image from "next/image";
 import { signOut, SessionProvider, useSession } from 'next-auth/react';
+import { revalidatePath, revalidateTag } from "next/cache";
 
 export default function Navbar() {
   return (

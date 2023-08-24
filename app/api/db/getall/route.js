@@ -10,7 +10,7 @@ export const GET = async (req)=>{
         const users = await Post.find({year: year});
         return new NextResponse(JSON.stringify(users), {status: 201});
     } catch (err) {
-        return  new NextResponse(err, {status: 500});
+        return  new NextResponse(err.message, {status: 500});
     } finally {
         mongoose.disconnect();
     }
