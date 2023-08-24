@@ -2,6 +2,8 @@ import { options } from "@/app/api/auth/[...nextauth]/options";
 import Retry from "@/components/Retry";
 import Form from "@/components/form/form";
 import ImageUpload from "@/components/profileImage/ImageUpload";
+import Post from "@/models/Post";
+import mongoose from "mongoose";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 
@@ -10,21 +12,20 @@ export const metadata = {
 };
 
 export default async function Page() {
-
   const session = await getServerSession(options);
 
-  if(!session) {
+  if (!session) {
     redirect('/api/auth/signin');
   }
 
   const id = session.user.email.split('@')[0];
   const year = id[3];
 
-  if(year !== '2' && year !== '3') {
-    redirect("/");
+  if (year !== '2' && year !== '3') {
+    redirect('/');
   }
 
-  let data = {
+  const dataDefaults = {
     name: '',
     about: '',
     state: '',
@@ -38,17 +39,36 @@ export default async function Page() {
   };
 
   try {
-    const response = await fetch(`${process.env.HOST}/api/db?id=${id}`, {cache: "no-store"});
-    data = await response.json() || data;
+    await mongoose.connect(process.env.MONGO);
+    const fetchedData = await Post.findOne({ id: id });
 
+    if (fetchedData) {
+      Object.assign(dataDefaults, {
+        name: fetchedData.name,
+        about: fetchedData.about,
+        state: fetchedData.state,
+        city: fetchedData.city,
+        instagram: fetchedData.instagram,
+        github: fetchedData.github,
+        linkedin: fetchedData.linkedin,
+        image: fetchedData.image
+      });
+    }
   } catch (err) {
-    return <div className=" mt-52"><h1>Err: {err.message}</h1><Retry/></div>
+    return (
+      <div className=" mt-52">
+        <h1>Err: {err.message}</h1>
+        <Retry />
+      </div>
+    );
+  } finally {
+    mongoose.disconnect();
   }
 
   return (
     <div className="profile-container relative">
-      <ImageUpload name={id} src={data.image} host={process.env.HOST} />
-      <Form prevData={data} user={id} host={process.env.HOST} />
+      <ImageUpload name={id} src={dataDefaults.image} host={process.env.HOST} />
+      <Form prevData={dataDefaults} user={id} host={process.env.HOST} />
     </div>
   );
 }

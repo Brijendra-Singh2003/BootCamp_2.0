@@ -66,8 +66,8 @@ export default function ImageUpload({ name, host, src }) {
           className={styles.userimage}
           src={image ? URL.createObjectURL(image) : prevURL}
           alt="user image"
-          height={250}
-          width={250} />
+          height={400}
+          width={400} />
 
       </label>
 

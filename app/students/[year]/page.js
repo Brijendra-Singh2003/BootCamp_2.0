@@ -28,7 +28,7 @@ export default async function StudentPage({params:{year}}) {
     let studentsList = sampleData;
 
     try {
-        const response = await fetch(`${process.env.HOST}/api/db/getall?year=${year[3]}`, {next: {revalidate: 10, tags:['student', year]}});
+        const response = await fetch(`${process.env.HOST}/api/db/getall?year=${year[3]}`, {next: {revalidate: 60, tags:['student', year]}});
         try{studentsList = await response.json();}catch(err) {
             throw new Error(response.status);
         }
