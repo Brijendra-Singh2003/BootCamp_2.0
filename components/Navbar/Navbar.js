@@ -35,7 +35,6 @@ function Nav() {
       function foo(e) {
         const x = e.clientX;
         const y = e.clientY;
-        console.log(x, y);
         spotlight.style.left = (x-w)+'px';
         spotlight.style.top = (y-h)+'px';
       }

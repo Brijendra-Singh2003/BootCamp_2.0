@@ -39,20 +39,11 @@ export default async function Page() {
   };
 
   try {
-    await mongoose.connect(process.env.MONGO);
-    const fetchedData = await Post.findOne({ id: id });
+    const response = await fetch(`${process.env.HOST}/api/db?id=${id}`);
+    const fetchedData = await response.json();
 
     if (fetchedData) {
-      Object.assign(dataDefaults, {
-        name: fetchedData.name,
-        about: fetchedData.about,
-        state: fetchedData.state,
-        city: fetchedData.city,
-        instagram: fetchedData.instagram,
-        github: fetchedData.github,
-        linkedin: fetchedData.linkedin,
-        image: fetchedData.image
-      });
+      Object.assign(dataDefaults, fetchedData);
     }
   } catch (err) {
     return (
@@ -61,8 +52,6 @@ export default async function Page() {
         <Retry />
       </div>
     );
-  } finally {
-    mongoose.disconnect();
   }
 
   return (
