@@ -25,7 +25,7 @@ export const metadata = {
 
 export default async function StudentPage({params:{year}}) {
 
-    let studentsList = sampleData;
+    let studentsList = [];
 
     try {
         const response = await fetch(`${process.env.HOST}/api/db/getall?year=${year[3]}`, {next: {revalidate: 30, tags:['student', year]}});
@@ -37,7 +37,7 @@ export default async function StudentPage({params:{year}}) {
     }
 
     return (
-        <Drower userlist={studentsList}/>
+        <Drower userlist={studentsList?.sort((a, b) => (a.id.localeCompare(b.id)))}/>
     )
 }
 
