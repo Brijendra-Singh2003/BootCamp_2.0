@@ -14,7 +14,7 @@
 }
 
 .middle-card {
-    margin: 5vh auto 0 auto;
+    margin: 0 auto;
     height: min(60vh, 100vw);
     transform: translateY(10%);
     width: auto;

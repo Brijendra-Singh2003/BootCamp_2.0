@@ -1,5 +1,8 @@
 import './society.css'
 import { Society_card } from '@/components/society_card/society_card';
+import { Lilita_One } from 'next/font/google'
+
+const lilitaOne = Lilita_One({ subsets: ['latin'], weight: "400" });
 
 export default async function Society() {
   return (
@@ -12,7 +15,7 @@ export default async function Society() {
         autoplay />
 
       <div >
-        <p className='text'>
+        <p className={'text '+lilitaOne.className}>
           SOCIETIES
         </p>
       </div>
