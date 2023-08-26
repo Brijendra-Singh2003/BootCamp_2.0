@@ -10,6 +10,10 @@
   user-select: none;
 }
 
+img {
+  pointer-events: none;
+}
+
 #spotlight {
   background-color: rgb(122, 59, 173);
   position: absolute;

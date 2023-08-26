@@ -84,7 +84,6 @@
     border-radius: 4vh;
     background-image: url('/assets/default-avatar.png');
     background-size: cover;
-    pointer-events: none;
 }
 
 

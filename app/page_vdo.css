@@ -12,6 +12,21 @@
     pointer-events: none;
 }
 
+.home-text {
+    color: rgba(255, 255, 255, 0);
+    background-image: linear-gradient(yellow, orange);
+    background-clip: text;
+    font-size: min(10vh, 18vw);
+    line-height: 10vh;
+    width: 100%;
+}
+
+.lottie {
+    height: 69%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .vid {
     height: 100%;
     width: 100%;
@@ -28,8 +43,25 @@
 }
 
 @media only screen and (min-width: 1100px) {
-    .lottie {
+    /* .lottie {
         display: none;
+    } */
+    section {
+        display: flex;
+        flex-direction: row-reverse;
+        /* align-items: center; */
+        justify-content: center;
+        padding: 10vh 5vw;
+    }
+    .lottie {
+        width: 70%;
+        height: fit-content;
+    }
+    .home-text {
+        font-size: 6vw;
+        width: 65%;
+        line-height: 6vw;
+        height: fit-content;
     }
     .youtube {
         display: none;

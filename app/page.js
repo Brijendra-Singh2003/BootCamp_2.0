@@ -1,16 +1,26 @@
 import "./page_vdo.css";
+import { Lilita_One } from 'next/font/google'
+
+const lilitaOne = Lilita_One({ subsets: ['latin'], weight: "400" });
 
 export default async function Home() {
 
   return (
-    <>
+    <section>
+
       <lottie-player
-        className='h-[40%] mt-10 w-[80%] m-auto lottie'
+        className='lottie'
         src="/animations/helloworld.json"
         background="transparent"
         speed="1"
         loop
         autoplay />
+
+      <div>
+        <p className={'home-text '+lilitaOne.className}>
+          WELCOME TO CSE BOOTCAMP
+        </p>
+      </div>
 
       {/* <iframe
         className="youtube"
@@ -21,7 +31,7 @@ export default async function Home() {
         allowFullScreen
       ></iframe> */}
 
-      <div className="video_animation">
+      {/* <div className="video_animation">
 
         <video
           className="vid"
@@ -33,8 +43,8 @@ export default async function Home() {
           autoPlay
           src="/assets/animation.webm" />
 
-      </div>
-    </>
+      </div> */}
+    </section>
   )
 }
 
