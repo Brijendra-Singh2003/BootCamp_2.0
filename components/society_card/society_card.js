@@ -3,17 +3,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import "./society_card.css"
 
-export function Society_card({height,width,heading,src,instagram,para}) {
+export function Society_card({heading,src,instagram,para}) {
     return (
         <>
             <div className='card-placeholder'>
                 <div className='card'>
                     <div className="front">
-                        <h1 className=' text-4xl text-black'>{heading}</h1>
+                        <h1 className='text-black'>{heading}</h1>
                         <Image
                             src={src}
-                            height={height}
-                            width={width} />
+                            height={300}
+                            width={400} />
                     </div>
                     <div className="back">
                         <Link className=' absolute top-[8%] bg-gray-900 rounded-2xl shadow-xl' target='_blank'

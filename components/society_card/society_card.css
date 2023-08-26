@@ -1,11 +1,8 @@
-
-
 .card-placeholder {
     width: min(90vw, 400px);
     aspect-ratio: 3/4;
     margin: 10% 0;
 }
-
 
 .card {
     height: 100%;
@@ -29,17 +26,25 @@
     backface-visibility: hidden;
 }
 
+.front h1 {
+    font-weight: 900;
+    font-size: min(7vw, 30px);
+}
+
 .back {
     transform: rotateY(180deg);
 }
+
 .back p {
     font-size: min(3.4vw, 15px);
     margin: min(10vw, 46px);
 }
+
 .back h1 {
     font-size: min(5vw, 22px);
     margin: min(3.5vw, 16px);
 }
+
 .card img {
     margin-top: 10%;
     height: 40%;
@@ -50,6 +55,7 @@
 .card-placeholder:hover .front {
     transform: rotateY(180deg);
 }
+
 .card-placeholder:hover .back {
     transform: rotateY(360deg);
 }

@@ -1,12 +1,15 @@
 import React from 'react'
+import { Lilita_One } from 'next/font/google'
 import "./page.css"
+
+const lilitaOne = Lilita_One({ subsets: ['latin'], weight: "400" });
 
 export default async function About() {
   return (
     <>
     <lottie-player
       className='middle-card'
-      src="https://lottie.host/b53a03ab-7407-4a8c-81bc-bd26d8355484/oKFOwD0sSA.json"
+      src="/animations/about.json"
       background="transparent"
       speed="1"
       loop
@@ -14,7 +17,7 @@ export default async function About() {
     />
 
     <div>
-      <p className='text'>
+      <p className={'text '+lilitaOne.className}>
         ABOUT US
       </p>
     </div>
