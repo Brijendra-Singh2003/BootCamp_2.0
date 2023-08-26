@@ -67,7 +67,7 @@ export default async function Society() {
             <div className="back">
               <Link className=' absolute top-[8%] bg-gray-900 rounded-2xl shadow-xl' target='_blank'
                 href="https://instagram.com/parda.productions" ><h1>VIEW PAGE</h1></Link>
-              <p className='absolute top-[16%] text-black text-justify rounded-2xl'>The film and theatre society of IIIT Bhubaneswar needs no introduction. We all have that actor hiding inside us waiting for an opportunity to come out. Well FATS is your opportunity peers! FATS literally sets the stage for you to showcase your acting skills in front of the audience. Still want to know more? Well, why don't you watch them on YouTube. If not, then what are you waiting for?</p>
+              <p className='absolute top-[16%] text-black text-justify rounded-2xl'>{"The film and theatre society of IIIT Bhubaneswar needs no introduction. We all have that actor hiding inside us waiting for an opportunity to come out. Well FATS is your opportunity peers! FATS literally sets the stage for you to showcase your acting skills in front of the audience. Still want to know more? Well, why don't you watch them on YouTube. If not, then what are you waiting for?"}</p>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@ export default async function Society() {
             <div className="back">
               <Link className=' absolute top-[8%] bg-gray-900 rounded-2xl shadow-xl' target='_blank'
                 href="https://instagram.com/naps_iiit" ><h1>VIEW PAGE</h1></Link>
-              <p className='absolute top-[16%] text-black text-justify rounded-2xl'>News and Publication Society is the literary club of IIIT Bhubaneswar. It is a platform to rise  up with amazing writeups be it poetry, short stories or any type of content writing. They believe that writing is for everyone. For better or for verse! Ingenium is the annual literary fest organised by NAPs along with various events like Shayari Nights, Open-mic shows, etc. You can find beautiful write-ups of further past events in their official monthly magazine 'The Insight'.</p>
+              <p className='absolute top-[16%] text-black text-justify rounded-2xl'>{"News and Publication Society is the literary club of IIIT Bhubaneswar. It is a platform to rise  up with amazing writeups be it poetry, short stories or any type of content writing. They believe that writing is for everyone. For better or for verse! Ingenium is the annual literary fest organised by NAPs along with various events like Shayari Nights, Open-mic shows, etc. You can find beautiful write-ups of further past events in their official monthly magazine 'The Insight'."}</p>
             </div>
           </div>
         </div>
@@ -135,7 +135,7 @@ export default async function Society() {
             <div className="back">
               <Link className=' absolute top-[8%] bg-gray-900 rounded-2xl shadow-xl' target='_blank'
                 href="https://instagram.com/iiitbh_sports" ><h1>VIEW PAGE</h1></Link>
-              <p className='absolute top-[16%] text-black text-justify rounded-2xl'>The official sports society of IIIT-Bh helps you maintain physical health and considers it to be man's greatest wealth. It provides great opportunity to interact with large number of people. It organises sports events like cricket, football, basketball intra championship and gives opportunity to represent the college in tournaments held in various IITs and NITs.</p>
+              <p className='absolute top-[16%] text-black text-justify rounded-2xl'>{"The official sports society of IIIT-Bh helps you maintain physical health and considers it to be man's greatest wealth. It provides great opportunity to interact with large number of people. It organises sports events like cricket, football, basketball intra championship and gives opportunity to represent the college in tournaments held in various IITs and NITs."}</p>
             </div>
           </div>
         </div>

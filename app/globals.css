@@ -24,9 +24,9 @@
 }
 
 main {
-    height: calc(100vh - 100px);
+    height: calc(100svh - 100px);
     margin-top: 100px;
-    width: 100vw;
+    width: 100svw;
     overflow: scroll;
 }
 
@@ -52,7 +52,20 @@ input:focus , .input:focus{
 body {
   background-image: radial-gradient(var(--background-end-rgb), var(--background-start-rgb));
   text-align: center;
-  overflow: scroll;
+  overflow: hidden;
+}
+
+main::-webkit-scrollbar {
+  width: 4px;
+}
+
+main::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 2px;
 }
 
 label, h1, p, li{
