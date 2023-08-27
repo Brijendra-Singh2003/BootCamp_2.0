@@ -24,7 +24,7 @@ export async function POST(req) {
         await post.save();
       }
 
-      fetch(`${process.env.HOST}/api/revalidate?secret=${process.env.MY_SECRET_TOKEN}`);
+      fetch(`${process.env.HOST}/api/revalidate`);
 
       return new NextResponse("data uploaded", { status: 201 });
     } catch (err) {
