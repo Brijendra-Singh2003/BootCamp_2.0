@@ -46,7 +46,7 @@ function Nav() {
   },[]);
 
   return (
-    (pathname !== "/api/auth/signin") && <nav>
+    <nav>
 
       { showMenu ? <div className="backdrop" onClick={toggle}></div> : null }
 

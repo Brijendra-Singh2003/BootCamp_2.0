@@ -23,7 +23,7 @@ export default async function Society() {
         </p>
       </div>
 
-      <div className="society-container">
+      <div className="society-container container">
 
         <Society_card
           height="400"

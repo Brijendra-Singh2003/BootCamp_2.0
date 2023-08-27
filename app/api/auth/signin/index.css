@@ -1,9 +1,6 @@
 @media only screen and (max-width: 1048px) {
     .container {
-        position: fixed;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        position: relative;
         margin: 0 auto;
         display: flex;
         justify-content: center;
