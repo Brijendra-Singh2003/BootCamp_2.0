@@ -42,7 +42,7 @@
 .youtube {
     position: relative;
     margin: auto;
-    width: min(720px, 80svw);
+    width: min(720px, 90svw);
     height: min(450px, 45svw);
 }
 
