@@ -56,7 +56,6 @@ input:focus , .input:focus{
 body {
   background-image: radial-gradient(var(--background-end-rgb), var(--background-start-rgb));
   text-align: center;
-  overflow: hidden;
 }
 
 main::-webkit-scrollbar {
