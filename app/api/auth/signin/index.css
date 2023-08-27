@@ -22,12 +22,10 @@
     }
 
     .left {
-        /* background-color: #FC0; */
         margin: 0 auto;
         width: min(40vh, 100vw);
-        height: min(40vh, 75vw);
-        padding: min(10vh, 25vw) min(10vh, 25vw) 0 min(10vh, 25vw);
-        /* overflow: hidden; */
+        height: min(40vh, 100vw);
+        padding: min(10vh, 25vw);
     }
 
     #para {
@@ -38,8 +36,6 @@
         text-align: center;
         font-size: min(1.44vh, 3.6vw);
         scale: 1.25;
-        width: 120%;
-        left: -10%;
     }
     
     #sign {
