@@ -25,8 +25,9 @@
     line-height: 60%;
 }
 .desc {
-    margin: 15px;
+    margin: 15px auto;
     line-height: min(4vh, 5vw);
     font-size: min(4vh, 5vw);
-    /* text-wrap: balance; */
+    max-width: 100vh;
+    text-wrap: balance;
 }
