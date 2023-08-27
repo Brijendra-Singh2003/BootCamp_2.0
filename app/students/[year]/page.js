@@ -12,9 +12,7 @@ export default async function StudentPage({ params: { year } }) {
 
     try {
         const intYear = Number.parseInt(year[3]);
-        const response = await fetch(process.env.HOST + "/api/db", {
-            next: { tags: ["student"] },
-        });
+        const response = await fetch(process.env.HOST + "/api/db");
         try {
             studentsList = (await response.json())?.filter(
                 (a) => a.year === intYear
@@ -39,6 +37,6 @@ export default async function StudentPage({ params: { year } }) {
 
 
 
-// export async function generateStaticParams() {
-//     return [{ year: "2022" }, { year: "2023" }];
-// }
+export async function generateStaticParams() {
+    return [{ year: "2022" }, { year: "2023" }];
+}

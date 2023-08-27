@@ -23,6 +23,9 @@ export async function POST(req) {
         const post = await Post.create(data);
         await post.save();
       }
+
+      fetch(`${process.env.HOST}/api/revalidate?secret=${process.env.MY_SECRET_TOKEN}`);
+
       return new NextResponse("data uploaded", { status: 201 });
     } catch (err) {
       return new NextResponse(err.message, { status: 500 });
