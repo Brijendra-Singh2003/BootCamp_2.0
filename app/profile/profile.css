@@ -1,0 +1,4 @@
+.title {
+    font-size: min(12vh, 20vw);
+    text-shadow: 0 0 8px white;
+}

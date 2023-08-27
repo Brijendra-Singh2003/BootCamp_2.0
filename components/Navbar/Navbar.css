@@ -16,6 +16,10 @@ nav{
     z-index: 1;
 }
 
+.active {
+    color: red;
+}
+
 .menu-icon {
     height: 35px;
     width: 35px;

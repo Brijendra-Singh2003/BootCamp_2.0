@@ -1,32 +1,32 @@
 @media only screen and (max-width: 1048px) {
     .container {
-        position: relative;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
         margin: 0 auto;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        /* background-color: red; */
-        flex-wrap: wrap-reverse;
-        /* overflow: hidden; */
+        flex-direction: column-reverse;
     }
     
     .animation {
         position: relative;
         display: inline-block;
-        /* background-color: #7200ff; */
         margin: 0 auto;
-        width: min(500px, 100svw);
-        height: min(400px, 75svw);
-        padding: min(100px, 25svw) min(100px, 25svw) 0 min(100px, 25svw);
+        width: min(50vh, 100vw);
+        height: min(40vh, 75vw);
+        padding: min(10vh, 25svw) min(10vh, 25svw) 0 min(10vh, 25svw);
         overflow: hidden;
     }
 
     .left {
         /* background-color: #FC0; */
         margin: 0 auto;
-        width: min(400px, 100svw);
-        height: min(400px, 75svw);
-        padding: min(100px, 25svw) min(100px, 25svw) 0 min(100px, 25svw);
+        width: min(40vh, 100vw);
+        height: min(40vh, 75vw);
+        padding: min(10vh, 25vw) min(10vh, 25vw) 0 min(10vh, 25vw);
         /* overflow: hidden; */
     }
 
@@ -36,8 +36,10 @@
         color: white;
         padding: 0 0 4% 0;
         text-align: center;
-        font-size: min(14.4px, 3.6vw);
+        font-size: min(1.44vh, 3.6vw);
         scale: 1.25;
+        width: 120%;
+        left: -10%;
     }
     
     #sign {
@@ -45,8 +47,8 @@
         background: linear-gradient(90.2deg, #ff0c28, #7200ff);
         color: white;
         font-weight: bolder;
-        font-size: min(14.4px, 3.6vw);
-        border-radius: min(14.4px, 3.6vw);
+        font-size: min(1.44vh, 3.6vw);
+        font-size: min(1.44vh, 3.6vw);
         padding: 2% 4%;
         border: 2px solid rgb(142, 4, 4);
         scale: 1.5;

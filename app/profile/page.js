@@ -4,6 +4,11 @@ import Form from "@/components/form/form";
 import ImageUpload from "@/components/profileImage/ImageUpload";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
+import { Lilita_One } from 'next/font/google'
+import "./profile.css";
+
+
+const lilitaOne = Lilita_One({ subsets: ['latin'], weight: "400" });
 
 export const metadata = {
   title: "Profile - CSE Bootcamp 2.0"
@@ -56,7 +61,8 @@ export default async function Page() {
   }
 
   return (
-    <div className="profile-container relative">
+    <div className={"profile-container relative"}>
+      <h1 className={"title "+lilitaOne.className}>PROFILE</h1>
       <ImageUpload name={id} src={dataDefaults.image} host={process.env.HOST} />
       <Form prevData={dataDefaults} user={id} host={process.env.HOST} />
     </div>

@@ -24,3 +24,9 @@
     position: relative;
     line-height: 60%;
 }
+.desc {
+    margin: 15px;
+    line-height: min(4vh, 5vw);
+    font-size: min(4vh, 5vw);
+    /* text-wrap: balance; */
+}

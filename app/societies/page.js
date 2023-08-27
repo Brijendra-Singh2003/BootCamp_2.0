@@ -18,6 +18,9 @@ export default async function Society() {
         <p className={'text '+lilitaOne.className}>
           SOCIETIES
         </p>
+        <p className={"desc "+lilitaOne.className}>
+          There is immense power when a group of people with similar interests gets together to work toward the same goals
+        </p>
       </div>
 
       <div className="container">

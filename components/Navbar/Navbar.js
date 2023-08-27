@@ -4,7 +4,7 @@ import "./Navbar.css";
 import Link from "next/link";
 import Image from "next/image";
 import { signOut, SessionProvider, useSession } from 'next-auth/react';
-import { revalidatePath, revalidateTag } from "next/cache";
+import { usePathname } from "next/navigation"
 
 export default function Navbar() {
   return (
@@ -15,9 +15,10 @@ export default function Navbar() {
 }
 
 function Nav() {
-
+  
   const { data: session, status} = useSession();
   const user = session?.user;
+  const pathname = usePathname();
 
   const [showMenu, setShowMenu] = React.useState(false);
   const email = user?.email;
@@ -42,10 +43,10 @@ function Nav() {
 
       return () => document.removeEventListener('mousemove', foo);
     }
-  },[])
+  },[]);
 
   return (
-    <nav>
+    (pathname !== "/api/auth/signin") && <nav>
 
       { showMenu ? <div className="backdrop" onClick={toggle}></div> : null }
 
@@ -71,7 +72,7 @@ function Nav() {
             </>
           ) : (
             <>
-              <Link href={"/api/auth/signin"}>Login</Link>
+              <a href={"/api/auth/signin"}>Login</a>
               <Link href="/societies">Societies</Link>
               <Link href={"/about"}>About</Link>
             </>
@@ -81,20 +82,20 @@ function Nav() {
       </div>
 
       <div className="desktop-links">
-        <Link href="/">Home</Link>
+        <Link className={(pathname === "/") && "active"} href="/">Home</Link>
         {user ? (
           <>
-            <Link href="/students/2023">2023</Link>
-            <Link href="/students/2022">2022</Link>
-            <Link href="/about">About</Link>
-            <Link href="/societies">Societies</Link>
-            {(email[3] === '2' || email[3] === '3') && <Link href={"/profile"}>Profile</Link>}
+            <Link className={(pathname === "/students/2023") && "active"} href="/students/2023">2023</Link>
+            <Link className={(pathname === "/students/2022") && "active"}  href="/students/2022">2022</Link>
+            <Link className={(pathname === "/about") && "active"}  href="/about">About</Link>
+            <Link className={(pathname === "/societies") && "active"}  href="/societies">Societies</Link>
+            {(email[3] === '2' || email[3] === '3') && <Link className={(pathname === "/profile") && "active"}  href={"/profile"}>Profile</Link>}
             <button className="signout" onClick={()=>{signOut()}}>Signout</button>
           </>
         ) : (
           <>
-            <Link href="/societies">Societies</Link>
-            <Link href="/about">About</Link>
+            <Link className={(pathname === "/societies") && "active"} href="/societies">Societies</Link>
+            <Link className={(pathname === "/about") && "active"} href="/about">About</Link>
           <Link href="/api/auth/signin">Login</Link>
           </>
         )}
