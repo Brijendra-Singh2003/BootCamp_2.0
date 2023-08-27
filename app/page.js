@@ -6,6 +6,7 @@ const lilitaOne = Lilita_One({ subsets: ['latin'], weight: "400" });
 export default async function Home() {
 
   return (
+    <>
     <section>
 
       <lottie-player
@@ -21,30 +22,20 @@ export default async function Home() {
           <span>WELCOME TO</span> <span className="cse">CSE</span> <span>BOOTCAMP</span>
         </p>
       </div>
+    </section>
+      <div className={"angledLineWrap"}>
+            <div className={"angledLine"}></div>
+        </div>
 
-      {/* <iframe
+      <iframe
         className="youtube"
         width="560"
         height="315"
         src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0&start=1"
         title="YouTube video player"
         allowFullScreen
-      ></iframe> */}
-
-      {/* <div className="video_animation">
-
-        <video
-          className="vid"
-          id="vid"
-          preload="false"
-          muted
-          playsInline
-          loop
-          autoPlay
-          src="/assets/animation.webm" />
-
-      </div> */}
-    </section>
+      ></iframe>
+  </>
   )
 }
 
@@ -71,3 +62,17 @@ export const metadata = {
     },
   ],
 };
+
+/* <div className="video_animation">
+
+<video
+className="vid"
+id="vid"
+preload="false"
+muted
+playsInline
+loop
+autoPlay
+src="/assets/animation.webm" />
+
+</div> */

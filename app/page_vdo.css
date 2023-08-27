@@ -71,11 +71,8 @@
         font-size: 9vw;
     }
     .youtube {
-        display: none;
-        /* position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate3D(-50%, -50%, 0); */
+        /* display: none; */
+        position: relative;
     }
 }
 
@@ -87,4 +84,15 @@
     .vid{
         display: none;
     }
+}
+
+.angledLine {
+    width: 80vw;
+    height: 24px;
+    margin: 5vh auto;
+    background: url('/assets/repeater.svg');
+}
+
+.angledLineWrap {
+    width: 100%;
 }
