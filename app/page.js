@@ -28,7 +28,6 @@ export default async function Home() {
       </div>
 
       <iframe className="youtube" width="560" height="315" src="https://www.youtube.com/embed/iHMfYBnRpkg?mute=1&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      https://youtu.be/iHMfYBnRpkg?si=2cgxrlFGLXH4p3sc
     </>
   )
 }
