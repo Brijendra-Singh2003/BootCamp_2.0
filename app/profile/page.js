@@ -2,8 +2,6 @@ import { options } from "@/app/api/auth/[...nextauth]/options";
 import Retry from "@/components/Retry";
 import Form from "@/components/form/form";
 import ImageUpload from "@/components/profileImage/ImageUpload";
-import Post from "@/models/Post";
-import mongoose from "mongoose";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 

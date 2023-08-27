@@ -34,7 +34,7 @@ export default async function StudentPage({ params: { year } }) {
     return (
         <>
         <div>
-            <p className={'text '+lilitaOne.className}>
+            <p className={'starter-text '+lilitaOne.className}>
                 ABOUT US
             </p>
         </div>
