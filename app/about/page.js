@@ -1,6 +1,6 @@
 import React from 'react'
-import { Lilita_One } from 'next/font/google'
 import "./page.css"
+import { Lilita_One } from 'next/font/google'
 
 const lilitaOne = Lilita_One({ subsets: ['latin'], weight: "400" });
 

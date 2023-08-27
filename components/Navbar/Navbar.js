@@ -71,11 +71,9 @@ function Nav() {
             </>
           ) : (
             <>
-              <Link href="/students/2023">2023</Link>
-              <Link href="/students/2022">2022</Link>
-              <Link href={"/about"}>About</Link>
-              <Link href="/societies">Societies</Link>
               <Link href={"/api/auth/signin"}>Login</Link>
+              <Link href="/societies">Societies</Link>
+              <Link href={"/about"}>About</Link>
             </>
           )}
 
@@ -95,11 +93,9 @@ function Nav() {
           </>
         ) : (
           <>
-          <Link href="/students/2023">2023</Link>
-              <Link href="/students/2022">2022</Link>
             <Link href="/societies">Societies</Link>
             <Link href="/about">About</Link>
-            <Link href="/api/auth/signin">Login</Link>
+          <Link href="/api/auth/signin">Login</Link>
           </>
         )}
       </div>

@@ -7,7 +7,6 @@
   --background-start-rgb: rgb(6, 0, 20);
   --background-end-rgb: rgb(21, 0, 70);
   height: 100svh;
-  user-select: none;
 }
 
 img {

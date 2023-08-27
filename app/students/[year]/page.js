@@ -1,6 +1,9 @@
 import "./students.css";
 // import sampleData from './sampleData';
 import { Drower } from "@/components/Drawrer/Drower";
+import { Lilita_One } from 'next/font/google'
+
+const lilitaOne = Lilita_One({ subsets: ['latin'], weight: "400" });
 
 export const metadata = {
     title: "Students - CSE Bootcamp 2.0",
@@ -29,9 +32,17 @@ export default async function StudentPage({ params: { year } }) {
     }
 
     return (
-        <Drower
+        <>
+        <div>
+            <p className={'text '+lilitaOne.className}>
+                ABOUT US
+            </p>
+        </div>
+
+        <Drower className={lilitaOne.className}
             userlist={studentsList?.sort((a, b) => a.id.localeCompare(b.id))}
         />
+        </>
     );
 }
 
