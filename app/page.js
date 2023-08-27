@@ -7,35 +7,29 @@ export default async function Home() {
 
   return (
     <>
-    <section>
+      <section>
 
-      <lottie-player
-        className='lottie'
-        src="/animations/helloworld.json"
-        background="transparent"
-        speed="1"
-        loop
-        autoplay />
+        <lottie-player
+          className='lottie'
+          src="/animations/helloworld.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay />
 
-      <div className="flex items-center justify-center">
-        <p className={'home-text flex flex-col '+lilitaOne.className}>
-          <span>WELCOME TO</span> <span className="cse">CSE</span> <span>BOOTCAMP</span>
-        </p>
-      </div>
-    </section>
-      <div className={"angledLineWrap"}>
-            <div className={"angledLine"}></div>
+        <div className="flex items-center justify-center">
+          <p className={'home-text flex flex-col ' + lilitaOne.className}>
+            <span>WELCOME TO</span> <span className="cse">CSE</span> <span>BOOTCAMP</span>
+          </p>
         </div>
+      </section>
+      <div className={"angledLineWrap"}>
+        <div className={"angledLine"}></div>
+      </div>
 
-      <iframe
-        className="youtube"
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0&start=1"
-        title="YouTube video player"
-        allowFullScreen
-      ></iframe>
-  </>
+      <iframe className="youtube" width="560" height="315" src="https://www.youtube.com/embed/iHMfYBnRpkg?mute=1&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      https://youtu.be/iHMfYBnRpkg?si=2cgxrlFGLXH4p3sc
+    </>
   )
 }
 
@@ -62,17 +56,3 @@ export const metadata = {
     },
   ],
 };
-
-/* <div className="video_animation">
-
-<video
-className="vid"
-id="vid"
-preload="false"
-muted
-playsInline
-loop
-autoPlay
-src="/assets/animation.webm" />
-
-</div> */
