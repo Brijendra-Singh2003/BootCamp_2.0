@@ -15,7 +15,7 @@ export default async function Society() {
         autoplay />
 
       <div >
-        <p className={'text '+lilitaOne.className}>
+        <p className={'society-text '+lilitaOne.className}>
           SOCIETIES
         </p>
         <p className={"desc "+lilitaOne.className}>

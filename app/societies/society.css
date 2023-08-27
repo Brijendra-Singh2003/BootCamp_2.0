@@ -13,9 +13,7 @@
     height: min(60vh, 100vw);
     width: auto;
 }
-.text {
-    /* font-family: 'Lilita One', cursive; */
-    /* font-weight: bolder; */
+.society-text {
     text-shadow: rgb(172, 5, 5) -4px 2px 5px;
     color: rgb(241, 254, 98);
     text-align: center;
