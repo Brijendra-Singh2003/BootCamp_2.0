@@ -1,10 +1,11 @@
 "use client"
 
-import { revalidateTag } from "next/cache";
+import handleRevalidate from "@/functions/revalidate";
 
 export default function Retry() {
 
     function sasta_refresh() {
+      handleRevalidate();
       document.location = document.location;
     }
 

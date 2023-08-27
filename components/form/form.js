@@ -4,7 +4,7 @@ import { useState } from "react";
 import classes from "./form.module.css";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
-import { revalidateTag } from "next/cache";
+import handleRevalidate from "@/functions/revalidate";
 
 export default function Form({ prevData, host }) {
 
@@ -31,14 +31,14 @@ export default function Form({ prevData, host }) {
       setDisabled(false);
       if (response.ok) {
         toast("updated successfully");
-        revalidateTag('profile');
-        revalidateTag('student');
+        console.log("updated successfully");
+        handleRevalidate();
       } else {
         toast(response.status);
       }
     });
   }
-  
+
   function checkData(e) {
     setDisabled(true);
     e.preventDefault();

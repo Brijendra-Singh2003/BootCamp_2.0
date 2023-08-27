@@ -1,46 +1,44 @@
-import "./students.css"
-import sampleData from './sampleData';
-import { Drower } from '@/components/Drawrer/Drower';
-import Retry from "@/components/Retry";
+import "./students.css";
+// import sampleData from './sampleData';
+import { Drower } from "@/components/Drawrer/Drower";
 
 export const metadata = {
     title: "Students - CSE Bootcamp 2.0",
     description: "About your peers",
 };
 
-// const curr = {
-//     _id: "64e1f12024452bbb960c865e",
-//     id: "b122041",
-//     name: "Brijendra Singh",
-//     about: "",
-//     state: "mp",
-//     city: "pali",
-//     instagram: "https://www.instagram.com/",
-//     github: "https://github.com/",
-//     linkedin: "https://www.linkedin.com/",
-//     image: "https://firebasestorage.googleapis.com/v0/b/cse-bootcamp-auth.appspot.com/o/images%2Fb122041?alt=media&token=ddedfdf7-8c2a-4927-b945-ee1c003b1055",
-//     year: 2,
-//     __v: 0
-// }
-
-export default async function StudentPage({params:{year}}) {
-
+export default async function StudentPage({ params: { year } }) {
     let studentsList = [];
 
     try {
-        const response = await fetch(`${process.env.HOST}/api/db/getall?year=${year[3]}`, {next: {revalidate: 30, tags:['student', year]}});
-        try{studentsList = await response.json();}catch(err) {
+        const intYear = Number.parseInt(year[3]);
+        const response = await fetch(process.env.HOST + "/api/db", {
+            next: { tags: ["student"] },
+        });
+        try {
+            studentsList = (await response.json())?.filter(
+                (a) => a.year === intYear
+            );
+        } catch (err) {
             throw new Error(response.status);
         }
     } catch (error) {
-        return <div className=" mt-52"><h1>Something went wrong. Status:{error.message}</h1><Retry/></div>
+        return (
+            <div className=" mt-52">
+                <h1>Something went wrong. Status:{error.message}</h1>
+            </div>
+        );
     }
 
     return (
-        <Drower userlist={studentsList?.sort((a, b) => (a.id.localeCompare(b.id)))}/>
-    )
+        <Drower
+            userlist={studentsList?.sort((a, b) => a.id.localeCompare(b.id))}
+        />
+    );
 }
 
-export async function generateStaticParams() {
-    return [{year: '2022'}, {year: '2023'}];
-}
+
+
+// export async function generateStaticParams() {
+//     return [{ year: "2022" }, { year: "2023" }];
+// }

@@ -39,8 +39,11 @@ export default async function Page() {
   };
 
   try {
-    const response = await fetch(`${process.env.HOST}/api/db?id=${id}`);
-    const fetchedData = await response.json();
+    const response = await fetch(process.env.HOST + "/api/db", {
+      next: { tags: ["student"] },
+    });
+    const userlist = await response.json();
+    const fetchedData = userlist?.find(a => a.id === id);
 
     if (fetchedData) {
       Object.assign(dataDefaults, fetchedData);

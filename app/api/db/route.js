@@ -2,21 +2,13 @@ import { NextResponse } from "next/server";
 import Post from "@/models/Post";
 import mongoose from "mongoose";
 
-export async function GET(req) {
+export async function GET() {
     try {
       await mongoose.connect(process.env.MONGO);
-      const userId = req.nextUrl.searchParams.get("id");
-
-      if (userId) {
-        const user = await Post.findOne({ id: userId });
-        return new NextResponse(JSON.stringify(user), { status: 201 });
-      } else {
-        return new NextResponse('id querry missing', { status: 400 });
-      }
+      const user = await Post.find();
+      return new NextResponse(JSON.stringify(user), { status: 201 });
     } catch (err) {
       return new NextResponse(err.message, { status: 500 });
-    } finally {
-      mongoose.disconnect();
     }
 }
 
@@ -34,7 +26,5 @@ export async function POST(req) {
       return new NextResponse("data uploaded", { status: 201 });
     } catch (err) {
       return new NextResponse(err.message, { status: 500 });
-    } finally {
-      mongoose.disconnect();
     }
 }

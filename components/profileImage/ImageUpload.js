@@ -6,6 +6,7 @@ import { storage } from "@/Firebase";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import styles from "./uploadImage.module.css";
 import { toast } from "react-toastify";
+import handleRevalidate from "@/functions/revalidate";
 
 export default function ImageUpload({ name, host, src }) {
   const [image, setImage] = useState(null);
@@ -37,6 +38,9 @@ export default function ImageUpload({ name, host, src }) {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ id: name, image: value }),
+        })
+        .then(() => {
+          handleRevalidate();
         });
       });
     }
