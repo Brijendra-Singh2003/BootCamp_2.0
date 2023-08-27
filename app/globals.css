@@ -60,16 +60,16 @@ body {
 }
 
 main::-webkit-scrollbar {
-  width: 4px;
+  width: 6px;
 }
 
 main::-webkit-scrollbar-track {
-  background-color: black;
+  width: 0;
 }
 
 main::-webkit-scrollbar-thumb {
   background-color: #888;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 label, h1, p, li{

@@ -16,9 +16,13 @@
     color: rgba(255, 255, 255, 0);
     background-image: linear-gradient(yellow, orange);
     background-clip: text;
-    font-size: min(10vh, 18vw);
-    line-height: 10vh;
+    font-size: min(10vh, 16vw);
+    line-height: min(12.5vh, 20vw);
     width: 100%;
+}
+
+.home-text .cse {
+    font-size: min(18.75vh, 30vw);
 }
 
 .lottie {
@@ -49,19 +53,22 @@
     section {
         display: flex;
         flex-direction: row-reverse;
-        /* align-items: center; */
-        justify-content: center;
+        justify-content: space-between;
         padding: 10vh 5vw;
     }
     .lottie {
-        width: 70%;
+        width: 40vw;
+        max-width: 40vw;
         height: fit-content;
+        margin: 0;
     }
     .home-text {
         font-size: 6vw;
-        width: 65%;
         line-height: 6vw;
-        height: fit-content;
+        /* height: fit-content; */
+    }
+    .home-text .cse {
+        font-size: 9vw;
     }
     .youtube {
         display: none;

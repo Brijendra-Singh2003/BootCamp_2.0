@@ -16,9 +16,9 @@ export default async function Home() {
         loop
         autoplay />
 
-      <div>
-        <p className={'home-text '+lilitaOne.className}>
-          WELCOME TO CSE BOOTCAMP
+      <div className="flex items-center justify-center">
+        <p className={'home-text flex flex-col '+lilitaOne.className}>
+          <span>WELCOME TO</span> <span className="cse">CSE</span> <span>BOOTCAMP</span>
         </p>
       </div>
 
