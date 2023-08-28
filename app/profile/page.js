@@ -62,7 +62,7 @@ export default async function Page() {
 
   return (
     <div className={"profile-container relative"}>
-      <h1 className={"title "+lilitaOne.className}>PROFILE</h1>
+      <h1 className={"title "+lilitaOne.className}>YOUR PROFILE</h1>
       <ImageUpload name={id} src={dataDefaults.image} host={process.env.HOST} />
       <Form prevData={dataDefaults} user={id} host={process.env.HOST} />
     </div>

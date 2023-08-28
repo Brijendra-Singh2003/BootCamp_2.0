@@ -35,6 +35,14 @@ main {
     overflow: scroll;
 }
 
+.desc {
+  margin: 40px auto;
+  line-height: min(4vh, 5vw);
+  font-size: min(4vh, 5vw);
+  max-width: 100vh;
+  text-wrap: balance;
+}
+
 input, button, .input {
   background-color: var(--background-end-rgb);
   border: 1px solid gray;

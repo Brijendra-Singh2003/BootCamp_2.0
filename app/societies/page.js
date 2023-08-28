@@ -87,6 +87,6 @@ export default async function Society() {
 }
 
 export const metadata = {
-  title: "Socities -CSE Bootcamp 2.0",
+  title: "Societies -CSE Bootcamp 2.0",
   description: "Get to know about different societies in IIIT Bhubaneshwar",
 };

@@ -37,6 +37,9 @@ export default async function StudentPage({ params: { year } }) {
             <p className={'starter-text '+lilitaOne.className}>
                 {year} BATCH
             </p>
+            <p className={'mkc-text '+lilitaOne.className}>
+                {(year === "2022") ? "The Sophomores" : "The Neophytes"}
+            </p>
         </div>
 
         <Drower className={lilitaOne.className}

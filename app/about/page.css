@@ -1,7 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap'); */
-
 .text {
-    /* font-family: 'Lilita One', cursive; */
     text-shadow: rgb(172, 5, 5) -4px 2px 5px;
     color: rgb(241, 254, 98);
     z-index: 0;
@@ -14,6 +11,71 @@
 
 .middle-card {
     margin: 0 auto;
+    height: min(60vh, 80vw);
+    width: auto;
+}
+
+.middle-about-card {
+    margin: 0 auto;
     height: min(60vh, 100vw);
     width: auto;
+}
+
+.teams {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    gap: 1.5em;
+}
+
+.about-card {
+    transition: all 0.4s;
+    background: linear-gradient(rgba(124, 127, 255, 0.2) 0%, rgba(124, 127, 255, 0) 100%);
+    border: 1px solid rgb(124, 127, 255);
+    border-radius: 1.5em;
+    width: 32em;
+    height: fit-content;
+    padding: 5px 20px 25px 20px;
+}
+
+.about-card:hover {
+    box-shadow: rgb(124 127 255) 0px 0px 12px;
+    cursor: pointer;
+}
+
+.about-card p {
+    font-size: min(5vh, 10vw);
+    margin-block-start: 0.4em;
+    margin-inline-start: 0.6em;
+    font-weight: bold;
+    color: rgb(241, 254, 98);
+}
+
+.about-card ul {
+    list-style: none;
+    margin-inline-start: 0.8em;
+    padding-inline-start: 0px;
+}
+
+.about-card ul li {
+    font-size: min(3vh, 4.5vw);
+    text-align: left;
+}
+
+#signn {
+    font-size: min(3vh, 4.5vw);
+    z-index: 0;
+    background: linear-gradient(90.2deg, #ff0c28, #7200ff);
+    color: white;
+    font-weight:100;
+    border: 2px solid rgb(142, 4, 4);
+}
+
+#signn:hover {
+    color: rgb(241, 254, 98);
+    border: 2px solid white;
 }
