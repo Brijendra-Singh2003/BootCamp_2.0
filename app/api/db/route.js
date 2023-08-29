@@ -22,7 +22,7 @@ export async function POST(req) {
       const data = await req.json();
       await mongoose.connect(process.env.MONGO);
 
-      const isPresent = await Post.findOneAndUpdate({ id: id }, data);
+      const isPresent = await Post.findOneAndUpdate({ id: id }, {...data, id: id});
 
       if (!isPresent) {
         const post = await Post.create(data);

@@ -60,21 +60,21 @@ function Nav() {
 
         <div className={ "dropDown " + (showMenu ? "show" : "hide") }>
 
-          <Link href="/">Home</Link>
+          <Link className={(pathname === "/") && "active"} href="/">Home</Link>
           {user ? (
             <>
-              <Link href="/students/2023">2023</Link>
-              <Link href="/students/2022">2022</Link>
-              <Link href="/about">About</Link>
-              <Link href="/societies">Societies</Link>
-              {(email[3] === '2' || email[3] === '3') && <Link href={"/profile"}>Profile</Link>}
-              <a className="cursor-pointer" onClick={()=>{signOut()}}>Signout</a>
+              <Link className={(pathname === "/students/2023") && "active"} href="/students/2023">2023</Link>
+              <Link className={(pathname === "/students/2022") && "active"}  href="/students/2022">2022</Link>
+              <Link className={(pathname === "/about") && "active"} href="/about">About</Link>
+              <Link className={(pathname === "/societies") && "active"}  href="/societies">Societies</Link>
+              {(email[3] === '2' || email[3] === '3') && <Link className={(pathname === "/profile") && "active"}  href={"/profile"}>Profile</Link>}
+              <a onClick={()=>{signOut()}}>Signout</a>
             </>
           ) : (
             <>
-              <a href={"/api/auth/signin"}>Login</a>
-              <Link href="/societies">Societies</Link>
-              <Link href={"/about"}>About</Link>
+              <Link className={(pathname === "/societies") && "active"} href="/societies">Societies</Link>
+              <Link className={(pathname === "/about") && "active"} href="/about">About</Link>
+            <Link className={(pathname === "/api/auth/signin") && "active"} href="/api/auth/signin">Login</Link>
             </>
           )}
 
@@ -82,12 +82,13 @@ function Nav() {
       </div>
 
       <div className="desktop-links">
+
         <Link className={(pathname === "/") && "active"} href="/">Home</Link>
         {user ? (
           <>
             <Link className={(pathname === "/students/2023") && "active"} href="/students/2023">2023</Link>
             <Link className={(pathname === "/students/2022") && "active"}  href="/students/2022">2022</Link>
-            <Link className={(pathname === "/about") && "active"}  href="/about">About</Link>
+            <Link className={(pathname === "/about") && "active"} href="/about">About</Link>
             <Link className={(pathname === "/societies") && "active"}  href="/societies">Societies</Link>
             {(email[3] === '2' || email[3] === '3') && <Link className={(pathname === "/profile") && "active"}  href={"/profile"}>Profile</Link>}
             <button className="signout" onClick={()=>{signOut()}}>Signout</button>
@@ -96,9 +97,10 @@ function Nav() {
           <>
             <Link className={(pathname === "/societies") && "active"} href="/societies">Societies</Link>
             <Link className={(pathname === "/about") && "active"} href="/about">About</Link>
-          <Link href="/api/auth/signin">Login</Link>
+          <Link className={(pathname === "/api/auth/signin") && "active"} href="/api/auth/signin">Login</Link>
           </>
         )}
+
       </div>
 
     </nav>
