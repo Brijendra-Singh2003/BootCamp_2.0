@@ -22,9 +22,9 @@ export default async function About() {
       <p className='text'>
         ABOUT US
       </p>
-        <p className="desc">
-          This bootcamp is made with lots of love and hard work by our entire team working behind this website and it would not have been possible without the support of the entire 2022 - 26 CSE batch.
-        </p>
+      <p className="desc">
+        This bootcamp is made with lots of love and hard work by our entire team working behind this website and it would not have been possible without the support of the entire 2022 - 26 CSE batch.
+      </p>
     </div>
     <div className={"teams " + lilitaOne.className}>
       <div className="about-card small">
@@ -63,7 +63,8 @@ export default async function About() {
           </div>
       </div>
     </div>
-    <div className="stack flex items-center justify-center gap-3 w-full flex-wrap mb-8">
+    <p className={'stack '+lilitaOne.className}>Tech Stack Used</p>
+    <div className="flex items-center justify-center gap-3 w-full flex-wrap mb-8">
       <div className="part flex items-center justify-center gap-3 h-16">
         <Image src="/stack/html.png" height={40} width={40} />
         <Image src="/stack/css-3.png" height={40} width={40} />

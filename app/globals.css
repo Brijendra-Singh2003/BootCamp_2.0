@@ -39,7 +39,7 @@ main {
   margin: 40px auto;
   line-height: min(4vh, 5vw);
   font-size: min(4vh, 5vw);
-  max-width: 100vh;
+  width: min(100vh, 85vw);
   text-wrap: balance;
 }
 
