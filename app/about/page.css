@@ -34,10 +34,10 @@
 
 .about-card {
     transition: all 0.4s;
-    background: linear-gradient(rgba(124, 127, 255, 0.2) 0%, rgba(124, 127, 255, 0) 100%);
-    border: 1px solid rgb(124, 127, 255);
+    background: linear-gradient(rgba(126, 128, 255, 0.221) 0%, rgba(116, 118, 255, 0) 100%);
+    border: 1px solid rgb(124, 126, 255);
     border-radius: 1.5em;
-    width: 32em;
+    width: min(32em, 90vw);
     height: fit-content;
     padding: 5px 20px 25px 20px;
 }
@@ -78,4 +78,20 @@
 #signn:hover {
     color: rgb(241, 254, 98);
     border: 2px solid white;
+}
+
+.Acard {
+    transition: all 0.4s;
+    background: linear-gradient(rgba(126, 128, 255, 0.221) 0%, rgba(116, 118, 255, 0) 100%);
+    border: 1px solid rgb(124, 126, 255);
+    width: min(12em, 75vw);
+}
+
+.Acard:hover {
+    box-shadow: rgb(124 127 255) 0px 0px 12px;
+    cursor: pointer;
+}
+
+.part {
+    width: min(15em, 80vw);
 }
