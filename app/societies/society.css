@@ -28,3 +28,7 @@
         flex-direction: column;
     }
 }
+
+.no-select{
+    user-select: none;
+}

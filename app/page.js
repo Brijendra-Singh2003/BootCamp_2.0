@@ -17,7 +17,7 @@ export default async function Home() {
         loop
         autoplay />
 
-      <div className="flex items-center justify-center">
+      <div className="no-select flex items-center justify-center">
         <p className={'home-text flex flex-col '+lilitaOne.className}>
           <span>WELCOME TO</span> <span className="cse">CSE</span> <span>BOOTCAMP</span>
         </p>
@@ -28,7 +28,7 @@ export default async function Home() {
         </div>
 
             <iframe
-                className="youtube"
+                className="youtube no-select"
                 width="560"
                 height="315"
                 src="https://www.youtube.com/embed/iHMfYBnRpkg?si=QLnc4WhkRsJeCWLJ&autoplay=1&mute=1"
@@ -66,16 +66,3 @@ export const metadata = {
     ],
 };
 
-/* <div className="video_animation">
-
-<video
-className="vid"
-id="vid"
-preload="false"
-muted
-playsInline
-loop
-autoPlay
-src="/assets/animation.webm" />
-
-</div> */

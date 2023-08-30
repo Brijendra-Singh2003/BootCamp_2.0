@@ -18,7 +18,7 @@ export default async function About() {
       autoplay
     />
 
-    <div className={lilitaOne.className}>
+    <div className={"no-select "+lilitaOne.className}>
       <p className='text'>
         ABOUT US
       </p>
@@ -27,7 +27,7 @@ export default async function About() {
       </p>
     </div>
     <div className={"teams " + lilitaOne.className}>
-      <div className="about-card small">
+      <div className="about-card small no-select">
           <p>OUR TEAM</p>
           <div className="Acont flex gap-4 flex-wrap items-center justify-center">
             <div className="Acard border border-blue-100 rounded-2xl p-4">
@@ -68,8 +68,8 @@ export default async function About() {
           </div>
       </div>
     </div>
-    <p className={'stack '+lilitaOne.className}>Tech Stack Used</p>
-    <div className="flex items-center justify-center gap-3 w-full flex-wrap mb-8">
+    <p className={'stack no-select '+lilitaOne.className}>Tech Stack Used</p>
+    <div className="no-select flex items-center justify-center gap-3 w-full flex-wrap mb-8">
       <div className="part flex items-center justify-center gap-3 h-16">
         <Image src="/stack/html.png" height={40} width={40} />
         <Image src="/stack/css-3.png" height={40} width={40} />
@@ -85,7 +85,7 @@ export default async function About() {
         <Image src="/stack/azure.png" height={40} width={40} />
       </div>
     </div>
-    <Link target='_blank' href={"https://github.com/Brijendra-Singh2003/BootCamp_2.0"}> <button id='signn' className={lilitaOne.className}> View GitHub Repository </button> </Link>
+    <Link target='_blank' href={"https://github.com/Brijendra-Singh2003/BootCamp_2.0"}> <button id='signn' className={"no-select "+lilitaOne.className}> View GitHub Repository </button> </Link>
     </>
   )
 }

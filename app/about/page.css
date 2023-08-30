@@ -30,6 +30,10 @@
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     gap: 1.5em;
+    
+}
+.no-select{
+    user-select: none;
 }
 
 .about-card {

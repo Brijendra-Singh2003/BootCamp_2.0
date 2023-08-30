@@ -14,7 +14,7 @@ export default async function Society() {
         loop
         autoplay />
 
-      <div >
+      <div className='no-select'>
         <p className={'society-text '+lilitaOne.className}>
           SOCIETIES
         </p>
