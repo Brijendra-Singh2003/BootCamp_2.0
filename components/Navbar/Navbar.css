@@ -123,6 +123,7 @@ nav{
     }
     .active {
         text-decoration: underline;
+        text-underline-offset: 6px;
     }
     .mobile-links {
         display: none;

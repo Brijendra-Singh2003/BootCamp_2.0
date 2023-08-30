@@ -36,27 +36,32 @@ export default async function About() {
               <h1>Frontend, Backend</h1>
             </div>
             <div className="Acard border border-blue-100 rounded-2xl p-4">
-              <h1>Asutosh Kataruka</h1>
+              <h1 className='scale-[1.2]'>Asutosh Kataruka</h1>
               <h1>B122029</h1>
               <h1>Frontend, Design</h1>
             </div>
             <div className="Acard border border-blue-100 rounded-2xl p-4">
-              <h1>Abhik Sundar Sahu</h1>
+              <h1 className='scale-[1.2]'>Abhik Sundar Sahu</h1>
               <h1>B122001</h1>
               <h1>Research, Content</h1>
             </div>
             <div className="Acard border border-blue-100 rounded-2xl p-4">
-              <h1>Anirudh Praadhan</h1>
+              <h1 className='scale-[1.2]'>Anirudh Praadhan</h1>
               <h1>B122018</h1>
               <h1>Content, Design</h1>
             </div>
             <div className="Acard border border-blue-100 rounded-2xl p-4">
-              <h1>Amit Behera</h1>
+              <h1 className='scale-[1.2]'>Amit Behera</h1>
               <h1>B122015</h1>
               <h1>Content</h1>
             </div>
             <div className="Acard border border-blue-100 rounded-2xl p-4">
-              <h1>Aditya Narayan</h1>
+              <h1 className='scale-[1.2]'>Abinas Ojha</h1>
+              <h1>B122008</h1>
+              <h1>content</h1>
+            </div>
+            <div className="Acard border border-blue-100 rounded-2xl p-4">
+              <h1 className='scale-[1.2]'>Aditya Narayan</h1>
               <h1>B122008</h1>
               <h1>Graphic Designer</h1>
             </div>
