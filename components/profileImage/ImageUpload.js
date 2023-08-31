@@ -19,6 +19,10 @@ export default function ImageUpload({ name, host, src }) {
     console.log(selectedImage);
   };
 
+  function handleDef(e) {
+    e.preventDefault();
+  }
+
   function handleDrop(e) {
     e.preventDefault();
     const file = e.dataTransfer.files[0];
@@ -63,6 +67,8 @@ export default function ImageUpload({ name, host, src }) {
       <label
         className={styles.imageLable}
         htmlFor="image-input"
+        onDragOver={handleDef}
+        onDragLeave={handleDef}
         onDrop={handleDrop}
       >
         <div className={styles.dndtext}>Drag And Drop Here</div>

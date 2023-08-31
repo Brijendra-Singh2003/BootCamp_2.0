@@ -46,7 +46,7 @@ export function Drower({userlist}) {
                 })}
             </div>
         ) : (
-            <Drawer.Root>
+            <Drawer.Root className="no-hlt">
 
                 <Drawer.Trigger className="trigger">
                     {userlist.map((curr)=>{

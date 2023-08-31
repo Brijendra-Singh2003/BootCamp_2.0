@@ -26,7 +26,7 @@ export default async function About() {
         This bootcamp is made with lots of love and hard work by our entire team working behind this website and it would not have been possible without the support of the entire 2022 - 26 CSE batch.
       </p>
     </div>
-    <div className={"teams " + lilitaOne.className}>
+    <div className={"teams no-hlt " + lilitaOne.className}>
       <div className="about-card small no-select">
           <p>OUR TEAM</p>
           <div className="Acont flex gap-4 flex-wrap items-center justify-center">
@@ -85,7 +85,7 @@ export default async function About() {
         <Image src="/stack/azure.png" height={40} width={40} />
       </div>
     </div>
-    <Link className='repo-link' target='_blank' href={"https://github.com/Brijendra-Singh2003/BootCamp_2.0"}> <button id='signn' className={"no-select "+lilitaOne.className}> View GitHub Repository </button> </Link>
+    <Link target='_blank' href={"https://github.com/Brijendra-Singh2003/BootCamp_2.0"}> <button id='signn' className={"no-select "+lilitaOne.className}> View GitHub Repository </button> </Link>
     </>
   )
 }

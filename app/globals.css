@@ -54,7 +54,7 @@ input, button, .input {
   -webkit-tap-highlight-color: transparent;
 }
 
-a {
+a, .no-hlt {
   -webkit-tap-highlight-color: transparent;
 }
 
