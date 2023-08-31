@@ -85,7 +85,7 @@ export default async function About() {
         <Image src="/stack/azure.png" height={40} width={40} />
       </div>
     </div>
-    <Link target='_blank' href={"https://github.com/Brijendra-Singh2003/BootCamp_2.0"}> <button id='signn' className={"no-select "+lilitaOne.className}> View GitHub Repository </button> </Link>
+    <Link className='repo-link' target='_blank' href={"https://github.com/Brijendra-Singh2003/BootCamp_2.0"}> <button id='signn' className={"no-select "+lilitaOne.className}> View GitHub Repository </button> </Link>
     </>
   )
 }

@@ -44,12 +44,12 @@
     width: min(32em, 90vw);
     height: fit-content;
     padding: 5px 20px 25px 20px;
-}
-
-.about-card:hover {
-    box-shadow: rgb(124 127 255) 0px 0px 12px;
     cursor: pointer;
 }
+
+/* .about-card:hover {
+    box-shadow: rgb(124 127 255) 0px 0px 12px;
+} */
 
 .about-card p, .stack {
     font-size: min(5vh, 10vw);
@@ -98,4 +98,8 @@
 
 .part {
     width: min(15em, 80vw);
+}
+
+.repo-link {
+    -webkit-tap-highlight-color: transparent;
 }

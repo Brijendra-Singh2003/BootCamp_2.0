@@ -51,6 +51,11 @@ input, button, .input {
   border-radius: 10px;
   color: var(--foreground-rgb);
   max-width: 400px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .cancel {
