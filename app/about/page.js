@@ -57,7 +57,7 @@ export default async function About() {
             </div>
             <div className="Acard border border-blue-100 rounded-2xl p-4">
               <h1 className='scale-[1.2]'>Abinas Ojha</h1>
-              <h1>B122008</h1>
+              <h1>B122004</h1>
               <h1>content</h1>
             </div>
             <div className="Acard border border-blue-100 rounded-2xl p-4">

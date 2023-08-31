@@ -65,9 +65,9 @@ function Nav() {
             <>
               <Link className={(pathname === "/students/2023") && "active"} href="/students/2023">2023</Link>
               <Link className={(pathname === "/students/2022") && "active"}  href="/students/2022">2022</Link>
-              <Link className={(pathname === "/about") && "active"} href="/about">About</Link>
               <Link className={(pathname === "/societies") && "active"}  href="/societies">Societies</Link>
               {(email[3] === '2' || email[3] === '3') && <Link className={(pathname === "/profile") && "active"}  href={"/profile"}>Profile</Link>}
+              <Link className={(pathname === "/about") && "active"} href="/about">About</Link>
               <a onClick={()=>{signOut()}}>Signout</a>
             </>
           ) : (
