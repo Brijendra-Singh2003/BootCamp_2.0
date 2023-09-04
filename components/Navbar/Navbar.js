@@ -29,6 +29,7 @@ function Nav() {
   }
 
   useEffect(()=>{
+    fetch('/api/db');
     if (window.innerWidth > 1100) {
       const spotlight = document.getElementById('spotlight');
       const w = spotlight.offsetWidth / 2;
