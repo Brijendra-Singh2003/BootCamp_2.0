@@ -30,11 +30,11 @@ export default function Form({ prevData, host }) {
     .then((response) => {
       setDisabled(false);
       if (response.ok) {
-        toast("updated successfully");
+        toast.success('👍 Updated Successfully');
         console.log("updated successfully");
         handleRevalidate();
       } else {
-        toast(response.status);
+        toast.error('Something Went Wrong');
       }
     });
   }
@@ -49,7 +49,7 @@ export default function Form({ prevData, host }) {
           return;
         }
       }
-      toast("updated successfully");
+      toast.success('👍 Updated Successfully');
       setDisabled(false);
     }
     else {

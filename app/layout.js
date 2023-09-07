@@ -41,8 +41,18 @@ export default async function RootLayout({ children }) {
         <main>
           {children}
         </main>
-        {/* run npm i to install toast */}
-        <ToastContainer/>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
         <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer/>
       </body>
     </html>

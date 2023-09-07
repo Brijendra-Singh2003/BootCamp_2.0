@@ -50,7 +50,7 @@ export default function ImageUpload({ name, host, src }) {
     }
     setImage(null);
     setIsDisabled(false);
-    toast("image uploaded");
+    toast.success('👍 Uploaded Successfully');
   }
 
   function handleImageUpload() {
@@ -59,6 +59,8 @@ export default function ImageUpload({ name, host, src }) {
       const imageRef = ref(storage, `images/${name}`);
       uploadBytes(imageRef, image)
       .then(updateDatabase);
+    } else {
+      toast.error('no image selected');
     }
   };
 
