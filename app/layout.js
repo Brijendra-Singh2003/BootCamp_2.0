@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar/Navbar'
 // import { options } from "./api/auth/[...nextauth]/options"
 // import { getServerSession } from "next-auth"
-import Script from 'next/script'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -53,7 +52,6 @@ export default async function RootLayout({ children }) {
           pauseOnHover
           theme="dark"
         />
-        <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer/>
       </body>
     </html>
   )

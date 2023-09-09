@@ -11,7 +11,7 @@
 .middle-card {
     margin: 0 auto;
     height: min(60vh, 100vw);
-    width: auto;
+    width: min(60vh, 100vw);
 }
 .society-text {
     text-shadow: rgb(172, 5, 5) -4px 2px 5px;

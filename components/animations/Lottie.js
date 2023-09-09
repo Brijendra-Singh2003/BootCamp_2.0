@@ -1,14 +1,14 @@
-import React from 'react'
+"use client";
 
-export default function Lottie({className, src, id}) {
+import { useLottie } from 'lottie-react'
+
+export default function Lottie({className, options}) {
+
+  const {View} = useLottie({animationData: options, loop: true});
+
   return (
-    <lottie-player
-      id={id}
-      className={className}
-      src={src}
-      background="transparent"
-      speed="1"
-      loop
-      autoplay />
+    <div className={className}>
+        {View}
+      </div>
   )
 }

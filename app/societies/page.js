@@ -1,18 +1,15 @@
 import './society.css'
 import { Society_card } from '@/components/society_card/society_card';
 import { Lilita_One } from 'next/font/google'
+import anime from "@/public/animations/society-main.json"
+import Lottie from '@/components/animations/Lottie';
 
 const lilitaOne = Lilita_One({ subsets: ['latin'], weight: "400" });
 
 export default async function Society() {
   return (
     <>
-      <lottie-player
-        className='middle-card'
-        src="/animations/society-main.json"
-        speed="1"
-        loop
-        autoplay />
+      <Lottie options={anime} className="middle-card" />
 
       <div className='no-select'>
         <p className={'society-text '+lilitaOne.className}>

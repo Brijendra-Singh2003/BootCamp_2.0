@@ -3,20 +3,15 @@ import "./page.css"
 import { Lilita_One } from 'next/font/google'
 import Link from 'next/link';
 import Image from 'next/image';
+import anime from "@/public/animations/about.json";
+import Lottie from '@/components/animations/Lottie';
 
 const lilitaOne = Lilita_One({ subsets: ['latin'], weight: "400" });
 
 export default async function About() {
   return (
     <>
-    <lottie-player
-      className='middle-card'
-      src="/animations/about.json"
-      background="transparent"
-      speed="1"
-      loop
-      autoplay
-    />
+    <Lottie options={anime} className="middle-card" />
 
     <div className={"no-select "+lilitaOne.className}>
       <p className='text'>

@@ -1,5 +1,7 @@
 import "./page_vdo.css";
 import { Lilita_One } from "next/font/google";
+import hello from "@/public/animations/helloworld.json";
+import Lottie from "@/components/animations/Lottie";
 
 const lilitaOne = Lilita_One({ subsets: ["latin"], weight: "400" });
 
@@ -9,13 +11,7 @@ export default async function Home() {
     <>
     <section>
 
-      <lottie-player
-        className='lottie'
-        src="/animations/helloworld.json"
-        background="transparent"
-        speed="1"
-        loop
-        autoplay />
+      <Lottie options={hello} className='lottie' />
 
       <div className="no-select flex items-center justify-center">
         <p className={'home-text flex flex-col '+lilitaOne.className}>
@@ -31,10 +27,10 @@ export default async function Home() {
                 className="youtube no-select"
                 width="560"
                 height="315"
-                src="https://www.youtube.com/embed/iHMfYBnRpkg?si=QLnc4WhkRsJeCWLJ&autoplay=1&mute=1"
+                src="https://www.youtube.com/embed/iHMfYBnRpkg?si=QLnc4WhkRsJeCWLJ&autoplay=1&mute=1&loop=1"
                 title="YouTube video player"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowfullscreen
                 
             ></iframe>
