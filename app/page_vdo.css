@@ -13,12 +13,17 @@
 }
 
 .home-text {
-    color: rgba(255, 255, 255, 0);
+    color: transparent;
     background-image: linear-gradient(yellow, orange);
     background-clip: text;
     font-size: min(10vh, 16vw);
     line-height: min(12.5vh, 20vw);
     width: 100%;
+    /* text-shadow:-1px 1px 0 rgb(255, 255, 0), -2px 2px 0 brown,
+                -3px 3px 0 brown, -4px 4px 0 brown,
+                -5px 5px 0 brown, -6px 6px 0 brown,
+                -7px 7px 0 brown, -8px 8px 0 #a52a2a,
+                0 20px 30px rgba(0, 0, 0, 0.349); */
 }
 
 .home-text .cse {

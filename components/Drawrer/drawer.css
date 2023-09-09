@@ -57,7 +57,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
-    bottom: 0;
+    bottom: -5vh;
     height: 90vh;
     width: 40vh;
     left: calc(50vw - 20vh);

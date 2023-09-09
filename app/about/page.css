@@ -54,7 +54,7 @@
 .about-card p, .stack {
     font-size: min(5vh, 10vw);
     margin-block-start: 0.4em;
-    margin-inline-start: 0.6em;
+    /* margin-inline-start: 0.6em; */
     font-weight: bold;
     color: rgb(241, 254, 98);
 }

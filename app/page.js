@@ -1,9 +1,9 @@
 import "./page_vdo.css";
-import { Lilita_One } from "next/font/google";
+import { Luckiest_Guy } from "next/font/google";
 import hello from "@/public/animations/helloworld.json";
 import Lottie from "@/components/animations/Lottie";
 
-const lilitaOne = Lilita_One({ subsets: ["latin"], weight: "400" });
+const lilitaOne = Luckiest_Guy({ subsets: ["latin"], weight: "400" });
 
 export default async function Home() {
 
