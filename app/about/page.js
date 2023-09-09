@@ -11,7 +11,7 @@ const lilitaOne = Lilita_One({ subsets: ['latin'], weight: "400" });
 export default async function About() {
   return (
     <>
-    <Lottie options={anime} className="middle-card" />
+    <Lottie options={anime} className="about-middle-card" />
 
     <div className={"no-select "+lilitaOne.className}>
       <p className='text'>
