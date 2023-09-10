@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
 import Post from "@/models/Post";
-import mongoose from "mongoose";
 import { getServerSession } from "next-auth";
 import { options } from "../auth/[...nextauth]/options";
+import connection from "@/utils/db";
 
 export async function GET() {
     try {
-      await mongoose.connect(process.env.MONGO);
+      await connection();
       const user = await Post.find();
       return new NextResponse(JSON.stringify(user), { status: 201 });
     } catch (err) {
@@ -20,12 +20,12 @@ export async function POST(req) {
     const id = session.user.email.split('@')[0];
     try {
       const data = await req.json();
-      await mongoose.connect(process.env.MONGO);
+      await connection();
 
-      const isPresent = await Post.findOneAndUpdate({ id: id }, {...data, id: id});
+      const isPresent = await Post.findOneAndUpdate({ id: id }, {...data, id: id, year: Number.parseInt(id[3])});
 
       if (!isPresent) {
-        const post = await Post.create(data);
+        const post = await Post.create({...data, id: id, year: Number.parseInt(id[3])});
         await post.save();
       }
 

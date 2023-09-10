@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { signOut, SessionProvider, useSession } from 'next-auth/react';
 import { usePathname } from "next/navigation"
+import fetchData from "@/functions/FetchData";
 
 export default function Navbar() {
   return (
@@ -29,7 +30,7 @@ function Nav() {
   }
 
   useEffect(()=>{
-    fetch('/api/db').then(() => console.log('got data!'));
+    fetchData();
     if (window.innerWidth > 1100) {
       const spotlight = document.getElementById('spotlight');
       const w = spotlight.offsetWidth / 2;

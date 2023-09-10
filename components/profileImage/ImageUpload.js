@@ -64,6 +64,8 @@ export default function ImageUpload({ name, host, src }) {
     }
   };
 
+  const currImg = image ? URL.createObjectURL(image) : prevURL;
+
   return (
     <>
       <label
@@ -74,12 +76,12 @@ export default function ImageUpload({ name, host, src }) {
         onDrop={handleDrop}
       >
         <div className={styles.dndtext}>Drag And Drop Here</div>
-        <Image
+        {currImg && <Image
           className={styles.userimage}
-          src={image ? URL.createObjectURL(image) : prevURL}
+          src={currImg}
           alt="user image"
           height={400}
-          width={400} />
+          width={400} />}
 
       </label>
 

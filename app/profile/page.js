@@ -37,8 +37,6 @@ export default async function Page() {
     github: '',
     linkedin: '',
     image: '',
-    id: id,
-    year: Number.parseInt(year)
   };
 
   try {
@@ -54,7 +52,7 @@ export default async function Page() {
   } catch (err) {
     return (
       <div className=" mt-52">
-        <h1>Err: {err.message}</h1>
+        <h1>Err: {err.message} <Retry /></h1>
         <Retry />
       </div>
     );
