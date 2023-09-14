@@ -13,15 +13,6 @@
     height: min(60vh, 100vw);
     width: min(60vh, 100vw);
 }
-.society-text {
-    text-shadow: rgb(172, 5, 5) -4px 2px 5px;
-    color: rgb(241, 254, 98);
-    text-align: center;
-    font-size: min(12vh, 20vw);
-    margin-top: 0px;
-    position: relative;
-    line-height: 60%;
-}
 
 @media only screen and (max-width: 1100px) {
     .society-container {

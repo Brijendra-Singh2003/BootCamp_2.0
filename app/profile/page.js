@@ -4,11 +4,11 @@ import Form from "@/components/form/form";
 import ImageUpload from "@/components/profileImage/ImageUpload";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-import { Lilita_One } from 'next/font/google'
+import { Luckiest_Guy } from 'next/font/google'
 import "./profile.css";
 
 
-const lilitaOne = Lilita_One({ subsets: ['latin'], weight: "400" });
+const lilitaOne = Luckiest_Guy({ subsets: ['latin'], weight: "400" });
 
 export const metadata = {
   title: "Profile - CSE Bootcamp 2.0"

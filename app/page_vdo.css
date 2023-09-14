@@ -1,38 +1,23 @@
-.video_animation {
-    position: absolute;
-    top: 50%;
-    left: 50vw;
-    z-index: -2;
-    width: 100vw;
-    height: 100em;
-    mask-image: radial-gradient(50% 50% at 50% 50%, #fff 60.94%, transparent 100%);
-    opacity: 1;
-    transform: translate(-50%, -50%);
-    transition: .75s cubic-bezier(.6, .6, 0, 1) opacity;
-    pointer-events: none;
-}
-
 .home-text {
-    color: transparent;
+    /* color: transparent;
     background-image: linear-gradient(yellow, orange);
     background-clip: text;
     font-size: min(10vh, 16vw);
     line-height: min(12.5vh, 20vw);
-    width: 100%;
-    /* text-shadow:-1px 1px 0 rgb(255, 255, 0), -2px 2px 0 brown,
-                -3px 3px 0 brown, -4px 4px 0 brown,
-                -5px 5px 0 brown, -6px 6px 0 brown,
-                -7px 7px 0 brown, -8px 8px 0 #a52a2a,
-                0 20px 30px rgba(0, 0, 0, 0.349); */
+    width: 100%; */
+    --text: brown;
+    font-size: min(7vh, 7vw);
+    font-weight: 900;
 }
 
-.home-text .cse {
+/* .home-text .cse {
     font-size: min(18.75vh, 30vw);
-}
+} */
 
-.lottie {
-    height: 69%;
-    max-width: 600px;
+.lottie-holder {
+    height: 50vw;
+    max-height: 50vh;
+    max-width: 100vh;
     margin: 0 auto;
 }
 
@@ -51,12 +36,11 @@
     border-radius: 8px;
     width: min(720px,96svw);
     height: min(450px,55svw);
+    outline: none;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
 }
 
-@media only screen and (min-width: 1100px) {
-    /* .lottie {
-        display: none;
-    } */
+/* @media only screen and (min-width: 1100px) {
     section {
         display: flex;
         flex-direction: row-reverse;
@@ -72,26 +56,14 @@
     .home-text {
         font-size: 6vw;
         line-height: 6vw;
-        /* height: fit-content; */
     }
     .home-text .cse {
         font-size: 9vw;
     }
     .youtube {
-        /* display: none; */
         position: relative;
     }
-}
-
-@media only screen and (max-width: 1100px) {
-    
-    .video_animation {
-        display: none;
-    }
-    .vid{
-        display: none;
-    }
-}
+} */
 
 .angledLine {
     width: 80vw;

@@ -1,20 +1,18 @@
 import './society.css'
 import { Society_card } from '@/components/society_card/society_card';
-import { Lilita_One } from 'next/font/google'
+import { Luckiest_Guy } from 'next/font/google'
 import anime from "@/public/animations/society-main.json"
 import Lottie from '@/components/animations/Lottie';
 
-const lilitaOne = Lilita_One({ subsets: ['latin'], weight: "400" });
+const lilitaOne = Luckiest_Guy({ subsets: ['latin'], weight: "400" });
 
 export default async function Society() {
   return (
     <>
+      <h1 className={lilitaOne.className+" title"}>SOCIETIES</h1>
       <Lottie options={anime} className="middle-card" />
 
       <div className='no-select'>
-        <p className={'society-text '+lilitaOne.className}>
-          SOCIETIES
-        </p>
         <p className={"desc "+lilitaOne.className}>
           There is immense power when a group of people with similar interests gets together to work toward the same goals
         </p>

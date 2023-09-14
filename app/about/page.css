@@ -11,14 +11,8 @@
 
 .about-middle-card {
     margin: 0 auto;
-    height: min(60vh, 64vw);
+    height: min(60vh, 80vw);
     width: min(90vh, 100vw);
-}
-
-.middle-about-card {
-    margin: 0 auto;
-    height: min(60vh, 100vw);
-    width: auto;
 }
 
 .teams {
@@ -46,10 +40,6 @@
     padding: 5px 20px 25px 20px;
     cursor: pointer;
 }
-
-/* .about-card:hover {
-    box-shadow: rgb(124 127 255) 0px 0px 12px;
-} */
 
 .about-card p, .stack {
     font-size: min(5vh, 10vw);

@@ -1,22 +1,20 @@
 import React from 'react'
 import "./page.css"
-import { Lilita_One } from 'next/font/google'
+import { Luckiest_Guy } from 'next/font/google'
 import Link from 'next/link';
 import Image from 'next/image';
 import anime from "@/public/animations/about.json";
 import Lottie from '@/components/animations/Lottie';
 
-const lilitaOne = Lilita_One({ subsets: ['latin'], weight: "400" });
+const lilitaOne = Luckiest_Guy({ subsets: ['latin'], weight: "400" });
 
 export default async function About() {
   return (
     <>
+    <h1 className={lilitaOne.className+" society-text"}>ABOUT US</h1>
     <Lottie options={anime} className="about-middle-card" />
 
     <div className={"no-select "+lilitaOne.className}>
-      <p className='text'>
-        ABOUT US
-      </p>
       <p className="desc">
         This bootcamp is made with lots of love and hard work by our entire team working behind this website and it would not have been possible without the support of the entire 2022 - 26 CSE batch.
       </p>

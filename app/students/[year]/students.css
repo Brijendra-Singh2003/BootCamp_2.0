@@ -1,20 +1,18 @@
 
-.starter-text {
-    /* font-family: 'Lilita One', cursive; */
-    text-shadow: rgb(172, 5, 5) -4px 2px 5px;
+/* .starter-text {
+    font-family: 'Lilita One', cursive;
+    text-shadow: rgb(255, 255, 255) -4px 2px 5px;
     color: rgb(241, 254, 98);
     z-index: 0;
     text-align: center;
     font-size: min(10vh, 15vw);
     line-height: min(10vh, 15vw);
     margin-top: 0px;
-}
+} */
 
 .mkc-text {
-    text-shadow: rgb(172, 5, 5) -4px 2px 5px;
-    /* color: rgb(241, 254, 98); */
     z-index: 0;
     text-align: center;
-    font-size: min(6.6vh, 10vw);
+    font-size: min(6vh, 9vw);
     margin-bottom: 40px;
 }
