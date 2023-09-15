@@ -23,7 +23,7 @@ export function Drower({userlist}) {
     }, [])
 
     return (
-        (width > 1100) ? (
+        (width > 620) ? (
             <div className="d-container">
                 {userlist.map(({image, id, name, city, state, about, instagram, linkedin, github})=>{
                     return(

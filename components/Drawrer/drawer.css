@@ -11,17 +11,16 @@
 }
 .student-card {
     width: calc(100vw - 26px);
-    margin-left: 8px;
     position: relative;
-    padding: 8px;
+    /* padding: 8px; */
     display: flex;
     text-align: left;
     gap: 15px;
     align-items: center;
     height: 80px;
-    border: 1px solid gray;
-    border-radius: 15px;
-    background-image: linear-gradient(90deg,rgba(255, 0, 255, 0.5),60%, rgba(0, 0, 255, 0.5));
+    /* border: 1px solid gray; */
+    /* border-radius: 15px; */
+    /* background-image: linear-gradient(90deg,rgba(255, 0, 255, 0.5),60%, rgba(0, 0, 255, 0.5)); */
 }
 .student-card img {
     border-radius: 40px;
@@ -34,11 +33,19 @@
     background-position: center;
 }
 .student-card h1 {
-    font-size: 18px;
+    width: calc(100vw - 111px);
+    font-size: 15px;
     margin-top: -3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .student-card p {
-    font-size: 14px;
+    width: calc(100vw - 111px);
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .student-card span {
     position: absolute;
