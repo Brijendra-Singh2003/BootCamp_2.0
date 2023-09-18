@@ -18,4 +18,4 @@ const list = [
 
 const newList = list.sort((a, b) => (b.id.localeCompare(a.id)));
 
-console.log(newList.find(a => (a.id === 'b122007')));
+console.log(newList.find(a => (a.id === 'b122007')), newList);

@@ -1,15 +1,15 @@
 import "./page_vdo.css";
-import { Poppins } from "next/font/google";
+// import { Poppins } from "next/font/google";
 import hello from "@/public/animations/helloworld.json";
 import Lottie from "@/components/animations/Lottie";
 
-const lilitaOne = Poppins({ subsets: ["latin"], weight: "400" });
+// const lilitaOne = Poppins({ subsets: ["latin"], weight: "400" });
 
 export default async function Home() {
     return (
         <>
             <section>
-                <h1 className={lilitaOne.className + " home-text"}>
+                <h1 className={"serious home-text"}>
                     CSE BOOTCAMP 2K23
                 </h1>
                 <div className="lottie-holder">

@@ -76,11 +76,11 @@
     margin-bottom: 60px;
     padding: 7px;
     border-radius: 5vh;
-    background-image: linear-gradient(rgba(255, 0, 255, 0.3),70%, rgba(0, 0, 255, 0.3));
-    backdrop-filter: blur(5px);
-    border: 1px solid white;
-    box-shadow: 0 0 25px rgba(195, 0, 255, 0.529);
-    color: white;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1) 70%, rgb(0, 0, 0));
+    backdrop-filter: blur(7px);
+    border: 1px solid rgb(64, 64, 64);
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
 }
 
 .drower-image {
@@ -88,7 +88,7 @@
     height: 36vh;
     width: 100%;
     object-fit: cover;
-    border-radius: 4vh;
+    border-radius: 4vh 4vh 0 0;
     background-image: url('/assets/default-avatar.png');
     background-size: cover;
 }
@@ -113,11 +113,11 @@
 
 .drower-about {
     margin-top: 1vh;
-    background-color: rgba(0, 0, 255, 0.2);
+    /* background-color: rgba(0, 0, 255, 0.2); */
     height: 28vh;
     font-size: 1.5vh;
     text-align: justify;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     border-radius: 2vh;
     padding: 10px;
     word-wrap: break-word;
@@ -133,13 +133,13 @@
 }
 
 .drower-logo-container a {
-    margin-top: 0.5vh;
-    background-color: rgb(255, 0, 200);
+    /* margin-top: 0.5vh; */
+    /* background-color: rgb(255, 0, 200); */
     object-fit: cover;
     height: 5.5vh;
     width: 5.5vh;
     padding: 1vh;
-    border-radius: 3vh;
+    /* border-radius: 3vh; */
     transition: all 150ms ease-out;
 }
 

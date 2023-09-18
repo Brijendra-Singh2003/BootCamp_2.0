@@ -66,7 +66,7 @@ export function Drower({userlist}) {
                 <Drawer.Overlay className="fixed inset-0 bg-black/40" />
                 <Drawer.Content className="drower-container">
                     <div className="flex-1 drower-card">
-                    <div className="mx-auto w-16 h-1.5 flex-shrink-0 rounded-full bg-zinc-300 mb-1.5" />
+                    <div className="mx-auto w-16 h-1 flex-shrink-0 rounded-full bg-zinc-300 mb-1.5" />
                         <div className="mx-auto">
                             <Image className="drower-image no-select" src={image || `https://csebootcamp2k22.tech/images/${id}.webp`} height={200} width={400} />
                             <span className="drower-id no-select">ID: #{id?.substring(4, 7)}</span>
