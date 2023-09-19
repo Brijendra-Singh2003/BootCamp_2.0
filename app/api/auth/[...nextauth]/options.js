@@ -11,7 +11,7 @@ export const options = {
         async signIn({ account, profile }) {
             const [id, provider] = profile.email.split('@');
             if (account.provider === "google") {
-                return profile.email_verified && ( provider === "iiit-bh.ac.in" && id.charAt(1) === '1' && id.charAt(3)!=='3');
+                return profile.email_verified && ( provider === "iiit-bh.ac.in" && (id === 'b122029' || id === 'b122041'));
             }
             return;
         },
