@@ -10,6 +10,6 @@ export default async function connection() {
             console.log('connected to db');
         }
     } catch (error) {
-        throw new Error('Failed to connect to MongoDB');
+        // throw new Error('Failed to connect to MongoDB');
     }
 }
