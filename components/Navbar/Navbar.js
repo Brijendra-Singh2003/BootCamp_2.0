@@ -52,8 +52,8 @@ function Nav() {
 
       { showMenu ? <div className="backdrop" onClick={toggle}></div> : null }
 
-      <Link target="_blank" draggable={false} href="https://www.iiit-bh.ac.in/">
-        <Image src="/assets/logo.png" height={120} width={120} alt="IIIT BBSR logo"/>
+      <Link draggable={false} href="/">
+        <Image src="/assets/csef.png" height={120} width={120} alt="CSE logo"/>
       </Link>
 
       <div className="mobile-links" onClick={toggle}>

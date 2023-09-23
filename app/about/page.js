@@ -54,6 +54,11 @@ export default async function About() {
               <h1>content</h1>
             </div>
             <div className="Acard border border-blue-100 rounded-2xl p-4">
+              <h1 className='scale-[1.2]'>Arya Singh Bais</h1>
+              <h1>B122025</h1>
+              <h1>Design</h1>
+            </div>
+            <div className="Acard border border-blue-100 rounded-2xl p-4">
               <h1 className='scale-[1.2]'>Aditya Narayan</h1>
               <h1>B122008</h1>
               <h1>Graphic Designer</h1>

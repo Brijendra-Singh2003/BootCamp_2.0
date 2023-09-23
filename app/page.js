@@ -1,9 +1,6 @@
 import "./page_vdo.css";
-// import { Poppins } from "next/font/google";
 import hello from "@/public/animations/helloworld.json";
 import Lottie from "@/components/animations/Lottie";
-
-// const lilitaOne = Poppins({ subsets: ["latin"], weight: "400" });
 
 export default async function Home() {
     return (
@@ -15,12 +12,6 @@ export default async function Home() {
                 <div className="lottie-holder">
                     <Lottie options={hello} className="lottie" />
                 </div>
-
-                {/* <div className="no-select flex items-center justify-center">
-        <p className={'home-text flex flex-col '+lilitaOne.className}>
-          <span>WELCOME TO</span> <span className="cse">CSE</span> <span>BOOTCAMP</span>
-        </p>
-      </div> */}
             </section>
             <div className={"angledLineWrap"}>
                 <div className={"angledLine"}></div>

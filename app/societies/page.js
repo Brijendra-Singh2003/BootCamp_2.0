@@ -1,10 +1,7 @@
 import './society.css'
 import { Society_card } from '@/components/society_card/society_card';
-import { Play } from 'next/font/google'
 import anime from "@/public/animations/society-main.json"
 import Lottie from '@/components/animations/Lottie';
-
-const lilitaOne = Play({ subsets: ['latin'], weight: "700" });
 
 export default async function Society() {
   return (
@@ -75,6 +72,12 @@ export default async function Society() {
           src="/assets/techsociety.png"
           instagram="https://instagram.com/techsociiitbh"
           para="Under Tech society there are several sub societies like Psoc, Gdsc, Gfg chapter. The society regularly conducts sessions on both introductory and advanced skills. It has organised and in future will organise several competitions and hackathons to boost up dsa and dev skills of students. Students can avail the opportunity to network with seniors who have cracked product based companies like Microsoft, Uber, etc. It conducts exciting events in techno-management fests like D3."
+        />
+        <Society_card
+          heading="VEDANTA SAMITI"
+          src="/assets/vedantsamiti.png"
+          instagram="https://instagram.com/techsociiitbh"
+          para="Vedanta Samiti is mainly focused on celebrations. It has 4 major domains. Vedanta: The main organiser of festivals and fun events. Spicmacay: The national level society for the promotion of Indian classical music and culture amongst youth. YFS: Brings together like minded youth oriented organisations focused on sustainability as a way of life. IIIT Megahertz: The official broadcasting channel and face of iiit bh."
         />
       </div>
     </>
