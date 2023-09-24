@@ -1,8 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar/Navbar'
-// import { options } from "./api/auth/[...nextauth]/options"
-// import { getServerSession } from "next-auth"
+//  heading - sora roboto | normal lato podkova
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

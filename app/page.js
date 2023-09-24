@@ -6,9 +6,7 @@ export default async function Home() {
     return (
         <>
             <section>
-                <h1 className={"serious home-text"}>
-                    CSE BOOTCAMP 2K23
-                </h1>
+                <h1 className={"serious home-text"}>CSE BOOTCAMP 2K23</h1>
                 <div className="lottie-holder">
                     <Lottie options={hello} className="lottie" />
                 </div>
@@ -21,12 +19,22 @@ export default async function Home() {
               className="youtube no-select"
                 width="560"
                 height="315"
+                src="https://www.youtube.com/embed/wIJdvHgFfQI?loop=1&autoplay=1&mute=1"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+            ></iframe>
+            {/* <iframe
+              className="youtube no-select"
+                width="560"
+                height="315"
                 src="https://www.youtube.com/embed/iHMfYBnRpkg?controls=1&loo=1&autoplay=1&mute=1"
                 title="YouTube video player"
                 frameborder="0"
                 allow="autoplay; picture-in-picture; web-share"
                 allowfullscreen
-            ></iframe>
+            ></iframe> */}
         </>
     );
 }
