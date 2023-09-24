@@ -75,12 +75,17 @@
     transition: all 0.4s;
     background: linear-gradient(rgba(126, 128, 255, 0.221) 0%, rgba(116, 118, 255, 0) 100%);
     border: 1px solid rgb(124, 126, 255);
-    width: min(12em, 75vw);
+    width: min(75svh, 75vw);
+    font-size: min(4svh, 6vw);
 }
 
 .Acard:hover {
     box-shadow: rgb(124 127 255) 0px 0px 12px;
     cursor: pointer;
+}
+
+.name {
+    font-size: 120%;
 }
 
 .part {
