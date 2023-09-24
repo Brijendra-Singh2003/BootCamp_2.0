@@ -6,8 +6,8 @@ import Image from 'next/image';
 import anime from "@/public/animations/about.json";
 import Lottie from '@/components/animations/Lottie';
 
-const lilitaOne = Roboto({ subsets: ['latin'], weight: "400" });
-const lato = Lato({ subsets: ['latin'], weight: "400" });
+const lilitaOne = Roboto({ subsets: ['latin'], weight: "700" });
+const lato = Lato({ subsets: ['latin'], weight: "700" });
 
 export default async function About() {
   return (

@@ -11,20 +11,17 @@
 
 .about-middle-card {
     margin: 0 auto;
-    height: min(60vh, 80vw);
+    height: min(67vh, 74vw);
     width: min(90vh, 99vw);
 }
 
 .teams {
     display: flex;
-    margin: auto;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 80em;
-    margin-top: 1.5em;
     margin-bottom: 1.5em;
     gap: 1.5em;
-    
+    margin: min(6.7vh, 7.4vw) 0;
 }
 .no-select{
     user-select: none;
