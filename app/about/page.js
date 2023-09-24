@@ -68,7 +68,7 @@ export default async function About() {
       </div>
     </div>
     <p className={'stack no-select '+lilitaOne.className}>Tech Stack Used</p>
-    <div className="no-select flex items-center justify-center gap-3 w-full flex-wrap mb-8">
+    <div className="tech-stack no-select flex items-center justify-center gap-3 w-full flex-wrap mb-8">
       <div className="part flex items-center justify-center gap-3 h-16">
         <Image src="/stack/html.png" height={40} width={40} />
         <Image src="/stack/css-3.png" height={40} width={40} />

@@ -43,7 +43,7 @@
     margin-block-start: 0.4em;
     /* margin-inline-start: 0.6em; */
     font-weight: bold;
-    color: rgb(241, 254, 98);
+    opacity: 0.8;
 }
 
 .about-card ul {
@@ -67,8 +67,8 @@
 }
 
 #signn:hover {
-    color: rgb(241, 254, 98);
     border: 2px solid white;
+    transform: translateY(-4px);
 }
 
 .Acard {
@@ -89,4 +89,15 @@
 
 .repo-link {
     -webkit-tap-highlight-color: transparent;
+}
+
+@media only screen and (min-width: 1048px) {
+    .tech-stack{
+        width: 80vw;
+    }
+    .part{
+        width: 48%;
+        scale: 1.5;
+    }
+
 }
