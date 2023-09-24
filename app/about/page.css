@@ -23,9 +23,6 @@
     gap: 1.5em;
     margin: min(6.7vh, 7.4vw) 0;
 }
-.no-select{
-    user-select: none;
-}
 
 .about-card {
     transition: all 0.4s;

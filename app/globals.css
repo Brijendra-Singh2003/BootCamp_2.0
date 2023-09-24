@@ -9,6 +9,10 @@
   height: 100svh;
 }
 
+.no-select{
+  user-select: none;
+}
+
 .society-text {
   margin-top: 25px;
   text-align: center;

@@ -1,7 +1,8 @@
 .card-placeholder {
-    width: min(90vw, 400px);
+    position: relative;
+    width: min(90vw, 45svh);
     aspect-ratio: 3/4;
-    margin: 10% 0;
+    margin: 5% 0;
 }
 
 .card {
@@ -11,6 +12,8 @@
 }
 
 .front, .back {
+    height: 100%;
+    width: 100%;
     transition: all 1s ease;
     position: absolute;
     display: flex;
@@ -26,7 +29,8 @@
 
 .front h1 {
     font-weight: 900;
-    font-size: min(7vw, 30px);
+    font-size: min(7vw, 3.5svh);
+    width: min(90vw, 400px);
 }
 
 .back {
@@ -34,62 +38,35 @@
 }
 
 .back p {
-    font-size: min(3.4vw, 15px);
-    margin: min(10vw, 46px);
+    font-size: min(3.3vw, 1.7svh);
+    margin: min(10vw, 5svh);
 }
 
 .back h1 {
-    font-size: min(5vw, 22px);
-    margin: min(3.5vw, 16px);
+    font-size: min(5vw, 2.5svh);
+    margin: min(3.5vw, 1.7svh);
 }
 
 .card img {
-    margin-top: 10%;
+    margin-bottom: 10%;
     height: 63%;
     width: 85%;
     object-fit: cover;
+    border: 4px solid #40beff;
+    box-shadow: 0 0 12px #40beff;
 }
 
-.card-placeholder:hover .front {
+.card-placeholder:hover .front, .snap {
     transform: rotateY(180deg);
 }
 
-.card-placeholder:hover .back {
+.card-placeholder:hover .back, .blip {
     transform: rotateY(360deg);
 }
 
-@media only screen and (min-width: 1100px) {
-
-    .container {
-        width: 60vw;
-        max-width: 1200px;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .card-placeholder {
-        width: 40%;
-        margin: 5% auto;
-    }
-
-    .back p {
-        font-size : 0.9vw;
-    }
-
-    .back h1 {
-        font-size : 1.1vw;
-    }
-
-}
-
-.no-select{
-    user-select: none;
-}
-
 .para{
-    line-height: 2.1vh;
+    line-height: min(6vw, 3svh);
 }
-
 
 .btn{
     position: absolute;
@@ -102,14 +79,8 @@
 .btn:hover{
     border: white 1px solid;
 }
+
 .btn:hover h1{
     color: white;
     text-shadow: white 1px 0px 2px;
-}
-
-.img{
-    border: 4px solid #40beff;
-    box-shadow: 0 0 12px #40beff;
-    object-fit: contain;
-  object-position: center;
 }
