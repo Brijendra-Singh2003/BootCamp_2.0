@@ -47,6 +47,7 @@
         padding: 2% 4%;
         border: 2px solid rgb(142, 4, 4);
         scale: 1.5;
+        opacity: 0.8;
         
     }
 }
@@ -91,6 +92,7 @@
         border-radius: 2.1vw;
         padding: 2% 4%;
         border: 2px solid rgb(142, 4, 4);
+        opacity: 0.8;
     }
 }
 
@@ -293,8 +295,8 @@
 }
 
 #sign:hover {
-    text-shadow: #FC0 0.5px 0 10px;
+    text-shadow: #Fff 0.5px 0 5px;
     border: 2px solid white;
     cursor: pointer;
-    color: rgb(217, 238, 51);
+    opacity: 1;
 }
