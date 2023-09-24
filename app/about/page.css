@@ -43,7 +43,7 @@
     margin-block-start: 0.4em;
     /* margin-inline-start: 0.6em; */
     font-weight: bold;
-    color: rgb(241, 254, 98);
+    opacity: 0.8;
 }
 
 .about-card ul {
@@ -60,14 +60,15 @@
 #signn {
     font-size: min(3vh, 4.5vw);
     z-index: 0;
-    background: linear-gradient(90.2deg, #ff0c28, #7200ff);
-    color: white;
+    background-color: #663dff;
+    background-image: linear-gradient(319deg, #663dff 0%, #920dd5 45%, #ab056b 100%);
+    /* color: #C2BFC9; */
     font-weight:100;
-    border: 2px solid rgb(142, 4, 4);
 }
 
 #signn:hover {
-    color: rgb(241, 254, 98);
+    opacity: 1;
+    color: white;
     border: 2px solid white;
 }
 
@@ -94,4 +95,15 @@
 
 .repo-link {
     -webkit-tap-highlight-color: transparent;
+}
+
+@media only screen and (min-width: 1048px) {
+    .tech-stack{
+        width: 80vw;
+    }
+    .part{
+        width: 48%;
+        scale: 1.5;
+    }
+
 }
