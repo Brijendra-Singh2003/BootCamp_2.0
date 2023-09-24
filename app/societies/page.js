@@ -55,7 +55,7 @@ export default async function Society() {
         />
         <Society_card
           heading="PHOTOGEEKS"
-          src="/assets/PHOTOGEEKS LOGO.png"
+          src="/assets/photogeeks.png"
           instagram="https://instagram.com/photogeeks.iiit"
           para="The official photography society of IIIT Bhubaneswar. Anyone interested in photography and capturing moments can gain lot of experience form the society members and contributes to it. It handles the precious duty of capturing beautiful memories of each event and creates memories worth a lifetime. It has conducted events like Tasveer, PhotoWalk and workshops."
         />
