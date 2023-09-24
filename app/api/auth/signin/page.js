@@ -4,7 +4,10 @@ import SignInButton from '@/components/button/SignInButton';
 import { getServerSession } from 'next-auth';
 import { options } from '../[...nextauth]/options';
 import { redirect } from 'next/navigation';
+import {Sora} from 'next/font/google'
 import Image from 'next/image';
+
+const lilitaOne=Sora({ subsets: ['latin'], weight: "800" });
 
 export default async function page() {
 
@@ -20,7 +23,7 @@ export default async function page() {
         <div className="left">
             <img id="cseimg" src="/assets/csef.png" alt="ERROR 404"/>
             <img id="cseimg2" src="/assets/bootbg.png" alt="ERROR 404"/>
-            <div id="para">WELCOME FRESHERS 2K23 </div>
+            <div id="para" className={lilitaOne.className}>WELCOME FRESHERS 2K23 </div>
             <SignInButton />
         </div>
         <div className="animation">
