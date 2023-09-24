@@ -1,18 +1,8 @@
 .home-text {
-    /* color: transparent;
-    background-image: linear-gradient(yellow, orange);
-    background-clip: text;
-    font-size: min(10vh, 16vw);
-    line-height: min(12.5vh, 20vw);
-    width: 100%; */
     --text: brown;
     font-size: min(7vh, 7vw);
     font-weight: 900;
 }
-
-/* .home-text .cse {
-    font-size: min(18.75vh, 30vw);
-} */
 
 .lottie-holder {
     height: 50vw;
@@ -39,31 +29,6 @@
     outline: none;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
 }
-
-/* @media only screen and (min-width: 1100px) {
-    section {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        padding: 10vh 5vw;
-    }
-    .lottie {
-        width: 40vw;
-        max-width: 40vw;
-        height: fit-content;
-        margin: 0;
-    }
-    .home-text {
-        font-size: 6vw;
-        line-height: 6vw;
-    }
-    .home-text .cse {
-        font-size: 9vw;
-    }
-    .youtube {
-        position: relative;
-    }
-} */
 
 .angledLine {
     width: 80vw;
