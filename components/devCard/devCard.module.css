@@ -1,8 +1,8 @@
 .card {
     margin-top: 100px;
     position: relative;
-    height: 225px;
-    width: 225px;
+    height: min(80vw, 30svh);
+    width: min(80vw, 30svh);
     border-radius: 5%;
     box-sizing: border-box;
     background-color: rgba(155, 101, 255, 0.2);

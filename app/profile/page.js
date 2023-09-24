@@ -5,8 +5,6 @@ import ImageUpload from "@/components/profileImage/ImageUpload";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { Luckiest_Guy } from 'next/font/google'
-import "./profile.css";
-
 
 const lilitaOne = Luckiest_Guy({ subsets: ['latin'], weight: "400" });
 

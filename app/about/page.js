@@ -22,8 +22,8 @@ export default async function About() {
       </p>
     </div>
     <div className={"teams no-hlt " + lilitaOne.className}>
-        <h1 className={"desc "}>OUR TEAM</h1>
-      <div className="flex gap-6 small no-select w-full justify-center items-center">
+      <h1 className={"scale-[0.6] title"}>OUR TEAM</h1>
+      <div className="flex flex-wrap gap-6 small no-select w-full justify-center items-center">
         <DevCard 
           src="/assets/default-avatar.png"
           name="Brijendra Singh"
