@@ -12,6 +12,7 @@ export function Society_card({heading,src,instagram,para}) {
                         <h1 className='text-black no-select'>{heading}</h1>
                         <Image
                             className='no-select'
+                            priority
                             src={src}
                             height={300}
                             width={400} />

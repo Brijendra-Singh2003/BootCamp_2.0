@@ -1,8 +1,9 @@
 import "./students.css";
 import { Drower } from "@/components/Drawrer/Drower";
-import { Luckiest_Guy } from 'next/font/google'
+import { Roboto, Lato } from 'next/font/google'
 
-const lilitaOne = Luckiest_Guy({ subsets: ['latin'], weight: "400" });
+const lilitaOne = Roboto({ subsets: ['greek'], weight: "700" });
+const lato = Lato({ subsets: ['latin'], weight: "700" });
 
 export const metadata = {
     title: "Students - CSE Bootcamp 2.0",
@@ -36,7 +37,7 @@ export default async function StudentPage({ params: { year } }) {
             <p className={'title '+lilitaOne.className}>
                 CSE {year}
             </p>
-            <p className={'mkc-text '+lilitaOne.className}>
+            <p className={'mkc-text '+lato.className}>
                 {(year === "2022") ? "The Sophomores" : "The Neophytes"}
             </p>
         </div>

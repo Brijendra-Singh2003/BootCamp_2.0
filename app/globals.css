@@ -3,11 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'myfont' ;
-  src: url('../public/Game\ Of\ Squids.ttf') format('opentype');
-}
-
-@font-face {
   font-family: 'serious' ;
   src: url('../public/brave_phoenix/bravephoenix.ttf') format('opentype');
 }
@@ -40,7 +35,6 @@ img {
   font-size: min(12vh, 15vw);
   line-height: min(12vh, 20vw);
   text-shadow: 0 0 3px white;
-  font-family: 'myfont';
 }
 
 #spotlight {
