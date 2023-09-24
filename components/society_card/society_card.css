@@ -87,3 +87,31 @@
 .no-select{
     user-select: none;
 }
+
+.para{
+    line-height: 2.1vh;
+}
+
+
+.btn{
+    position: absolute;
+    top:8%;
+    background-color: rgb(36, 32, 32);
+    color: #C2BFC9;
+    border-radius: 1em;
+}
+
+.btn:hover{
+    border: white 1px solid;
+}
+.btn:hover h1{
+    color: white;
+    text-shadow: white 1px 0px 2px;
+}
+
+.img{
+    border: 4px solid #40beff;
+    box-shadow: 0 0 12px #40beff;
+    object-fit: contain;
+  object-position: center;
+}
