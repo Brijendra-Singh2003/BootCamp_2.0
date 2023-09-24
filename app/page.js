@@ -1,16 +1,20 @@
 import "./page_vdo.css";
 import hello from "@/public/animations/helloworld.json";
 import Lottie from "@/components/animations/Lottie";
+import { Roboto, Lato } from 'next/font/google'
+
+const lilitaOne = Roboto({ subsets: ['latin'], weight: "700" });
 
 export default async function Home() {
     return (
         <>
             <section>
-                <h1 className={"serious home-text"}>CSE BOOTCAMP 2K23</h1>
+                <h1 className={"home-text "+lilitaOne.className}>CSE BOOTCAMP 2K23</h1>
                 <div className="lottie-holder">
                     <Lottie options={hello} className="lottie" />
                 </div>
             </section>
+
             <div className={"angledLineWrap"}>
                 <div className={"angledLine"}></div>
             </div>
@@ -25,7 +29,12 @@ export default async function Home() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
             ></iframe>
-            {/* <iframe
+
+            <div className={"angledLineWrap"}>
+                <div className={"angledLine"}></div>
+            </div>
+
+            <iframe
               className="youtube no-select"
                 width="560"
                 height="315"
@@ -34,7 +43,7 @@ export default async function Home() {
                 frameborder="0"
                 allow="autoplay; picture-in-picture; web-share"
                 allowfullscreen
-            ></iframe> */}
+            ></iframe>
         </>
     );
 }

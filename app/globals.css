@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'serious' ;
-  src: url('../public/brave_phoenix/bravephoenix.ttf') format('opentype');
-}
-
-.serious {
-  font-family: 'serious';
-}
-
 :root {
   --foreground-rgb: rgb(255, 255, 255);
   --background-start-rgb: rgb(6, 0, 20);

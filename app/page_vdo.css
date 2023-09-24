@@ -21,7 +21,7 @@
 
 .youtube {
     position: relative;
-    margin: auto;
+    margin: 5% auto;
     border: 1px solid white;
     border-radius: 8px;
     width: min(720px,96svw);
