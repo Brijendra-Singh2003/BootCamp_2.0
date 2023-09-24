@@ -1,18 +1,17 @@
 import Image from 'next/image'
 import React from 'react'
+import styles from "./devCard.module.css"
 
-export default function DevCard() {
+export default function DevCard({src, name, id, children}) {
   return (
-    <div>
-        <div>
-            <Image src={"/assets/default-avatar.png"} height={200} width={200} />
+    <div className={styles.card}>
+        <div className={styles.top}>
+            <Image src={src} height={200} width={200} />
         </div>
-        <div>
-            <h1>Brijendra singh</h1>
-            <span>B122041</span>
-            <ul>
-                <li>- Backend</li>
-            </ul>
+        <div className={styles.bottom}>
+            <h1 className={styles.name}>{name}</h1>
+            <span className={styles.id}>{id}</span>
+            {children}
         </div>
     </div>
   )
