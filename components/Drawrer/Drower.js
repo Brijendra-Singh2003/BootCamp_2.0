@@ -29,7 +29,7 @@ export function Drower({userlist}) {
                     return(
                         <div className="drower-card" key={id}>
                         <div className="mx-auto">
-                            <Image className="drower-image no-select" src={image || `https://csebootcamp2k22.tech/images/${id}.webp`} height={200} width={400} />
+                            <Image className="drower-image no-select" src={image || `https://csebootcamp2k22.tech/images/${id}.webp`} height={200} width={400} alt="" />
                             <span className="drower-id no-select">ID: #{id?.substring(4, 7)}</span>
                             <h1 className="drower-name no-select">{name?.toUpperCase()}</h1>
                             <p className="drower-city no-select">{(city+', '+state).toUpperCase()}</p>
@@ -52,7 +52,7 @@ export function Drower({userlist}) {
                     {userlist.map((curr)=>{
                         return(
                             <div className="student-card" onClick={()=>setActive(curr)} key={curr.id}>
-                                <Image src={curr.image || `https://csebootcamp2k22.tech/images/${curr.id}.webp`} height={70} width={70} alt={""} />
+                                <Image src={curr.image || `https://csebootcamp2k22.tech/images/${curr.id}.webp`} height={70} width={70} alt="" />
                                 <div>
                                     <h1 className="student-card-name">{curr.name?.toUpperCase()}</h1>
                                     <p>{curr.city+', '+curr.state}</p>
@@ -68,7 +68,7 @@ export function Drower({userlist}) {
                     <div className="flex-1 drower-card">
                     <div className="mx-auto w-16 h-1 flex-shrink-0 rounded-full bg-zinc-300 mb-1.5" />
                         <div className="mx-auto">
-                            <Image className="drower-image no-select" src={image || `https://csebootcamp2k22.tech/images/${id}.webp`} height={200} width={400} />
+                            <Image className="drower-image no-select" src={image || `https://csebootcamp2k22.tech/images/${id}.webp`} height={200} width={400} alt="" />
                             <span className="drower-id no-select">ID: #{id?.substring(4, 7)}</span>
                             <h1 className="drower-name no-select">{name?.toUpperCase()}</h1>
                             <p className="drower-city no-select">{(city+', '+state).toUpperCase()}</p>
