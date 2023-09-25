@@ -56,11 +56,11 @@
     box-shadow: 0 0 12px #40beff;
 }
 
-.card-placeholder:hover .front, .snap {
+.snap {
     transform: rotateY(180deg);
 }
 
-.card-placeholder:hover .back, .blip {
+.blip {
     transform: rotateY(360deg);
 }
 
