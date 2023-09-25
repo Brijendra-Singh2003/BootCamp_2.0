@@ -1,5 +1,5 @@
 import "./page_vdo.css";
-import hello from "@/public/animations/helloworld.json";
+import hello from "@/public/animations/about.json";
 import Lottie from "@/components/animations/Lottie";
 import { Roboto, Lato } from 'next/font/google'
 

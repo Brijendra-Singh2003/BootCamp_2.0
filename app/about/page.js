@@ -3,7 +3,7 @@ import "./page.css"
 import { Roboto, Lato } from 'next/font/google'
 import Link from 'next/link';
 import Image from 'next/image';
-import anime from "@/public/animations/about.json";
+import anime from "@/public/animations/helloworld.json";
 import Lottie from '@/components/animations/Lottie';
 import DevCard from '@/components/devCard/DevCard';
 
