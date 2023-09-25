@@ -25,7 +25,7 @@ export default async function About() {
         <h1 className={"scale-[0.6] title underline"}>OUR TEAM</h1>
         <div className="flex flex-wrap gap-6 small no-select w-full justify-center items-center">
           <DevCard
-            src="/assets/default-avatar.png"
+            src="/assets/brijendra.jpeg"
             name="Brijendra Singh"
             id="B122041"
           >
@@ -35,7 +35,7 @@ export default async function About() {
             </ul>
           </DevCard>
           <DevCard
-            src="/assets/default-avatar.png"
+            src="/assets/asutosh.jpg"
             name="Asutosh Kataruka"
             id="B122029"
           >
@@ -45,7 +45,7 @@ export default async function About() {
             </ul>
           </DevCard>
           <DevCard
-            src="/assets/default-avatar.png"
+            src="/assets/abhik.jpeg"
             name="Abhik Sundar Sahu"
             id="B122001"
           >
@@ -55,7 +55,7 @@ export default async function About() {
             </ul>
           </DevCard>
           <DevCard
-            src="/assets/default-avatar.png"
+            src="/assets/anirudh.jpeg"
             name="Anirudh Pradhan"
             id="B122018"
           >
@@ -67,7 +67,7 @@ export default async function About() {
           
           
           <DevCard
-            src="/assets/default-avatar.png"
+            src="/assets/aditya.jpeg"
             name="Aditya Narayan"
             id="B122008"
           >
@@ -77,8 +77,8 @@ export default async function About() {
             </ul>
           </DevCard>
           <DevCard
-            src="/assets/tars.jpeg"
-            name="Abhinas Ojha"
+            src="/assets/abhi.jpeg"
+            name="Abinas Ojha"
             id="B122004"
           >
             <ul>
@@ -95,7 +95,7 @@ export default async function About() {
             </ul>
           </DevCard>
           <DevCard
-            src="/assets/default-avatar.png"
+            src="/assets/amit.jpeg"
             name="Amit Behera"
             id="B122015"
           >
@@ -104,7 +104,7 @@ export default async function About() {
             </ul>
           </DevCard>
           <DevCard
-            src="/assets/default-avatar.png"
+            src="/assets/arya.jpeg"
             name="Arya Singh Bais"
             id="B122025"
           >
