@@ -13,7 +13,7 @@ const lato = Lato({ subsets: ['latin'], weight: "700" });
 export default async function About() {
   return (
     <>
-      <h1 className={lilitaOne.className + " title"}>ABOUT US</h1>
+      <h1 className={lilitaOne.className + " no-select title"}>ABOUT US</h1>
       <Lottie options={anime} className="about-middle-card" />
 
       <div className={"no-select " + lato.className}>

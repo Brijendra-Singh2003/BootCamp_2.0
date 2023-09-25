@@ -10,7 +10,7 @@ const lato = Lato({ subsets: ['latin'], weight: "700" });
 export default async function Society() {
   return (
     <>
-      <h1 className={"title "+lilitaOne.className}>SOCIETIES</h1>
+      <h1 className={"title no-select "+lilitaOne.className}>SOCIETIES</h1>
       <Lottie options={anime} className="middle-card" />
 
       <div className='no-select'>

@@ -101,7 +101,7 @@ export default function ImageUpload({ name, host, src }) {
           disabled={isDisabled}
           onClick={handleImageUpload}
         >
-          {isDisabled ? "Uploading..." : "Upload Image"}
+          {isDisabled ? "Saving..." : "Save Image"}
         </button>
       </div>
     </>
