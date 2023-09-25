@@ -1,6 +1,7 @@
 import "./students.css";
 import { Drower } from "@/components/Drawrer/Drower";
 import { Roboto, Lato } from 'next/font/google'
+import { notFound } from "next/navigation";
 
 const lilitaOne = Roboto({ subsets: ['greek'], weight: "700" });
 const lato = Lato({ subsets: ['latin'], weight: "700" });
@@ -11,6 +12,7 @@ export const metadata = {
 };
 
 export default async function StudentPage({ params: { year } }) {
+    if(year !== '2022' && year !== '2023') return notFound();
     let studentsList = [];
 
     try {
