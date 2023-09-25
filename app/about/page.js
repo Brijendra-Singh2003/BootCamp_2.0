@@ -77,7 +77,7 @@ export default async function About() {
             </ul>
           </DevCard>
           <DevCard
-            src="/assets/abhinas.jpeg"
+            src="/assets/abhi.jpeg"
             name="Abinas Ojha"
             id="B122004"
           >
