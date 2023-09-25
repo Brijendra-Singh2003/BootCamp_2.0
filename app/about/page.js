@@ -50,8 +50,8 @@ export default async function About() {
             id="B122001"
           >
             <ul>
-              <li>- Research</li>
-              <li>- Content </li>
+              <li>- Frontend Developer</li>
+              <li>- Content Writer </li>
             </ul>
           </DevCard>
           <DevCard
@@ -60,38 +60,29 @@ export default async function About() {
             id="B122018"
           >
             <ul>
-              <li>- Frontend Developer</li>
-              <li>- Design</li>
+              <li>- UI/UX Designer</li>
+              <li>- Content Writer</li>
             </ul>
           </DevCard>
-          <DevCard
-            src="/assets/default-avatar.png"
-            name="Arya Singh "
-            id="B122025"
-          >
-            <ul>
-              <li>- Frontend</li>
-              <li>- Design</li>
-            </ul>
-          </DevCard>
-          <DevCard
-            src="/assets/default-avatar.png"
-            name="Amit Behera"
-            id="B122015"
-          >
-            <ul>
-              <li>- Frontend</li>
-              <li>- Design</li>
-            </ul>
-          </DevCard>
+          
+          
           <DevCard
             src="/assets/default-avatar.png"
             name="Aditya Narayan"
             id="B122008"
           >
             <ul>
-              <li>- Frontend</li>
-              <li>- Design</li>
+              <li>- Graphics Designer</li>
+              <li>- Video Editor</li>
+            </ul>
+          </DevCard>
+          <DevCard
+            src="/assets/tars.jpeg"
+            name="Abhinas Ojha"
+            id="B122004"
+          >
+            <ul>
+            <li>- Video Editor</li>
             </ul>
           </DevCard>
           <DevCard
@@ -100,30 +91,29 @@ export default async function About() {
             id="B122083"
           >
             <ul>
-              <li>- Frontend</li>
-              <li>- Design</li>
-            </ul>
-          </DevCard>
-          <DevCard
-            src="/assets/tars.jpeg"
-            name="Ashutosh Kataruka"
-            id="B122029"
-          >
-            <ul>
-              <li>- Frontend</li>
-              <li>- Design</li>
+              <li>- Video Editor</li>
             </ul>
           </DevCard>
           <DevCard
             src="/assets/default-avatar.png"
-            name="Ashutosh Kataruka"
-            id="B122029"
+            name="Amit Behera"
+            id="B122015"
           >
             <ul>
-              <li>- Frontend</li>
-              <li>- Design</li>
+              <li>- Content Writer</li>
             </ul>
           </DevCard>
+          <DevCard
+            src="/assets/default-avatar.png"
+            name="Arya Singh Bais"
+            id="B122025"
+          >
+            <ul>
+              <li>- UI/UX Designer</li>
+            </ul>
+          </DevCard>
+          
+          
           
 
           {/* <div className="Acont flex gap-4 flex-wrap items-center justify-center">
