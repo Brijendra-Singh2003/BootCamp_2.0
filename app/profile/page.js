@@ -22,7 +22,7 @@ export default async function Page() {
   const id = session.user.email.split('@')[0];
   const year = id[3];
 
-  if (year !== '2' && year !== '3') {
+  if (year !== '2') {
     redirect('/');
   }
 
