@@ -7,9 +7,17 @@ import { toast } from "react-toastify";
 import handleRevalidate from "@/functions/revalidate";
 
 export default function Form({ prevData, host }) {
-
+  const _data = {
+    name: prevData.name,
+    about: prevData.about,
+    state: prevData.state,
+    city: prevData.city,
+    instagram: prevData.instagram,
+    github: prevData.github,
+    linkedin: prevData.linkedin
+  };
   const router = useRouter();
-  const [data, setData] = useState(prevData);
+  const [data, setData] = useState(_data);
   const [disabled, setDisabled] = useState(false);
 
   function handleChange({ target: { value, name } }) {
