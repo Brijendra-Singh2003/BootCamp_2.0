@@ -99,12 +99,12 @@
 
 
 .tech-box{
-
-    margin-top: 20px;
-    margin-bottom: min(3vh,10vw);
+    transition: all 300ms;
+    margin: min(3vh,10vw) auto;
     display: flex;
     justify-content: center;
     flex-direction: row;
+    width: 80%;
     flex-wrap: wrap;
 }
 
@@ -115,21 +115,23 @@
 
 }
 
-.tech-box-child img{
-    height:min(100px,10vw) ;
+.tech-box-child .img{
+    height:min(100px,10vw);
     width: min(120px,10vw);
+    object-fit: cover;
     margin: 8px 10px;
+
+    & img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 .tech-box:hover{
     scale: 1.1;
+    filter: invert();
 }
-
-
-
-
-
-
 
 @media only screen and (min-width: 1048px) {
     .tech-stack{
