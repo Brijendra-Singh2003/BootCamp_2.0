@@ -20,6 +20,7 @@
     position: absolute;
     left: 50%;
     transform: translate3D(-50%, -50%, 0);
+    object-fit:cover;
 }
 
 .name {
