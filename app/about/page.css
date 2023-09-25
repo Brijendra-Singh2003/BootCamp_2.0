@@ -22,7 +22,9 @@
     margin-bottom: 1.5em;
     gap: 1.5em;
     margin: min(6.7vh, 7.4vw) 0;
+    
 }
+
 
 .about-card {
     transition: all 0.4s;
@@ -93,6 +95,41 @@
 .repo-link {
     -webkit-tap-highlight-color: transparent;
 }
+
+
+
+.tech-box{
+
+    margin-top: 20px;
+    margin-bottom: min(3vh,10vw);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tech-box-child{
+    display: flex;
+    justify-content: center;
+    margin: 10px 5px;
+
+}
+
+.tech-box-child img{
+    height:min(100px,10vw) ;
+    width: min(120px,10vw);
+    margin: 8px 10px;
+}
+
+.tech-box:hover{
+    scale: 1.1;
+}
+
+
+
+
+
+
 
 @media only screen and (min-width: 1048px) {
     .tech-stack{

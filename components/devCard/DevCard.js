@@ -11,7 +11,9 @@ export default async function DevCard({src, name, id, children}) {
         <div className={styles.bottom}>
             <h1 className={styles.name}>{name}</h1>
             <span className={styles.id}>{id}</span>
+            <div className={styles.contri}>
             {children}
+            </div>
         </div>
     </div>
   )
