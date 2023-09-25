@@ -179,18 +179,18 @@ export default async function About() {
       <p className={'stack no-select ' + lilitaOne.className}>Tech Stack Used</p>
       <div className="tech-box">
         <div className="tech-box-child">
-          <img src="/stack/html.png" alt="ERROR 404"/>
-          <img src="/stack/css-3.png" alt="ERROR 404"/>
-          <img src="/stack/js.png" alt="ERROR 404"/>
-          <img src="/stack/node.png" alt="ERROR 404"/>
-          <img src="/stack/react2.png" alt="ERROR 404"/>
+          <div className="img no-select"><Image height={80} width={80} src="/stack/html.png" alt="ERROR 404"/></div>
+          <div className="img no-select"><Image height={80} width={80} src="/stack/css-3.png" alt="ERROR 404"/></div>
+          <div className="img no-select"><Image height={80} width={80} src="/stack/js.png" alt="ERROR 404"/></div>
+          <div className="img no-select"><Image height={80} width={80} src="/stack/node.png" alt="ERROR 404"/></div>
+          <div className="img no-select"><Image height={80} width={80} src="/stack/react2.png" alt="ERROR 404"/></div>
         </div>
         <div className="tech-box-child">
-          <img className='scale-[1.7]' src="/stack/Next.js.png" alt="ERROR 404"/>
-          <img src="/stack/git.png" alt="ERROR 404"/>
-          <img src="/stack/github.png" alt="ERROR 404"/>
-          <img src="/stack/mongo.png" alt="ERROR 404"/>
-          <img src="/stack/azure.png" alt="ERROR 404"/>
+          <div className="img no-select"><Image className='scale-[1.3]' height={80} width={80} src="/stack/Next.js.png" alt="ERROR 404"/></div>
+          <div className="img no-select"><Image height={80} width={80} src="/stack/git.png" alt="ERROR 404"/></div>
+          <div className="img no-select"><Image height={80} width={80} src="/stack/github.png" alt="ERROR 404"/></div>
+          <div className="img no-select"><Image height={80} width={80} src="/stack/mongo.png" alt="ERROR 404"/></div>
+          <div className="img no-select"><Image height={80} width={80} src="/stack/azure.png" alt="ERROR 404"/></div>
         </div>
       </div>
       <Link target='_blank' href={"https://github.com/Brijendra-Singh2003/BootCamp_2.0"}> <button id='signn' className={"no-select " + lilitaOne.className}> View GitHub Repository </button> </Link>

@@ -14,7 +14,8 @@ export async function Society_card({heading,src,instagram,para}) {
                             priority
                             src={src}
                             height={300}
-                            width={400} />
+                            width={400}
+                            alt='' />
                         <h1 className='text-black no-select'>{heading}</h1>
                     </div>
                     <div className="back ">

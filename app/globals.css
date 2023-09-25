@@ -26,8 +26,8 @@ img {
 }
 
 .title {
-  margin-top: 25px;
-  font-size: min(12vh, 15vw);
+  margin: 25px 0;
+  font-size: min(12vh, 11vw);
   line-height: min(12vh, 10vw);
   text-shadow: 0 0 3px white;
 }
