@@ -1,7 +1,7 @@
 .card {
     margin-top: 120px;
     position: relative;
-    height: min(70vw, 27svh);
+    height: min(70vw, 30svh);
     width: min(80vw, 30svh);
     border-radius: 5%;
     box-sizing: border-box;
@@ -22,8 +22,9 @@
 }
 
 .name {
+    margin-top: 0px;
     font-size: max(3vh, 1vw);
-    margin-bottom: 9px;
+    margin-bottom: max(4px, 1vw);
 }
 
 .id {
@@ -36,13 +37,43 @@
     line-height: 25px;
     padding: 5% 0;
 }
-.contri{
+
+.contri {
     padding-left: 25%;
     margin-top: 13px;
     font-size: max(2vh, 0.7vw);
 }
 
-.contri ul li{
+.contri ul li {
     text-align: left;
-    margin-top: 4px ;
+    margin-top: 4px;
+}
+
+@media only screen and (max-width: 1048px) {
+
+    .card {
+        margin-top: 80px;
+        height: min(60vw,40vh);
+    }
+
+    .name {
+        margin-top: -10px;
+        font-size: max(3vh, 1vw);
+        margin-bottom: max(4px, 1vw);
+    }
+
+    .id {
+        color: rgb(200, 200, 200);
+        font-size: max(2.4vh, 0.8vw);
+        margin-top: -5px;
+    }
+
+    .contri {
+        margin-top: 2px;
+    }
+
+    .contri ul li {
+        margin-top: 0px;
+    }
+
 }

@@ -30,18 +30,18 @@ export default async function About() {
             id="B122041"
           >
             <ul>
-              <li>- Backend</li>
-              <li>- Frontend</li>
+              <li>- Backend Developer</li>
+              <li>- Frontend Developer</li>
             </ul>
           </DevCard>
           <DevCard
             src="/assets/default-avatar.png"
-            name="Ashutosh Kataruka"
+            name="Asutosh Kataruka"
             id="B122029"
           >
             <ul>
-              <li>- Frontend</li>
-              <li>- Design</li>
+              <li>- Frontend Developer</li>
+              <li>- UI/UX Designer</li>
             </ul>
           </DevCard>
           <DevCard
@@ -51,13 +51,23 @@ export default async function About() {
           >
             <ul>
               <li>- Research</li>
-              <li>- Content</li>
+              <li>- Content </li>
             </ul>
           </DevCard>
           <DevCard
             src="/assets/default-avatar.png"
-            name="Ashutosh Kataruka"
-            id="B122029"
+            name="Anirudh Pradhan"
+            id="B122018"
+          >
+            <ul>
+              <li>- Frontend Developer</li>
+              <li>- Design</li>
+            </ul>
+          </DevCard>
+          <DevCard
+            src="/assets/default-avatar.png"
+            name="Arya Singh "
+            id="B122025"
           >
             <ul>
               <li>- Frontend</li>
@@ -66,8 +76,8 @@ export default async function About() {
           </DevCard>
           <DevCard
             src="/assets/default-avatar.png"
-            name="Ashutosh Kataruka"
-            id="B122029"
+            name="Amit Behera"
+            id="B122015"
           >
             <ul>
               <li>- Frontend</li>
@@ -76,8 +86,8 @@ export default async function About() {
           </DevCard>
           <DevCard
             src="/assets/default-avatar.png"
-            name="Ashutosh Kataruka"
-            id="B122029"
+            name="Aditya Narayan"
+            id="B122008"
           >
             <ul>
               <li>- Frontend</li>
@@ -86,18 +96,8 @@ export default async function About() {
           </DevCard>
           <DevCard
             src="/assets/default-avatar.png"
-            name="Ashutosh Kataruka"
-            id="B122029"
-          >
-            <ul>
-              <li>- Frontend</li>
-              <li>- Design</li>
-            </ul>
-          </DevCard>
-          <DevCard
-            src="/assets/default-avatar.png"
-            name="Ashutosh Kataruka"
-            id="B122029"
+            name="Pranaya Mallik"
+            id="B122083"
           >
             <ul>
               <li>- Frontend</li>
@@ -124,26 +124,7 @@ export default async function About() {
               <li>- Design</li>
             </ul>
           </DevCard>
-          <DevCard
-            src="/assets/default-avatar.png"
-            name="Ashutosh Kataruka"
-            id="B122029"
-          >
-            <ul>
-              <li>- Frontend</li>
-              <li>- Design</li>
-            </ul>
-          </DevCard>
-          <DevCard
-            src="/assets/default-avatar.png"
-            name="Ashutosh Kataruka"
-            id="B122029"
-          >
-            <ul>
-              <li>- Frontend</li>
-              <li>- Design</li>
-            </ul>
-          </DevCard>
+          
 
           {/* <div className="Acont flex gap-4 flex-wrap items-center justify-center">
             <div className="Acard flex border border-blue-100 rounded-2xl p-4">
