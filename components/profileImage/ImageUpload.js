@@ -27,7 +27,6 @@ export default function ImageUpload({ name, host, src }) {
     e.preventDefault();
     const file = e.dataTransfer.files[0];
     const fileType = file.type.split("/")[0];
-    console.log(fileType, file);
     if (fileType === "image") {
       setImage(e.dataTransfer.files[0]);
     }
@@ -93,7 +92,7 @@ export default function ImageUpload({ name, host, src }) {
           hidden
           type="file"
           onChange={handleImageChange}
-          accept="image/*"
+          accept="image/png, image/jpeg, image/jpg"
           title="select image" />
 
         <label className="input" hidden={image} htmlFor="image-input">browse image</label>
