@@ -1,21 +1,31 @@
 .form {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    gap: min(1vh, 10px);
     width: 90%;
     max-width: 500px;
     margin: auto;
-    grid-template-columns: 33% 33% 33%;
-}
-
-.form input, .input {
-    grid-column: 2 / 4;
 }
 
 .form label {
-    grid-column: 1 / 2;
     display: flex;
     align-items: center;
 }
 
 .form button{
+    margin: 1vh auto;
     width: 100%;
+}
+
+@media only screen and (min-width: 450px) {
+    .form {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+    .form input, .input {
+        grid-column: 2 / 4;
+    }
+    .form label {
+        grid-column: 1 / 2;
+    }
 }

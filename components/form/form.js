@@ -66,9 +66,11 @@ export default function Form({ prevData, host }) {
   }
 
   return (
+    <>
+    <h1><span className="text-red-500">*</span> marked fields are required</h1>
     <form className={classes.form} onSubmit={checkData}>
 
-      <label htmlFor="name"><span>Name: </span></label>
+      <label htmlFor="name"><span><span className="text-red-500">*</span>Name: </span></label>
 
       <input
         required={true}
@@ -79,7 +81,7 @@ export default function Form({ prevData, host }) {
         name="name"
         value={data.name} />
 
-      <label htmlFor="state"><span>State: </span></label>
+      <label htmlFor="state"><span><span className="text-red-500">*</span>State: </span></label>
 
       <input
         required={true}
@@ -90,10 +92,9 @@ export default function Form({ prevData, host }) {
         name="state"
         value={data.state} />
 
-      <label htmlFor="city"><span>City: </span></label>
+      <label htmlFor="city"><span className="text-red-500">*</span><span>City: </span></label>
 
       <input
-        required={true}
         id="city"
         type="text"
         onChange={handleChange}
@@ -131,9 +132,10 @@ export default function Form({ prevData, host }) {
         name="github"
         value={data.github} />
 
-      <label htmlFor="about"><span>About: </span></label>
+      <label htmlFor="about"><span className="text-red-500">*</span><span>About: </span></label>
 
       <textarea
+      required
         className={classes.input+' input'}
         id="about"
         name="about"
@@ -148,14 +150,15 @@ export default function Form({ prevData, host }) {
         disabled={disabled}
         className={"mt-3 col-start-1 text-lg submitButton"}
         value='submit'
-      > submit </button>
+        > submit </button>
 
       <button
         type="button"
         className="mt-3 col-start-3 text-lg cancel"
         onClick={() => router.back()}
-      > Cancel </button>
+        > Cancel </button>
 
     </form>
+    </>
   );
 }

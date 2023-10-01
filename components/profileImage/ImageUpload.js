@@ -90,11 +90,13 @@ export default function ImageUpload({ name, host, src }) {
 
         <input
           id="image-input"
-          hidden={image}
+          hidden
           type="file"
           onChange={handleImageChange}
           accept="image/*"
           title="select image" />
+
+        <label className="input" hidden={image} htmlFor="image-input">browse image</label>
 
         <button
           className={"submitButton"}
