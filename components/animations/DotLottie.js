@@ -1,13 +1,14 @@
-import '@dotlottie/player-component';
-import { DotLottiePlayer } from '@dotlottie/player-component';
+"use client";
 
-export default function DotLottie({src}) {
-  return (""
-      // <DotLottiePlayer
-      //   src={src}
-      //   autoplay
-      //   loop
-      //   style={{ height: '100%', width: '100%' }}
-      // />
+import { DotLottiePlayer } from '@dotlottie/react-player';
+
+export default function DotLottie({src, className}) {
+  return (
+    <DotLottiePlayer
+        src={src}
+        autoplay
+        loop
+        className={className}
+    />
   );
 }

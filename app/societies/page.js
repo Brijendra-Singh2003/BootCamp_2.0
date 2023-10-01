@@ -1,8 +1,7 @@
 import './society.css'
 import { Society_card } from '@/components/society_card/society_card';
-import anime from "@/public/animations/society-main.json"
-import Lottie from '@/components/animations/Lottie';
 import { Roboto, Lato } from 'next/font/google'
+import DotLottie from '@/components/animations/DotLottie';
 
 const lilitaOne = Roboto({ subsets: ['greek'], weight: "700" });
 const lato = Lato({ subsets: ['latin'], weight: "700" });
@@ -11,7 +10,7 @@ export default async function Society() {
   return (
     <>
       <h1 className={"title no-select "+lilitaOne.className}>SOCIETIES</h1>
-      <Lottie options={anime} className="middle-card" />
+      <DotLottie src="/animations/society-main.lottie" className="middle-card" />
 
       <div className='no-select'>
         <p className={"desc "+lato.className}>

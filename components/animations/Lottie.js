@@ -8,7 +8,7 @@ export default function Lottie({className, options}) {
 
   return (
     <div className={className}>
-        {View}
-      </div>
+      {View}
+    </div>
   )
 }

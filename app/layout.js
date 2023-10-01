@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar/Navbar'
 //  heading - sora roboto | normal lato podkova
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import '@dotlottie/react-player/dist/index.css';
 
 export const metadata = {
   icons: [

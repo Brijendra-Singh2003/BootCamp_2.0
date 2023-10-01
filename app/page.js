@@ -1,7 +1,6 @@
 import "./page_vdo.css";
-import hello from "@/public/animations/about.json";
-import Lottie from "@/components/animations/Lottie";
-import { Roboto, Lato } from 'next/font/google'
+import { Roboto } from 'next/font/google'
+import DotLottie from "@/components/animations/DotLottie";
 
 const lilitaOne = Roboto({ subsets: ['latin'], weight: "700" });
 
@@ -11,7 +10,7 @@ export default async function Home() {
             <section>
                 <h1 className={"home-text "+lilitaOne.className}>CSE BOOTCAMP 2K23</h1>
                 <div className="lottie-holder">
-                    <Lottie options={hello} className="lottie" />
+                    <DotLottie src="/animations/about.lottie" className="lottie" />
                 </div>
             </section>
 

@@ -53,6 +53,7 @@ main {
   width: 100svw;
   overflow: scroll;
   scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
 }
 
 .desc {

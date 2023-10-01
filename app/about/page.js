@@ -3,9 +3,8 @@ import "./page.css"
 import { Roboto, Lato } from 'next/font/google'
 import Link from 'next/link';
 import Image from 'next/image';
-import anime from "@/public/animations/anima.json";
-import Lottie from '@/components/animations/Lottie';
 import DevCard from '@/components/devCard/DevCard';
+import DotLottie from '@/components/animations/DotLottie';
 
 const lilitaOne = Roboto({ subsets: ['latin'], weight: "700" });
 const lato = Lato({ subsets: ['latin'], weight: "700" });
@@ -14,7 +13,7 @@ export default async function About() {
   return (
     <>
       <h1 className={lilitaOne.className + " no-select title"}>ABOUT US</h1>
-      <Lottie options={anime} className="about-middle-card" />
+      <DotLottie src="/animations/anima.lottie" className="about-middle-card" />
 
       <div className={"no-select " + lato.className}>
         <p className="desc">
