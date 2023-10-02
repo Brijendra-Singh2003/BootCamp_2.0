@@ -11,7 +11,8 @@ const PostSchema = new Schema(
         github: String,
         linkedin: String,
         image: String,
-        year: Number
+        year: Number,
+        ext: String
     }
 )
 

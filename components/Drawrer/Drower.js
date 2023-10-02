@@ -5,11 +5,13 @@ import "./drawer.css"
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Compress from "compress.js";
+// const compress = new Compress();
 
 export function Drower({userlist}) {
 
     const [active, setActive] = useState({});
-    const {image, id, name, city, state, about, instagram, linkedin, github} = active;
+    let {image, id, name, city, state, about, instagram, linkedin, github, ext} = active;
     const [width, setWidth] = useState(0);
 
     useEffect(() => {
@@ -25,7 +27,10 @@ export function Drower({userlist}) {
     return (
         (width > 620) ? (
             <div className="d-container">
-                {userlist.map(({image, id, name, city, state, about, instagram, linkedin, github})=>{
+                {userlist.map(({image, id, name, city, state, about, instagram, linkedin, github, ext})=>{
+                    if(ext) {
+                        image = URL.createObjectURL(Compress.convertBase64ToFile(image, ext))
+                    }
                     return(
                         <div className="drower-card" key={id}>
                         <div className="mx-auto">
@@ -50,14 +55,19 @@ export function Drower({userlist}) {
 
                 <Drawer.Trigger className="trigger">
                     {userlist.map((curr)=>{
+                        let {image, id, name, city, state, ext} = curr;
+                        if(ext) {
+                            image = URL.createObjectURL(Compress.convertBase64ToFile(image, ext))
+                        }
+                        
                         return(
-                            <div className="student-card" onClick={()=>setActive(curr)} key={curr.id}>
-                                <Image src={curr.image || `https://csebootcamp2k22.tech/images/${curr.id}.webp`} height={70} width={70} alt="" />
+                            <div className="student-card" onClick={()=>setActive({...curr, image: image})} key={id}>
+                                <Image src={image || `https://csebootcamp2k22.tech/images/${id}.webp`} height={70} width={70} alt="" />
                                 <div>
-                                    <h1 className="student-card-name">{curr.name?.toUpperCase()}</h1>
-                                    <p>{curr.city+', '+curr.state}</p>
+                                    <h1 className="student-card-name">{name?.toUpperCase()}</h1>
+                                    <p>{city+', '+state}</p>
                                 </div>
-                                <span>ID #{curr.id.substring(4, 7)}</span>
+                                <span>ID #{id.substring(4, 7)}</span>
                             </div>
                         )
                     })}

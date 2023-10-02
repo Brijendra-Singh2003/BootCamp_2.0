@@ -35,6 +35,7 @@ export default async function Page() {
     github: '',
     linkedin: '',
     image: '',
+    ext: ''
   };
 
   try {
@@ -59,7 +60,7 @@ export default async function Page() {
   return (
     <div className={"profile-container relative"}>
       <h1 className={"title no-select "+lilitaOne.className}>YOUR PROFILE</h1>
-      <ImageUpload name={id} src={dataDefaults.image} host={process.env.HOST} />
+      <ImageUpload name={id} src={dataDefaults.image} ext={dataDefaults?.ext} host={process.env.HOST} />
       <Form prevData={dataDefaults} user={id} host={process.env.HOST} />
     </div>
   );
