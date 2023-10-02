@@ -13,6 +13,7 @@ export function Drower({userlist}) {
     const [active, setActive] = useState({});
     let {image, id, name, city, state, about, instagram, linkedin, github, ext} = active;
     const [width, setWidth] = useState(0);
+    const [List, setList] = useState([]);
 
     useEffect(() => {
         setWidth(window.innerWidth);
@@ -20,6 +21,23 @@ export function Drower({userlist}) {
             setWidth(window.innerWidth);
         }
         window.addEventListener("resize", resize);
+        setList(userlist.map((curr)=>{
+            let {image, id, name, city, state, ext} = curr;
+            if(ext) {
+                image = URL.createObjectURL(Compress.convertBase64ToFile(image, ext))
+            }
+            
+            return(
+                <div className="student-card" onClick={()=>setActive({...curr, image: image})} key={id}>
+                    <Image src={image || `https://csebootcamp2k22.tech/images/${id}.webp`} height={70} width={70} alt="" />
+                    <div>
+                        <h1 className="student-card-name">{name?.toUpperCase()}</h1>
+                        <p>{city+', '+state}</p>
+                    </div>
+                    <span>ID #{id.substring(4, 7)}</span>
+                </div>
+            )
+        }))
 
         return () => window.removeEventListener("resize", resize);
     }, [])
@@ -28,7 +46,7 @@ export function Drower({userlist}) {
         (width > 620) ? (
             <div className="d-container">
                 {userlist.map(({image, id, name, city, state, about, instagram, linkedin, github, ext})=>{
-                    if(ext) {
+                    if(ext && window) {
                         image = URL.createObjectURL(Compress.convertBase64ToFile(image, ext))
                     }
                     return(
@@ -54,23 +72,7 @@ export function Drower({userlist}) {
             <Drawer.Root className="no-hlt">
 
                 <Drawer.Trigger className="trigger">
-                    {userlist.map((curr)=>{
-                        let {image, id, name, city, state, ext} = curr;
-                        if(ext) {
-                            image = URL.createObjectURL(Compress.convertBase64ToFile(image, ext))
-                        }
-                        
-                        return(
-                            <div className="student-card" onClick={()=>setActive({...curr, image: image})} key={id}>
-                                <Image src={image || `https://csebootcamp2k22.tech/images/${id}.webp`} height={70} width={70} alt="" />
-                                <div>
-                                    <h1 className="student-card-name">{name?.toUpperCase()}</h1>
-                                    <p>{city+', '+state}</p>
-                                </div>
-                                <span>ID #{id.substring(4, 7)}</span>
-                            </div>
-                        )
-                    })}
+                    {List}
                 </Drawer.Trigger>
 
                 <Drawer.Overlay className="fixed inset-0 bg-black/40" />
@@ -97,3 +99,7 @@ export function Drower({userlist}) {
         )
     );
 }
+
+
+
+

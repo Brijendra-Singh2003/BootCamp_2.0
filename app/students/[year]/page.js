@@ -51,8 +51,6 @@ export default async function StudentPage({ params: { year } }) {
     );
 }
 
-
-
 export async function generateStaticParams() {
     return [{ year: "2022" }, { year: "2023" }];
 }
