@@ -51,7 +51,7 @@ export default async function Page() {
   } catch (err) {
     return (
       <div className=" mt-52">
-        <h1>Err: {err.message} <Retry /></h1>
+        <h1>Err: {err.message}</h1>
         <Retry />
       </div>
     );

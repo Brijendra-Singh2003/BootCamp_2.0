@@ -37,7 +37,7 @@ export default async function StudentPage({ params: { year } }) {
         <>
         <div>
             <p className={'title '+lilitaOne.className}>
-                CSE {year}
+                CSE {+year + 4}
             </p>
             <p className={'mkc-text '+lato.className}>
                 {(year === "2022") ? "The Sophomores" : "The Neophytes"}

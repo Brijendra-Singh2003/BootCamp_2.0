@@ -39,7 +39,7 @@ export default function ImageUpload({ name, host, src, ext }) {
 
       setImage(file);
       setStr({image: base64str, ext: imgExt})
-      console.log(data);
+      // console.log(data);
     })
   };
 
@@ -82,11 +82,15 @@ export default function ImageUpload({ name, host, src, ext }) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(imgStr),
-      }).then(()=>{
+      }).then(async (res)=>{
         setIsDisabled(false);
         handleRevalidate();
-        setImage(null);
         toast.success('👍 Uploaded Successfully');
+        const {image, ext} = await res.json();
+        if(image && ext) {
+          setPrevURL(URL.createObjectURL(Compress.convertBase64ToFile(image, ext)));
+        }
+        setImage(null);
       });
     } else {
       toast.error('no image selected');

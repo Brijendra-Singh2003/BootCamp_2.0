@@ -20,18 +20,19 @@ export async function POST(req) {
     const id = session.user.email.split('@')[0];
     try {
       const data = await req.json();
+      const newData = {...data, id: id, year: Number.parseInt(id[3])};
       await connection();
 
-      const isPresent = await Post.findOneAndUpdate({ id: id }, {...data, id: id, year: Number.parseInt(id[3])});
+      const isPresent = await Post.findOneAndUpdate({ id: id }, newData);
 
       if (!isPresent) {
-        const post = await Post.create({...data, id: id, year: Number.parseInt(id[3])});
+        const post = await Post.create(newData);
         await post.save();
       }
 
       fetch(`${process.env.HOST}/api/revalidate`);
 
-      return new NextResponse(JSON.stringify(data), { status: 201 });
+      return new NextResponse(JSON.stringify(newData), { status: 201 });
     } catch (err) {
       return new NextResponse(err.message, { status: 500 });
     }

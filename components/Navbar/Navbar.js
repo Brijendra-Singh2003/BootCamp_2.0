@@ -62,21 +62,21 @@ function Nav() {
 
         <div className={ "dropDown " + (showMenu ? "show" : "hide") }>
 
-          <Link className={(pathname === "/") && "active"} href="/">Home</Link>
+          <Link className={(pathname === "/")  ? "active" : ""} href="/">Home</Link>
           {user ? (
             <>
-              <Link className={(pathname === "/students/2023") && "active"} href="/students/2023">2023</Link>
-              <Link className={(pathname === "/students/2022") && "active"}  href="/students/2022">2022</Link>
-              <Link className={(pathname === "/societies") && "active"}  href="/societies">Societies</Link>
-              {(email[3] === '2' || email[3] === '3') && <Link className={(pathname === "/profile") && "active"}  href={"/profile"}>Profile</Link>}
-              <Link className={(pathname === "/about") && "active"} href="/about">About</Link>
+              <Link className={(pathname === "/students/2023") ? "active" : ""} href="/students/2023">2027</Link>
+              <Link className={(pathname === "/students/2022")  ? "active" : ""}  href="/students/2022">2026</Link>
+              <Link className={(pathname === "/societies")  ? "active" : ""}  href="/societies">Societies</Link>
+              {(email[3] === '2' || email[3] === '3') && <Link className={(pathname === "/profile")  ? "active" : ""}  href={"/profile"}>Profile</Link>}
+              <Link className={(pathname === "/about")  ? "active" : ""} href="/about">About</Link>
               <a onClick={()=>{signOut()}}>Signout</a>
             </>
           ) : (
             <>
-              <Link className={(pathname === "/societies") && "active"} href="/societies">Societies</Link>
-              <Link className={(pathname === "/about") && "active"} href="/about">About</Link>
-            <Link className={(pathname === "/api/auth/signin") && "active"} href="/api/auth/signin">Login</Link>
+              <Link className={(pathname === "/societies")  ? "active" : ""} href="/societies">Societies</Link>
+              <Link className={(pathname === "/about")  ? "active" : ""} href="/about">About</Link>
+            <Link className={(pathname === "/api/auth/signin")  ? "active" : ""} href="/api/auth/signin">Login</Link>
             </>
           )}
 
@@ -85,21 +85,21 @@ function Nav() {
 
       <div className="desktop-links">
 
-        <Link className={(pathname === "/") && "active"} href="/">Home</Link>
+        <Link className={(pathname === "/")  ? "active" : ""} href="/">Home</Link>
         {user ? (
           <>
-            <Link className={(pathname === "/students/2023") && "active"} href="/students/2023">2023</Link>
-            <Link className={(pathname === "/students/2022") && "active"}  href="/students/2022">2022</Link>
-            <Link className={(pathname === "/about") && "active"} href="/about">About</Link>
-            <Link className={(pathname === "/societies") && "active"}  href="/societies">Societies</Link>
-            {(email[3] === '2' || email[3] === '3') && <Link className={(pathname === "/profile") && "active"}  href={"/profile"}>Profile</Link>}
+            <Link className={(pathname === "/students/2023")  ? "active" : ""} href="/students/2023">2027</Link>
+            <Link className={(pathname === "/students/2022")  ? "active" : ""}  href="/students/2022">2026</Link>
+            <Link className={(pathname === "/about")  ? "active" : ""} href="/about">About</Link>
+            <Link className={(pathname === "/societies")  ? "active" : ""}  href="/societies">Societies</Link>
+            {(email[3] === '2' || email[3] === '3') && <Link className={(pathname === "/profile")  ? "active" : ""}  href={"/profile"}>Profile</Link>}
             <button className="signout" onClick={()=>{signOut()}}>Signout</button>
           </>
         ) : (
           <>
-            <Link className={(pathname === "/societies") && "active"} href="/societies">Societies</Link>
-            <Link className={(pathname === "/about") && "active"} href="/about">About</Link>
-          <Link className={(pathname === "/api/auth/signin") && "active"} href="/api/auth/signin">Login</Link>
+            <Link className={(pathname === "/societies")  ? "active" : ""} href="/societies">Societies</Link>
+            <Link className={(pathname === "/about")  ? "active" : ""} href="/about">About</Link>
+          <Link className={(pathname === "/api/auth/signin")  ? "active" : ""} href="/api/auth/signin">Login</Link>
           </>
         )}
 
