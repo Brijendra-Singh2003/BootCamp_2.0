@@ -1,8 +1,8 @@
-export default async function handler(req, res) {
+export default function handler(req, res) {
     try{
-        await res.revalidate('/students/2022');
-        await res.revalidate('/students/2023');
-        return res.json({revalidate: true});
+        res.revalidate('/students/2022');
+        res.revalidate('/students/2023');
+        return res.json({revalidated: true});
     }
     catch(err) {
         res.send(err.message);
