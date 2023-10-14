@@ -83,7 +83,7 @@
     color: rgb(255, 255, 255);
 }
 
-.drower-image {
+.newImage {
     margin: auto;
     height: 36vh;
     width: 100%;
@@ -91,6 +91,7 @@
     border-radius: 4vh;
     background-image: url('/assets/default-avatar.png');
     background-size: cover;
+    user-select: none;
 }
 
 
@@ -133,7 +134,6 @@
 
 .drower-logo-container a {
     /* margin-top: 0.5vh; */
-    /* background-color: rgb(255, 0, 200); */
     object-fit: cover;
     height: 5.5vh;
     width: 5.5vh;

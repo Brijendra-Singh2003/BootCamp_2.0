@@ -10,9 +10,7 @@ const PostSchema = new Schema(
         instagram: String,
         github: String,
         linkedin: String,
-        image: String,
         year: Number,
-        ext: String
     }
 )
 

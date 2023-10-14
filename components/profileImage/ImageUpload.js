@@ -2,35 +2,35 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-// import { storage } from "@/Firebase";
-// import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import styles from "./uploadImage.module.css";
 import { toast } from "react-toastify";
 import handleRevalidate from "@/functions/revalidate";
 import Compress from "compress.js";
 const compress = new Compress();
 
-export default function ImageUpload({ name, host, src, ext }) {
+export default function ImageUpload({ name }) {
   const [image, setImage] = useState(null);
   const [isDisabled, setIsDisabled] = useState(false);
-  const [prevURL, setPrevURL] = useState(src);
+  const [prevURL, setPrevURL] = useState("");
   const [imgStr, setStr] = useState({});
   
-  useEffect(()=>{
-    if(ext) {
-      setPrevURL(URL.createObjectURL(Compress.convertBase64ToFile(src, ext)));
+  useEffect(async ()=>{
+    const res = await fetch(`${location.origin}/api/db/image?id=${name}`);
+    if(res.ok) {
+      const data = await res.json();
+      if(data && data?.ext) {
+        setPrevURL(URL.createObjectURL(Compress.convertBase64ToFile(data.image, data.ext)));
+      }
     }
   },[]);
 
   const handleImageChange = async (e) => {
     const files = [...e.target.files]
     compress.compress(files, {
-      size: 0.5, // the max size in MB, defaults to 2MB
-      quality: .75, // the quality of the image, max is 1,
-      // maxWidth: 400, // the max width of the output image, defaults to 1920px
-      // maxHeight: 400, // the max height of the output image, defaults to 1920px
-      resize: true, // defaults to true, set false if you do not want to resize the image width and height
-      rotate: false, // See the rotation section below
+      size: 0.25, // the max size in MB, defaults to 2MB
+      quality: .6, // the quality of the image, max is 1,
+      resize: true,
+      rotate: false,
     }).then((data) => {
 
       const base64str = data[0].data
@@ -39,7 +39,6 @@ export default function ImageUpload({ name, host, src, ext }) {
 
       setImage(file);
       setStr({image: base64str, ext: imgExt})
-      // console.log(data);
     })
   };
 
@@ -54,41 +53,22 @@ export default function ImageUpload({ name, host, src, ext }) {
     }
   }
 
-  // function updateDatabase() {
-  //   const urlref = ref(storage, `images/${name}`) || null;
-  //   if (urlref) {
-  //     getDownloadURL(urlref).then((value) => {
-  //       setPrevURL(value);
-  //       fetch(`${host}/api/db`, {
-  //         method: "POST",
-  //         headers: { "Content-Type": "application/json" },
-  //         body: JSON.stringify({ id: name, image: value }),
-  //       })
-  //       .then(() => {
-  //         handleRevalidate();
-  //       });
-  //     });
-  //   }
-  //   setImage(null);
-  //   toast.success('👍 Uploaded Successfully');
-  //   setIsDisabled(false);
-  // }
-
   function handleImageUpload() {
     if (image) {
       setIsDisabled(true);
-      console.log(imgStr);
-      fetch(`${host}/api/db`, {
+
+      fetch(`${location.origin}/api/db/image`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(imgStr),
-      }).then(async (res)=>{
+      })
+      .then(async (res)=>{
         setIsDisabled(false);
         handleRevalidate();
         toast.success('👍 Uploaded Successfully');
-        const {image, ext} = await res.json();
-        if(image && ext) {
-          setPrevURL(URL.createObjectURL(Compress.convertBase64ToFile(image, ext)));
+        const data = await res.json();
+        if(data && data?.ext) {
+          setPrevURL(URL.createObjectURL(Compress.convertBase64ToFile(data.image, data.ext)));
         }
         setImage(null);
       });

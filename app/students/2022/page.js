@@ -11,8 +11,8 @@ export const metadata = {
     description: "About your peers",
 };
 
-export default async function StudentPage({ params: { year } }) {
-    if(year !== '2022' && year !== '2023') return notFound();
+export default async function StudentPage() {
+    const year = "2022";
     let studentsList = [];
 
     try {
@@ -49,8 +49,4 @@ export default async function StudentPage({ params: { year } }) {
         />
         </>
     );
-}
-
-export async function generateStaticParams() {
-    return [{ year: "2022" }, { year: "2023" }];
 }

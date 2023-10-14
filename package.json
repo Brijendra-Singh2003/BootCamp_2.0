@@ -11,6 +11,7 @@
   "dependencies": {
     "@dotlottie/react-player": "^1.6.1",
     "autoprefixer": "10.4.14",
+    "axios": "^1.5.1",
     "compress.js": "^1.2.2",
     "dotenv": "^16.3.1",
     "eslint": "8.45.0",

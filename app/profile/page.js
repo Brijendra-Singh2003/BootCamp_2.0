@@ -26,42 +26,11 @@ export default async function Page() {
     redirect('/');
   }
 
-  const dataDefaults = {
-    name: '',
-    about: '',
-    state: '',
-    city: '',
-    instagram: '',
-    github: '',
-    linkedin: '',
-    image: '',
-    ext: ''
-  };
-
-  try {
-    const response = await fetch(process.env.HOST + "/api/db", {
-      next: { tags: ["student"] },
-    });
-    const userlist = await response.json();
-    const fetchedData = userlist?.find(a => a.id === id);
-
-    if (fetchedData) {
-      Object.assign(dataDefaults, fetchedData);
-    }
-  } catch (err) {
-    return (
-      <div className=" mt-52">
-        <h1>Err: {err.message}</h1>
-        <Retry />
-      </div>
-    );
-  }
-
   return (
     <div className={"profile-container relative"}>
       <h1 className={"title no-select "+lilitaOne.className}>YOUR PROFILE</h1>
-      <ImageUpload name={id} src={dataDefaults.image} ext={dataDefaults?.ext} host={process.env.HOST} />
-      <Form prevData={dataDefaults} user={id} host={process.env.HOST} />
+      <ImageUpload name={id} />
+      <Form user={id} />
     </div>
   );
 }

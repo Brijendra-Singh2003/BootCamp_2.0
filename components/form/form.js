@@ -1,30 +1,38 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import classes from "./form.module.css";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import handleRevalidate from "@/functions/revalidate";
 
-export default function Form({ prevData, host }) {
-  const _data = {
-    name: prevData.name,
-    about: prevData.about,
-    state: prevData.state,
-    city: prevData.city,
-    instagram: prevData.instagram,
-    github: prevData.github,
-    linkedin: prevData.linkedin
-  };
+export default function Form({user}) {
   const router = useRouter();
-  const [data, setData] = useState(_data);
   const [disabled, setDisabled] = useState(false);
+  const [data, setData] = useState({
+    name: "",
+    about: "",
+    state: "",
+    city: "",
+    instagram: "",
+    github: "",
+    linkedin: "",
+  });
+
+  useEffect(async ()=>{
+    const res = await fetch(`${location.origin}/api/db/user?id=${user}`);
+    if(res.ok) {
+      const data = await res.json();
+      if(data) {
+        setData(data);
+      }
+    }
+  },[]);
 
   function handleChange({ target: { value, name } }) {
     setData((prevData) => {
       return { ...prevData, [name]: value };
     });
-    console.log(data);
   }
 
   function updateData() {
