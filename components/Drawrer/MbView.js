@@ -42,7 +42,7 @@ export default function MbView({userlist}) {
                 <div className="flex-1 drower-card">
                     <div className="mx-auto w-16 h-1 flex-shrink-0 rounded-full bg-zinc-300 mb-1.5" />
                     <div className="mx-auto">
-                        <img src={Img} name={id} alt="" />
+                        <img className="newImage" src={Img} name={id} alt="" />
                         <span className="drower-id no-select">
                             ID: #{id?.substring(4, 7)}
                         </span>
