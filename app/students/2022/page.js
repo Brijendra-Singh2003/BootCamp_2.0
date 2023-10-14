@@ -49,7 +49,3 @@ export default async function StudentPage() {
         </>
     );
 }
-
-export async function getStaticProps() {
-    
-}
