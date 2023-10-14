@@ -19,14 +19,14 @@ export default function Form({user}) {
     linkedin: "",
   });
 
-  useEffect(async ()=>{
-    const res = await fetch(`${location.origin}/api/db/user?id=${user}`);
+  useEffect(()=>{
+    (async()=>{const res = await fetch(`${location.origin}/api/db/user?id=${user}`);
     if(res.ok) {
       const data = await res.json();
       if(data) {
         setData(data);
       }
-    }
+    }})();
   },[]);
 
   function handleChange({ target: { value, name } }) {

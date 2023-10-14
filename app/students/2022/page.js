@@ -1,7 +1,6 @@
 import "./students.css";
 import { Drower } from "@/components/Drawrer/Drower";
 import { Roboto, Lato } from 'next/font/google'
-import { notFound } from "next/navigation";
 
 const lilitaOne = Roboto({ subsets: ['greek'], weight: "700" });
 const lato = Lato({ subsets: ['latin'], weight: "700" });
@@ -49,4 +48,8 @@ export default async function StudentPage() {
         />
         </>
     );
+}
+
+export async function getStaticProps() {
+    
 }

@@ -14,14 +14,14 @@ export default function ImageUpload({ name }) {
   const [prevURL, setPrevURL] = useState("");
   const [imgStr, setStr] = useState({});
   
-  useEffect(async ()=>{
-    const res = await fetch(`${location.origin}/api/db/image?id=${name}`);
+  useEffect(()=>{
+    (async()=>{const res = await fetch(`${location.origin}/api/db/image?id=${name}`);
     if(res.ok) {
       const data = await res.json();
       if(data && data?.ext) {
         setPrevURL(URL.createObjectURL(Compress.convertBase64ToFile(data.image, data.ext)));
       }
-    }
+    }})();
   },[]);
 
   const handleImageChange = async (e) => {
