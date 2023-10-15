@@ -9,6 +9,7 @@ import handleRevalidate from "@/functions/revalidate";
 export default function Form({user}) {
   const router = useRouter();
   const [disabled, setDisabled] = useState(false);
+  const [prevData, setPrevData] = useState();
   const [data, setData] = useState({
     name: "",
     about: "",
@@ -25,6 +26,7 @@ export default function Form({user}) {
       const data = await res.json();
       if(data) {
         setData(data);
+        setPrevData(data);
       }
     }})();
   },[]);
@@ -36,7 +38,7 @@ export default function Form({user}) {
   }
 
   function updateData() {
-    fetch (`${host}/api/db`,
+    fetch (`${location.origin}/api/db`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
