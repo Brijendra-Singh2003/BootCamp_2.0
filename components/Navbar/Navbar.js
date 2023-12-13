@@ -53,7 +53,7 @@ function Nav() {
       { showMenu ? <div className="backdrop" onClick={toggle}></div> : null }
 
       <Link draggable={false} href="/">
-        <Image src="/assets/csef.png" height={120} width={120} alt="CSE logo"/>
+        <Image src="/assets/csef.png" className="logo" height={120} width={120} alt="CSE logo"/>
       </Link>
 
       <div className="mobile-links" onClick={toggle}>
