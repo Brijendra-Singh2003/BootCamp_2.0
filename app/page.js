@@ -43,12 +43,16 @@ export default async function Home() {
                 allow="autoplay; picture-in-picture; web-share"
                 allowfullscreen
             ></iframe>
+            
+            <div className={"angledLineWrap"}>
+                <div className={"angledLine"}></div>
+            </div>
         </>
     );
 }
 
 export const metadata = {
-    title: "CSE Bootcamp 2.0 - Home",
+    title: "CSE Bootcamp - Home",
     description: "A bootcamp for all CSE students of IIIT Bhubaneshwar",
     icons: [
         {
