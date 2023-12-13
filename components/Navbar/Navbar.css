@@ -1,21 +1,22 @@
 nav {
     --foreground-rgb: rgb(255, 255, 255);
-    --background-start-rgb: rgb(34, 34, 34);
-    --background-end-rgb: rgb(0, 0, 0);
+    --background-start-rgb: rgb(6, 0, 20);
+    --background-end-rgb: rgb(21, 0, 70);
 }
 
 nav{
-    padding: 0 2%;
+    padding: 0;
     position: fixed;
     top: 0;
     width: 100svw;
     color: var(--foreground-rgb);
-    height: 70px;
+    height: 65px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1;
     user-select: none;
+    background-color: rgb(10, 0, 30, 0.9);
 }
 
 .logo {
@@ -59,14 +60,14 @@ nav{
 
 .dropDown{
     position: absolute;
-    top: 60px;
+    top: 65px;
     right: 0;
     display: flex;
     flex-direction: column;
     align-items: baseline;
     justify-content: space-between;
-    border: 1px solid rgb(60, 60, 60);
-    background-color: rgba(21, 0, 70, 0.75);
+    border: 1px solid rgb(50, 50, 50);
+    background-color: rgba(20, 10, 60, 0.75);
     backdrop-filter: blur(5px);
     border-radius: 10px;
     z-index: 20;
