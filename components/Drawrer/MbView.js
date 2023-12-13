@@ -16,13 +16,11 @@ export default function MbView({userlist}) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(async (entry) => {
                 if (entry.isIntersecting && !entry.target.src) {
+                    entry.target.src="/assets/default-avatar.png";
                     const res = await fetch(`${location.origin}/api/db/image?id=${entry.target.name}`);
                     const data = await res.json();
                     if (data && data?.ext){
                         entry.target.src = URL.createObjectURL(Compress.convertBase64ToFile(data.image, data.ext));
-                    }
-                    else{
-                        entry.target.src="/assets/default-avatar.png";
                     }
                 }
             });

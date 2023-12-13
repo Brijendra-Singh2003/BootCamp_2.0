@@ -11,8 +11,10 @@
 
 .about-middle-card {
     margin: 0 auto;
-    height: min(65vh, 108vw);
+    height: min(50vh, 75vw);
     width: min(63vh, 99vw);
+    object-fit: cover;
+    object-position: bottom;
 }
 
 .teams {
@@ -22,9 +24,7 @@
     margin-bottom: 1.5em;
     gap: 1.5em;
     margin: min(6.7vh, 7.4vw) 0;
-    
 }
-
 
 .about-card {
     transition: all 0.4s;
@@ -95,8 +95,6 @@
 .repo-link {
     -webkit-tap-highlight-color: transparent;
 }
-
-
 
 .tech-box{
     transition: all 300ms;

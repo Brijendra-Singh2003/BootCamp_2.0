@@ -4,7 +4,7 @@ import { Roboto, Lato } from 'next/font/google'
 import Link from 'next/link';
 import Image from 'next/image';
 import DevCard from '@/components/devCard/DevCard';
-import DotLottie from '@/components/animations/DotLottie';
+// import DotLottie from '@/components/animations/DotLottie';
 
 const lilitaOne = Roboto({ subsets: ['latin'], weight: "700" });
 const lato = Lato({ subsets: ['latin'], weight: "700" });
@@ -12,8 +12,8 @@ const lato = Lato({ subsets: ['latin'], weight: "700" });
 export default async function About() {
   return (
     <>
-      <h1 className={lilitaOne.className + " no-select title"}>ABOUT US</h1>
-      <DotLottie src="/animations/anima.lottie" className="about-middle-card" />
+      <h1 className={lilitaOne.className + " no-select title m-0"}>ABOUT US</h1>
+      <Image src="/assets/team.png" height={400} width={600} className="about-middle-card" alt=''/>
 
       <div className={"no-select " + lato.className}>
         <p className="desc">
@@ -178,18 +178,18 @@ export default async function About() {
       <p className={'stack no-select ' + lilitaOne.className}>Tech Stack Used</p>
       <div className="tech-box">
         <div className="tech-box-child">
-          <div className="img no-select"><Image height={80} width={80} src="/stack/html.png" alt="ERROR 404"/></div>
-          <div className="img no-select"><Image height={80} width={80} src="/stack/css-3.png" alt="ERROR 404"/></div>
-          <div className="img no-select"><Image height={80} width={80} src="/stack/js.png" alt="ERROR 404"/></div>
-          <div className="img no-select"><Image height={80} width={80} src="/stack/node.png" alt="ERROR 404"/></div>
-          <div className="img no-select"><Image height={80} width={80} src="/stack/react2.png" alt="ERROR 404"/></div>
+          <div className="img no-select"><Image height={400} width={400} src="/stack/html.png" alt="ERROR 404"/></div>
+          <div className="img no-select"><Image height={400} width={400} src="/stack/css-3.png" alt="ERROR 404"/></div>
+          <div className="img no-select"><Image height={400} width={400} src="/stack/js.png" alt="ERROR 404"/></div>
+          <div className="img no-select"><Image height={400} width={400} src="/stack/node.png" alt="ERROR 404"/></div>
+          <div className="img no-select"><Image height={400} width={400} src="/stack/react2.png" alt="ERROR 404"/></div>
         </div>
         <div className="tech-box-child">
-          <div className="img no-select"><Image className='scale-[1.3]' height={80} width={80} src="/stack/Next.js.png" alt="ERROR 404"/></div>
-          <div className="img no-select"><Image height={80} width={80} src="/stack/git.png" alt="ERROR 404"/></div>
-          <div className="img no-select"><Image height={80} width={80} src="/stack/github.png" alt="ERROR 404"/></div>
-          <div className="img no-select"><Image height={80} width={80} src="/stack/mongo.png" alt="ERROR 404"/></div>
-          <div className="img no-select"><Image height={80} width={80} src="/stack/azure.png" alt="ERROR 404"/></div>
+          <div className="img no-select"><Image className='scale-[1.3]' height={400} width={400} src="/stack/Next.js.png" alt="ERROR 404"/></div>
+          <div className="img no-select"><Image height={400} width={400} src="/stack/git.png" alt="ERROR 404"/></div>
+          <div className="img no-select"><Image height={400} width={400} src="/stack/github.png" alt="ERROR 404"/></div>
+          <div className="img no-select"><Image height={400} width={400} src="/stack/mongo.png" alt="ERROR 404"/></div>
+          <div className="img no-select"><Image height={400} width={400} src="/stack/azure.png" alt="ERROR 404"/></div>
         </div>
       </div>
       <Link target='_blank' href={"https://github.com/Brijendra-Singh2003/BootCamp_2.0"}> <button id='signn' className={"no-select " + lilitaOne.className}> View GitHub Repository </button> </Link>
