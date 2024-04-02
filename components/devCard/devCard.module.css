@@ -6,7 +6,7 @@
     width: min(80vw, 30svh);
     border-radius: 5%;
     box-sizing: border-box;
-    background-color: rgba(155, 101, 255, 0.2);
+    background-color: #9b65ff33;
     backdrop-filter: blur(6px);
     border: 2px solid rgba(100, 100, 100, 0.536);
 }
@@ -20,7 +20,7 @@
     position: absolute;
     left: 50%;
     transform: translate3D(-50%, -50%, 0);
-    object-fit:cover;
+    object-fit: cover;
 }
 
 .name {
@@ -55,7 +55,7 @@
 
     .card {
         margin-top: 80px;
-        height: min(60vw,40vh);
+        height: min(60vw, 40vh);
     }
 
     .name {
