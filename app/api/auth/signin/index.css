@@ -1,99 +1,9 @@
-@media only screen and (max-width: 1048px) {
-    .container {
-        position: relative;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column-reverse;
-        
-    }
-    
-    .animation {
-        position: relative;
-        display: inline-block;
-        margin: 0 auto;
-        width: min(50vh, 100vw);
-        height: min(40vh, 75vw);
-        padding: min(10vh, 25svw) min(10vh, 25svw) 0 min(10vh, 25svw);
-        overflow: hidden;
-        user-select: none;
-    }
-
-    .left {
-        margin: 0 auto;
-        width: min(40vh, 100vw);
-        height: min(40vh, 100vw);
-        padding: min(10vh, 25vw);
-    }
-
-    #para {
-        position: relative;
-        top: -5%;
-        color: white;
-        padding: 0 0 4% 0;
-        text-align: center;
-        font-size: min(1.44vh, 3.6vw);
-        scale: 1.25;
-    }
-    
-    #sign {
-        z-index: 0;
-        background: linear-gradient(90.2deg, #ff0c28, #7200ff);
-        color: white;
-        font-weight: bolder;
-        font-size: min(1.44vh, 3.6vw);
-        font-size: min(1.44vh, 3.6vw);
-        padding: 2% 4%;
-        border: 2px solid rgb(142, 4, 4);
-        scale: 1.5;
-        opacity: 0.8;
-        
-    }
-}
-
-@media only screen and (min-width: 1048px) {
-    
-    .animation {
-        position: absolute;
-        top: 50%;
-        right: 2%;
-        transform: translateY(-50%);
-        height: 45vw;
-        width: 45vw;
-        padding: 10vw;
-        overflow: hidden;
-    }
-    
-    .left {
-        position: absolute;
-        top: 50%;
-        left: 10%;
-        transform: translateY(-50%);
-        height: 25vw;
-        width: 25vw;
-    }
-
-    #para {
-        position: relative;
-        top: -5%;
-        color: white;
-        padding: 0 0 4% 0;
-        text-align: center;
-        font-size: 2.1vw;
-    }
-    
-    #sign {
-        z-index: 11;
-        background: linear-gradient(90.2deg, #ff0c28, #7200ff);
-        color: white;
-        font-weight: bolder;
-        font-size: 2.1vw;
-        border-radius: 2.1vw;
-        padding: 2% 4%;
-        border: 2px solid rgb(142, 4, 4);
-        opacity: 0.8;
-    }
+#sign {
+    z-index: 11;
+    background: linear-gradient(45deg, #ff0c28, #7200ff);
+    color: white;
+    font-weight: bolder;
+    border: 2px solid rgb(142, 4, 4);
 }
 
 #img1 {
@@ -267,7 +177,6 @@
     position: relative;
     right: 6%;
     height: 36%;
-    object-fit: cover;
     width: 100%;
     scale: 1.5;
     user-select: none;
@@ -279,7 +188,6 @@
     left: 10%;
     width: 80%;
     height: 25%;
-    object-fit: cover;
     position: relative;
     scale: 1.5;
     user-select: none;

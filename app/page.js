@@ -24,7 +24,7 @@ export default async function Home() {
                 height="315"
                 src="https://www.youtube.com/embed/wIJdvHgFfQI?loop=1&autoplay=1&mute=1"
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
             ></iframe>
@@ -39,9 +39,9 @@ export default async function Home() {
                 height="315"
                 src="https://www.youtube.com/embed/iHMfYBnRpkg?controls=1&loo=1&autoplay=1&mute=1"
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="autoplay; picture-in-picture; web-share"
-                allowfullscreen
+                allowFullScreen
             ></iframe>
             
             <div className={"angledLineWrap"}>
